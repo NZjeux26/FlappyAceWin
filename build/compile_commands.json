@@ -1,0 +1,267 @@
+[
+{
+  "directory": "F:/FlappyAceWin/build",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DFlappyAceWin_VERSION=\\\"23.10.26\\\" -IF:\\FlappyAceWin\\include -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -fomit-frame-pointer -o CMakeFiles\\FlappyAceWin.elf.dir\\main.c.obj -c F:\\FlappyAceWin\\main.c",
+  "file": "F:/FlappyAceWin/main.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DFlappyAceWin_VERSION=\\\"23.10.26\\\" -IF:\\FlappyAceWin\\include -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -fomit-frame-pointer -o CMakeFiles\\FlappyAceWin.elf.dir\\src\\game.c.obj -c F:\\FlappyAceWin\\src\\game.c",
+  "file": "F:/FlappyAceWin/src/game.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DFlappyAceWin_VERSION=\\\"23.10.26\\\" -IF:\\FlappyAceWin\\include -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -fomit-frame-pointer -o CMakeFiles\\FlappyAceWin.elf.dir\\src\\vector.c.obj -c F:\\FlappyAceWin\\src\\vector.c",
+  "file": "F:/FlappyAceWin/src/vector.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\managers\\audio.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\managers\\audio.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/managers/audio.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\managers\\blit.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\managers\\blit.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/managers/blit.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\managers\\bob.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\managers\\bob.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/managers/bob.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\managers\\copper.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\managers\\copper.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/managers/copper.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\managers\\game.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\managers\\game.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/managers/game.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\managers\\joy.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\managers\\joy.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/managers/joy.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\managers\\key.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\managers\\key.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/managers/key.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\managers\\log.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\managers\\log.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/managers/log.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\managers\\memory.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\managers\\memory.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/managers/memory.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\managers\\mouse.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\managers\\mouse.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/managers/mouse.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\managers\\ptplayer.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\managers\\ptplayer.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/managers/ptplayer.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\managers\\rand.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\managers\\rand.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/managers/rand.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\managers\\sprite.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\managers\\sprite.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/managers/sprite.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\managers\\state.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\managers\\state.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/managers/state.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\managers\\system.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\managers\\system.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/managers/system.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\managers\\timer.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\managers\\timer.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/managers/timer.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\managers\\viewport\\camera.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\managers\\viewport\\camera.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/managers/viewport/camera.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\managers\\viewport\\scrollbuffer.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\managers\\viewport\\scrollbuffer.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/managers/viewport/scrollbuffer.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\managers\\viewport\\simplebuffer.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\managers\\viewport\\simplebuffer.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/managers/viewport/simplebuffer.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\managers\\viewport\\tilebuffer.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\managers\\viewport\\tilebuffer.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/managers/viewport/tilebuffer.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\utils\\bitmap.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\utils\\bitmap.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/utils/bitmap.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\utils\\bmframe.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\utils\\bmframe.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/utils/bmframe.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\utils\\chunky.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\utils\\chunky.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/utils/chunky.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\utils\\custom.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\utils\\custom.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/utils/custom.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\utils\\dir.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\utils\\dir.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/utils/dir.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\utils\\extview.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\utils\\extview.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/utils/extview.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\utils\\file.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\utils\\file.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/utils/file.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\utils\\font.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\utils\\font.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/utils/font.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\utils\\palette.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\utils\\palette.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/utils/palette.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\utils\\sprite.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\utils\\sprite.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/utils/sprite.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\utils\\string.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\utils\\string.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/utils/string.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\ace\\utils\\tag.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\ace\\utils\\tag.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/ace/utils/tag.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\fixmath\\fix16.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\fixmath\\fix16.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/fixmath/fix16.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\fixmath\\fix16_exp.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\fixmath\\fix16_exp.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/fixmath/fix16_exp.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\fixmath\\fix16_sqrt.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\fixmath\\fix16_sqrt.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/fixmath/fix16_sqrt.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\fixmath\\fix16_str.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\fixmath\\fix16_str.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/fixmath/fix16_str.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\fixmath\\fix16_trig.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\fixmath\\fix16_trig.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/fixmath/fix16_trig.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\fixmath\\fract32.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\fixmath\\fract32.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/fixmath/fract32.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\fixmath\\uint32.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\fixmath\\uint32.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/fixmath/uint32.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -Wa,-g,--register-prefix-optional -o CMakeFiles\\ace.dir\\src\\bartman\\gcc8_a_support.s.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\bartman\\gcc8_a_support.s",
+  "file": "F:/FlappyAceWin/deps/ace/src/bartman/gcc8_a_support.s"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\bartman\\gcc8_c_support.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\bartman\\gcc8_c_support.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/bartman/gcc8_c_support.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\mini_std\\ctype.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\mini_std\\ctype.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/mini_std/ctype.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\mini_std\\errno.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\mini_std\\errno.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/mini_std/errno.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\mini_std\\intrin.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\mini_std\\intrin.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/mini_std/intrin.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\mini_std\\printf.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\mini_std\\printf.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/mini_std/printf.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\mini_std\\stdio_file.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\mini_std\\stdio_file.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/mini_std/stdio_file.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\mini_std\\stdio_putchar.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\mini_std\\stdio_putchar.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/mini_std/stdio_putchar.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\mini_std\\stdlib.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\mini_std\\stdlib.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/mini_std/stdlib.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\mini_std\\string.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\mini_std\\string.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/mini_std/string.c"
+},
+{
+  "directory": "F:/FlappyAceWin/build/ace",
+  "command": "c:\\Users\\NZJeu\\.vscode\\extensions\\bartmanabyss.amiga-debug-1.7.4\\bin\\win32\\opt\\bin\\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG -IF:\\FlappyAceWin\\deps\\ace\\include\\bartman -IF:\\FlappyAceWin\\deps\\ace\\include\\mini_std -IF:\\FlappyAceWin\\deps\\ace\\include -MP -MMD -m68000 -fomit-frame-pointer -nostdlib -Wno-unused-function -Wno-volatile-register-var -fno-tree-loop-distribution -flto -fwhole-program -fdata-sections -ffunction-sections -g -Wall -Wextra -fomit-frame-pointer -o CMakeFiles\\ace.dir\\src\\mini_std\\strtoul.c.obj -c F:\\FlappyAceWin\\deps\\ace\\src\\mini_std\\strtoul.c",
+  "file": "F:/FlappyAceWin/deps/ace/src/mini_std/strtoul.c"
+}
+]

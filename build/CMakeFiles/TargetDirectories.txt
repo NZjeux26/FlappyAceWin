@@ -1,0 +1,16 @@
+F:/FlappyAceWin/build/CMakeFiles/generateZip.dir
+F:/FlappyAceWin/build/CMakeFiles/FlappyAceWin.elf.dir
+F:/FlappyAceWin/build/CMakeFiles/generateAdf.dir
+F:/FlappyAceWin/build/CMakeFiles/install.dir
+F:/FlappyAceWin/build/CMakeFiles/install/local.dir
+F:/FlappyAceWin/build/CMakeFiles/edit_cache.dir
+F:/FlappyAceWin/build/CMakeFiles/rebuild_cache.dir
+F:/FlappyAceWin/build/CMakeFiles/list_install_components.dir
+F:/FlappyAceWin/build/CMakeFiles/install/strip.dir
+F:/FlappyAceWin/build/ace/CMakeFiles/install/local.dir
+F:/FlappyAceWin/build/ace/CMakeFiles/install.dir
+F:/FlappyAceWin/build/ace/CMakeFiles/edit_cache.dir
+F:/FlappyAceWin/build/ace/CMakeFiles/ace.dir
+F:/FlappyAceWin/build/ace/CMakeFiles/rebuild_cache.dir
+F:/FlappyAceWin/build/ace/CMakeFiles/list_install_components.dir
+F:/FlappyAceWin/build/ace/CMakeFiles/install/strip.dir
