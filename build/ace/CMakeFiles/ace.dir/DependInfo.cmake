@@ -22,9 +22,9 @@ set(CMAKE_TARGET_DEFINITIONS_ASM
 
 # The include file search paths:
 set(CMAKE_ASM_TARGET_INCLUDE_PATH
-  "../deps/ace/include/bartman"
-  "../deps/ace/include/mini_std"
-  "../deps/ace/include"
+  "F:/FlappyAceWin/deps/ace/include/bartman"
+  "F:/FlappyAceWin/deps/ace/include/mini_std"
+  "F:/FlappyAceWin/deps/ace/include"
   )
 
 # The set of dependency files which are needed:
@@ -80,8 +80,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "F:/FlappyAceWin/deps/ace/src/mini_std/strtoul.c" "ace/CMakeFiles/ace.dir/src/mini_std/strtoul.c.obj" "gcc" "ace/CMakeFiles/ace.dir/src/mini_std/strtoul.c.obj.d"
   )
 
-# Targets to which this target links.
-set(CMAKE_TARGET_LINKED_INFO_FILES
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.

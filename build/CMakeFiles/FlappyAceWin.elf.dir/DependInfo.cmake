@@ -10,11 +10,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "F:/FlappyAceWin/main.c" "CMakeFiles/FlappyAceWin.elf.dir/main.c.obj" "gcc" "CMakeFiles/FlappyAceWin.elf.dir/main.c.obj.d"
   "F:/FlappyAceWin/src/game.c" "CMakeFiles/FlappyAceWin.elf.dir/src/game.c.obj" "gcc" "CMakeFiles/FlappyAceWin.elf.dir/src/game.c.obj.d"
-  "F:/FlappyAceWin/src/vector.c" "CMakeFiles/FlappyAceWin.elf.dir/src/vector.c.obj" "gcc" "CMakeFiles/FlappyAceWin.elf.dir/src/vector.c.obj.d"
+  "F:/FlappyAceWin/src/menu.c" "CMakeFiles/FlappyAceWin.elf.dir/src/menu.c.obj" "gcc" "CMakeFiles/FlappyAceWin.elf.dir/src/menu.c.obj.d"
   )
 
-# Targets to which this target links.
-set(CMAKE_TARGET_LINKED_INFO_FILES
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.
