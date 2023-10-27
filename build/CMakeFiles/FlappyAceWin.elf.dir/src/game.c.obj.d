@@ -22,6 +22,7 @@ CMakeFiles/FlappyAceWin.elf.dir/src/game.c.obj: \
  F:\FlappyAceWin\deps\ace\include/ace/managers/copper.h \
  F:\FlappyAceWin\deps\ace\include/ace/utils/bitmap.h \
  F:\FlappyAceWin\deps\ace\include/ace/managers/blit.h \
+ F:\FlappyAceWin\deps\ace\include/ace/managers/rand.h \
  F:\FlappyAceWin\deps\ace\include/ace/utils/font.h \
  F:\FlappyAceWin\deps\ace\include/ace/utils/string.h
 F:\FlappyAceWin\src\game.h:
@@ -47,5 +48,6 @@ F:\FlappyAceWin\deps\ace\include\mini_std/printf.h:
 F:\FlappyAceWin\deps\ace\include/ace/managers/copper.h:
 F:\FlappyAceWin\deps\ace\include/ace/utils/bitmap.h:
 F:\FlappyAceWin\deps\ace\include/ace/managers/blit.h:
+F:\FlappyAceWin\deps\ace\include/ace/managers/rand.h:
 F:\FlappyAceWin\deps\ace\include/ace/utils/font.h:
 F:\FlappyAceWin\deps\ace\include/ace/utils/string.h:

@@ -6,6 +6,7 @@
 #include <ace/managers/viewport/simplebuffer.h>
 #include <ace/managers/blit.h> // Blitting fns
 #include <ace/managers/state.h>
+#include <ace/managers/rand.h>
 #include <ace/utils/file.h>
 #include <ace/utils/font.h>
 #include <ace/utils/string.h>
@@ -26,8 +27,12 @@ static tVPort *s_pVpScore; // Viewport for score
 static tSimpleBufferManager *s_pScoreBuffer;
 static tVPort *s_pVpMain; // Viewport for playfield
 static tSimpleBufferManager *s_pMainBuffer;
+static tRandManager *s_pRandManager;
 
 g_obj player; //player object declaration
+g_obj toppipe;
+g_obj bottompipe; 
+
 tFont *fallfontsmall; //global for font
 tTextBitMap *scoretextbitmap;//global for score text
 char scorebuffer[20];
@@ -37,11 +42,8 @@ int g_highScore = 0; //needs to be assigned prior to initialization
 ULONG startTime;
 UBYTE g_scored = false;
 
-
 void gameGsCreate(void) {
-  s_pView = viewCreate(0,
-    TAG_VIEW_GLOBAL_PALETTE, 1,
-  TAG_END);
+  s_pView = viewCreate(0,TAG_VIEW_GLOBAL_PALETTE, 1,TAG_END);
   
   // Viewport for score bar - on top of screen
   s_pVpScore = vPortCreate(0,
@@ -63,6 +65,7 @@ void gameGsCreate(void) {
     TAG_SIMPLEBUFFER_VPORT, s_pVpMain,
     TAG_SIMPLEBUFFER_BITMAP_FLAGS, BMF_CLEAR,
   TAG_END);
+
   //palette with VBB set to four i can get 16-colours
   s_pVpScore->pPalette[0] = 0x0000; // First color is also border color 
   s_pVpScore->pPalette[1] = 0x0888; // Gray
@@ -79,6 +82,7 @@ void gameGsCreate(void) {
     s_pVpScore->uwWidth - 1, s_pVpScore->uwHeight - 2,
     SCORE_COLOR, 0xFFFF, 0 // Try patterns 0xAAAA, 0xEEEE, etc.
   );
+
   gSCORE = 99999999; 
   g_highScore = 0;//getHighScore();  //get the highscore from the file, returning zero if no file
   char i_highScore[20]; //buffer string to hold the highscore
@@ -98,11 +102,32 @@ void gameGsCreate(void) {
   scoretextbitmap = fontCreateTextBitMapFromStr(fallfontsmall, scorebuffer); //redo bitmap
   
   startTime = timerGet();
-  player.x = 10;
+
+  player.x = 40;
   player.y = (s_pVpMain->uwHeight - player.h) / 2;
   player.w = 10;
   player.h = 10;
+  player.yvel = 2;
   player.colour = 5;
+
+  short pos = randUwMinMax(s_pRandManager, 30, 150);
+  short range = randUwMinMax(s_pRandManager, 10, 70);
+  short pipestart = 220;
+  short pipewidth = randUwMinMax(s_pRandManager,5,30);
+  short pipecolour = randUwMax(s_pRandManager, 6);
+
+  toppipe.x = pipestart;
+  toppipe.y = 0;
+  toppipe.h = toppipe.y + pos - (range / 2); //the height of the pipe is the Y pos - half of the gap(range) / 2;
+  toppipe.w = 20;
+  toppipe.colour = 4;
+
+  bottompipe.x = pipestart;
+  bottompipe.y = pos + (range / 2); //the y pos of the bottom pipe is the Y pos of the gap + 1/2 it's width
+  bottompipe.h = 210 - pos; //the hight of the bottom pipe is the screen length - the y pos of the gap.
+  bottompipe.w = 20;
+  bottompipe.colour = 4;
+
 
   systemUnuse();
   // Load the view
@@ -121,8 +146,6 @@ UBYTE Collision(g_obj *a, g_obj *b)
   return (a->x < b->x + b->w && a->x + a->w > b->x && a->y < b->y + b->h && a->y + a->h > b->y);
 }
 
-//need a 2nd block counter first one is the max and the second is the current amount
-short BLOCKS = 2;
 void gameGsLoop(void) {
   // This will loop every frame
   if(keyCheck(KEY_ESCAPE)) {
@@ -137,32 +160,52 @@ void gameGsLoop(void) {
     player.w, player.h, 0
     );
 
+  blitRect( 
+    s_pMainBuffer->pBack,
+    toppipe.x, toppipe.y,
+    toppipe.w, toppipe.h, 0
+    );
+
+  blitRect( 
+    s_pMainBuffer->pBack,
+    bottompipe.x, bottompipe.y,
+    bottompipe.w, bottompipe.h, 0
+    );
   //**Move things down**
 
-  if(keyCheck(KEY_D)){  //move player right
-    player.x = MIN(player.x + PADDLE_SPEED, 275);
+  if(keyCheck(KEY_SPACE)){  //move player up
+    player.y = MAX(player.y - PADDLE_SPEED, 0);
   }
-  if(keyCheck(KEY_A)){  //move player left
-    player.x = MAX(player.x - PADDLE_SPEED, 0);
+  else{
+    player.y = MIN(player.y + player.yvel , 210);
   }
-
+   if (keyCheck(KEY_D))
+    { // move player right
+      player.x = MIN(player.x + PADDLE_SPEED, 275);
+    }
+    if (keyCheck(KEY_A))
+    { // move player left
+      player.x = MAX(player.x - PADDLE_SPEED, 0);
+    }
  //**Draw things**
-  //time_t currentTime = time(&currentTime);  //gets the current time and if 15 has past add another block
-   ULONG  currentTime = timerGet();
-  if(currentTime - startTime >= 300){
-    BLOCKS++;
-    startTime = currentTime;
-  }
+
  // Redraw the player at new position
   blitRect(
     s_pMainBuffer->pBack, player.x, player.y,
       player.w, player.h, player.colour
   );
   
-  if (g_scored){  //if the player ahs scored, set to false and update the score
-    g_scored = false;
-    updateScore(); //moved into function for code clarity
-  }
+  blitRect( 
+    s_pMainBuffer->pBack,
+    toppipe.x, toppipe.y,
+    toppipe.w, toppipe.h, toppipe.colour
+  );
+
+  blitRect( 
+    s_pMainBuffer->pBack,
+    bottompipe.x, bottompipe.y,
+    bottompipe.w, bottompipe.h, bottompipe.colour
+  );
   vPortWaitForEnd(s_pVpMain);
   }
  

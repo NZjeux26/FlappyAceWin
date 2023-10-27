@@ -20,7 +20,7 @@ void genericCreate(void) {
   // Initialize gamestate
   g_pStateManager = stateManagerCreate();
   g_pGameState = stateCreate(gameGsCreate, gameGsLoop, gameGsDestroy, 0, 0);
-  //g_pMenuState = stateCreate(menuGsCreate, menuGsLoop, menuGsDestroy, 0, 0);
+  g_pMenuState = stateCreate(menuGsCreate, menuGsLoop, menuGsDestroy, 0, 0);
   statePush(g_pStateManager, g_pGameState);
 }
 
