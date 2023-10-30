@@ -7,6 +7,7 @@ void gameGsDestroy(void);
 void updateScore(void);
 void highScoreCheck(void);
 short getHighScore(void);
+void generatepipes(void);
 
 typedef struct g_obj {//struct for player parameters
     short x;        //position X
@@ -18,5 +19,10 @@ typedef struct g_obj {//struct for player parameters
     short health;   //health
     short colour;    
 } g_obj;
+
+typedef struct g_pipes{ //struct of game objects that keep the top and bottom pipes together in one logical unit.
+    g_obj toppipe;
+    g_obj bottompipe;
+} g_pipes;
 
 #endif // _GAME_H_

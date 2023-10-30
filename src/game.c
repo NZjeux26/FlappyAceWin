@@ -17,6 +17,7 @@
 #define WALL_HEIGHT 1
 #define WALL_COLOR 1
 #define PADDLE_SPEED 4
+#define MAXPIPES 5
 //-------------------------------------------------------------- NEW STUFF START
 //AMiga Pal 320x256
 #define PLAYFIELD_HEIGHT (256-32) //32 for the top viewport height
@@ -33,16 +34,25 @@ g_obj player; //player object declaration
 g_obj toppipe;
 g_obj bottompipe; 
 
+g_pipes pipes[MAXPIPES];
+
 tFont *fallfontsmall; //global for font
 tTextBitMap *scoretextbitmap;//global for score text
+
 char scorebuffer[20];
 int gSCORE = 0;
 int g_highScore = 0; //needs to be assigned prior to initialization
+short pipesdisplay = 1;
+short pipestart = 265;
 
 ULONG startTime;
 UBYTE g_scored = false;
 
 void gameGsCreate(void) {
+  tRayPos sRayPos = getRayPos();
+
+  s_pRandManager = randCreate(1+(sRayPos.bfPosY << 8), 1 + sRayPos.bfPosX);
+
   s_pView = viewCreate(0,TAG_VIEW_GLOBAL_PALETTE, 1,TAG_END);
   
   // Viewport for score bar - on top of screen
@@ -103,7 +113,7 @@ void gameGsCreate(void) {
   
   startTime = timerGet();
 
-  player.x = 40;
+  player.x = 35;
   player.y = (s_pVpMain->uwHeight - player.h) / 2;
   player.w = 10;
   player.h = 10;
@@ -111,23 +121,24 @@ void gameGsCreate(void) {
   player.colour = 5;
 
   short pos = randUwMinMax(s_pRandManager, 30, 150);
-  short range = randUwMinMax(s_pRandManager, 10, 70);
-  short pipestart = 220;
-  short pipewidth = randUwMinMax(s_pRandManager,5,30);
-  short pipecolour = randUwMax(s_pRandManager, 6);
+  short range = randUwMinMax(s_pRandManager, 20, 70);
+  
+  short pipecolour = randUwMinMax(s_pRandManager,1, 6);
 
-  toppipe.x = pipestart;
-  toppipe.y = 0;
-  toppipe.h = toppipe.y + pos - (range / 2); //the height of the pipe is the Y pos - half of the gap(range) / 2;
-  toppipe.w = 20;
-  toppipe.colour = 4;
+  //create first batch of pipes to fill the array
+  for (short i = 0; i < MAXPIPES; i++) {
+    pipes[i].toppipe.x = pipestart;
+    pipes[i].toppipe.y = 0;
+    pipes[i].toppipe.h = pipes[i].toppipe.y + pos - (range / 2); //the height of the pipe is the Y pos - half of the gap(range) / 2;
+    pipes[i].toppipe.w = 15;
+    pipes[i].toppipe.colour = pipecolour;
 
-  bottompipe.x = pipestart;
-  bottompipe.y = pos + (range / 2); //the y pos of the bottom pipe is the Y pos of the gap + 1/2 it's width
-  bottompipe.h = 210 - pos; //the hight of the bottom pipe is the screen length - the y pos of the gap.
-  bottompipe.w = 20;
-  bottompipe.colour = 4;
-
+    pipes[i].bottompipe.x = pipestart;
+    pipes[i].bottompipe.y = pos + (range / 2); //the y pos of the bottom pipe is the Y pos of the gap + 1/2 it's width
+    pipes[i].bottompipe.h = 210 - pos; //the hight of the bottom pipe is the screen length - the y pos of the gap.
+    pipes[i].bottompipe.w = 15;
+    pipes[i].bottompipe.colour = pipecolour;
+  }
 
   systemUnuse();
   // Load the view
@@ -160,24 +171,48 @@ void gameGsLoop(void) {
     player.w, player.h, 0
     );
 
-  blitRect( 
-    s_pMainBuffer->pBack,
-    toppipe.x, toppipe.y,
-    toppipe.w, toppipe.h, 0
-    );
+  //undraw each pipe pair in the array upto pipe display #
+  for (short i = 0; i < pipesdisplay; i++) {
+      blitRect( 
+      s_pMainBuffer->pBack,
+      pipes[i].toppipe.x, pipes[i].toppipe.y,
+      pipes[i].toppipe.w, pipes[i].toppipe.h, 0
+      );
 
-  blitRect( 
-    s_pMainBuffer->pBack,
-    bottompipe.x, bottompipe.y,
-    bottompipe.w, bottompipe.h, 0
-    );
-  //**Move things down**
+      blitRect( 
+      s_pMainBuffer->pBack,
+      pipes[i].bottompipe.x, pipes[i].bottompipe.y,
+      pipes[i].bottompipe.w, pipes[i].bottompipe.h, 0
+      );
+  }
+ 
+  //**Move things accross**
+
+  for (short i = 0; i < pipesdisplay; i++) {
+      if(pipes[i].toppipe.x < 5 || pipes[i].bottompipe.x < 5){//probably only need one pipe side but jsut in case something weird happens
+        short pos = randUwMinMax(s_pRandManager, 30, 150); //recalculate position and the gap between pipes(range)
+        short range = randUwMinMax(s_pRandManager, 20, 70);
+        //move the pipe back to the start and redraw with new calculations.
+        pipes[i].toppipe.x = pipestart;
+        pipes[i].toppipe.y = 0;
+        pipes[i].toppipe.h = pipes[i].toppipe.y + pos - (range / 2);
+
+        pipes[i].bottompipe.x = pipestart;
+        pipes[i].bottompipe.y = pos + (range / 2);
+        pipes[i].bottompipe.h = 210 - pos;
+      }
+
+      else {//move the pipes across the playfield
+        pipes[i].toppipe.x -= 1;
+        pipes[i].bottompipe.x -= 1;
+      }
+  }
 
   if(keyCheck(KEY_SPACE)){  //move player up
-    player.y = MAX(player.y - PADDLE_SPEED, 0);
+    //player.y = MAX(player.y - PADDLE_SPEED, 0);
   }
   else{
-    player.y = MIN(player.y + player.yvel , 210);
+    //player.y = MIN(player.y + player.yvel , 210);
   }
    if (keyCheck(KEY_D))
     { // move player right
@@ -188,24 +223,36 @@ void gameGsLoop(void) {
       player.x = MAX(player.x - PADDLE_SPEED, 0);
     }
  //**Draw things**
-
+  	ULONG currentTime = timerGet();
+    if(currentTime - startTime >= 100){
+      pipesdisplay++;
+      if(pipesdisplay>=MAXPIPES){
+        pipesdisplay = MAXPIPES -1;
+      }
+      startTime = currentTime;
+    }
+    
  // Redraw the player at new position
   blitRect(
     s_pMainBuffer->pBack, player.x, player.y,
       player.w, player.h, player.colour
   );
-  
-  blitRect( 
-    s_pMainBuffer->pBack,
-    toppipe.x, toppipe.y,
-    toppipe.w, toppipe.h, toppipe.colour
-  );
 
-  blitRect( 
+  //redraw each pipe pair in the array upto pipe display #
+  for (short i = 0; i < pipesdisplay; i++) {
+    blitRect( 
     s_pMainBuffer->pBack,
-    bottompipe.x, bottompipe.y,
-    bottompipe.w, bottompipe.h, bottompipe.colour
-  );
+    pipes[i].toppipe.x, pipes[i].toppipe.y,
+    pipes[i].toppipe.w, pipes[i].toppipe.h, pipes[i].toppipe.colour
+    );
+
+    blitRect( 
+    s_pMainBuffer->pBack,
+    pipes[i].bottompipe.x, pipes[i].bottompipe.y,
+    pipes[i].bottompipe.w, pipes[i].bottompipe.h, pipes[i].bottompipe.colour
+    );
+  }
+  
   vPortWaitForEnd(s_pVpMain);
   }
  
@@ -227,6 +274,9 @@ void updateScore(void) {  //bug seems to appear where text for 10000 + seems to 
     fontDrawTextBitMap(s_pScoreBuffer->pBack, scoretextbitmap, 40,20, 6, FONT_COOKIE);  //draw
 }
 
+void generatepipes(void){
+
+}
 // void highScoreCheck(void) {
 //   int score = gSCORE;
 //   char charScore[30];

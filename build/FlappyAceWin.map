@@ -1,1183 +1,47 @@
 
 Discarded input sections
 
- .text          0x00000000        0x0 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .data          0x00000000        0x0 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss           0x00000000        0x0 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .data.__stack_chk_guard
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.__stack_chk_fail
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.g_scored  0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.Collision
-                0x00000000       0x9e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.updateScore
-                0x00000000       0xb8 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pControls
-                0x00000000        0x8 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.audioIntHandler
-                0x00000000       0x40 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.audioCreate
-                0x00000000       0x9c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.audioDestroy
-                0x00000000       0x4c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.audioPlay
-                0x00000000       0xc0 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.audioStop
-                0x00000000       0x3e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.sampleCreate
-                0x00000000       0x5c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.sampleCreateFromFile
-                0x00000000       0xc4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.sampleDestroy
-                0x00000000       0x36 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.blitSafeCopy
-                0x00000000       0xa8 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.blitUnsafeCopyAligned
-                0x00000000      0x2f0 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.blitSafeCopyAligned
-                0x00000000       0xae C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.blitUnsafeCopyMask
-                0x00000000      0x3d6 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.blitSafeCopyMask
-                0x00000000       0xa8 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.blitSafeRect
-                0x00000000       0x84 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_ubBufferCurr
-                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_ubMaxBobCount
-                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_isPushingDone
-                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_ubBpp   0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_ubBobsPushed
-                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_ubBobsDrawn
-                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_ubBobsSaved
-                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_uwAvailHeight
-                0x00000000        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_uwBgBufferLength
-                0x00000000        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_uwDestByteWidth
-                0x00000000        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pQueues
-                0x00000000       0x1c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bobDeallocBuffers
-                0x00000000       0xd0 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bobManagerReset
-                0x00000000       0x2e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bobManagerCreate
-                0x00000000       0x98 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bobReallocateBgBuffers
-                0x00000000       0xf0 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bobManagerDestroy
-                0x00000000        0xa C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bobPush  0x00000000       0x62 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bobInit  0x00000000      0x154 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bobSetFrame
-                0x00000000       0x16 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bobSetWidth
-                0x00000000       0x56 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bobSetHeight
-                0x00000000       0x46 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bobCalcFrameAddress
-                0x00000000       0x3e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bobProcessNext
-                0x00000000      0x5c0 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bobCheckGood
-                0x00000000       0x16 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bobBegin
-                0x00000000      0x262 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bobPushingDone
-                0x00000000        0xc C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bobEnd   0x00000000       0x4a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bobDiscardUndraw
-                0x00000000       0x10 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.copDumpCmd
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.copDumpBlocks
-                0x00000000       0xae C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.copDumpBfr
-                0x00000000       0x4a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.copBlockEnable
-                0x00000000       0x36 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.copBlockDisable
-                0x00000000       0x2e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.g_sJoyManager
-                0x00000000       0x14 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.MiscBase  0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_isParallelEnabled
-                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_ubOldDataDdr
-                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_ubOldStatusDdr
-                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_ubOldDataVal
-                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_ubOldStatusVal
-                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.myAllocMiscResource
-                0x00000000       0x36 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.joyOpen  0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.joyClose
-                0x00000000        0xa C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.joySetState
-                0x00000000       0x2a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.joyCheck
-                0x00000000       0x24 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.joyUse   0x00000000       0x3e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.joyProcess
-                0x00000000      0x2fc C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.joyEnableParallel
-                0x00000000      0x150 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.joyDisableParallel
-                0x00000000       0x92 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.joyIsParallelEnabled
-                0x00000000        0x8 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .data.szOwner.0
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.keySetState
-                0x00000000       0x38 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.g_pFromAscii
-                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.g_pToAscii
-                0x00000000       0x68 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_uwLastId
-                0x00000000        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pMemTail
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_ulChipUsage
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_ulChipPeakUsage
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_ulFastUsage
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_ulFastPeakUsage
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text._memEntryAdd
-                0x00000000       0xee C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text._memEntryDelete
-                0x00000000       0xc4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.memEntryCheckTrash
-                0x00000000       0x66 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text._memCheckIntegrity
-                0x00000000       0x4c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text._memCreate
-                0x00000000       0x28 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text._memDestroy
-                0x00000000       0x42 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text._memAllocDbg
-                0x00000000       0xc8 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text._memFreeDbg
-                0x00000000       0x6e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text._memCheckTrashAtAddr
-                0x00000000       0x60 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text._memLogPeak
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.memType  0x00000000       0x3e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.memGetChipSize
-                0x00000000       0x28 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mouseSetBounds
-                0x00000000       0xaa C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mouseSetButton
-                0x00000000       0x4c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mouseCheck
-                0x00000000       0x44 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mouseMoveBy
-                0x00000000      0x11c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mouseResetPos
-                0x00000000       0xaa C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.s_pCopperWaitXByBitplanes.lto_priv.0
-                0x00000000       0x12 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.g_sMouseManager
-                0x00000000       0x3a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mouseCreate
-                0x00000000       0xd8 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mouseDestroy
-                0x00000000       0x14 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mouseProcessPort
-                0x00000000      0x1f4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mouseProcess
-                0x00000000      0x130 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.mt_PeriodTables
-                0x00000000      0x480 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.MasterVolTab
-                0x00000000     0x1081 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.mt_FunkTable
-                0x00000000       0x10 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.mt_VibratoSineTable
-                0x00000000      0x400 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.mt_VibratoSawTable
-                0x00000000      0x400 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.mt_VibratoRectTable
-                0x00000000      0x400 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fx_tab
-                0x00000000       0x40 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.morefx_tab
-                0x00000000       0x40 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.blmorefx_tab
-                0x00000000       0x40 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.ecmd_tab
-                0x00000000       0x40 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.blecmd_tab
-                0x00000000       0x40 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.prefx_tab
-                0x00000000       0x40 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_isRepeat
-                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_cbSongEnd
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_isPal   0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.mt_MusicChannels
-                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.mt_E8Trigger
-                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.mt_Enable
-                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_isNextTimerBSetRep
-                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.mt_chan   0x00000000      0x120 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.mt_SampleStarts
-                0x00000000       0x7c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.mt_mod    0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.mt_timerval
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.mt_MasterVolTab
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.mt_PatternPos
-                0x00000000        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.mt_PBreakPos
-                0x00000000        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.mt_PosJumpFlag
-                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.mt_PBreakFlag
-                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.mt_Speed  0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.mt_Counter
-                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.mt_SongPos
-                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.mt_PattDelTime
-                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.mt_PattDelTime2
-                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.mt_SilCntValid
-                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.mt_dmaon  0x00000000        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pModCurr
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.clearAudioDone
-                0x00000000       0x1a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.setAudioDone
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.isChannelDone
-                0x00000000       0x46 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.printVoices
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.findPeriod
-                0x00000000       0x3c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptSongStep
-                0x00000000       0x70 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.startSfx
-                0x00000000      0x104 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.moreBlockedFx
-                0x00000000       0x50 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_updatefunk
-                0x00000000       0xae C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.checkmorefx
-                0x00000000       0x60 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_playvoice
-                0x00000000      0x38e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_checkfx
-                0x00000000      0x148 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.intPlay  0x00000000       0x1a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_TimerAInt
-                0x00000000        0xa C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerEnableMainHandler
-                0x00000000       0x42 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.setChannelRepeat
-                0x00000000       0x40 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.intSetRep
-                0x00000000       0x9e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.intDmaOn
-                0x00000000       0x40 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_TimerBInt
-                0x00000000       0x3a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.chan_sfx_only
-                0x00000000       0x56 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_sfxonly
-                0x00000000       0xa2 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_music
-                0x00000000      0x312 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.resetChannel
-                0x00000000       0x40 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerStop
-                0x00000000       0xae C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.setTempo
-                0x00000000       0x46 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_reset
-                0x00000000       0xee C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerDestroy
-                0x00000000       0x34 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerCreate
-                0x00000000       0xaa C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerSetPal
-                0x00000000       0x38 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerLoadMod
-                0x00000000       0xee C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerSetMusicChannelMask
-                0x00000000       0x7a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.setAllVolumes
-                0x00000000       0xec C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerSetMasterVolume
-                0x00000000       0x48 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerSetChannelsForPlayer
-                0x00000000       0x80 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_toneporta_nc
-                0x00000000      0x124 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_vibrato_nc
-                0x00000000       0xac C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_nop   0x00000000       0x12 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_arpeggio
-                0x00000000       0x9c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptDoPortaUp
-                0x00000000       0x44 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_portaup
-                0x00000000       0x2c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptDoPortaDn
-                0x00000000       0x48 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_portadown
-                0x00000000       0x2c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_toneporta
-                0x00000000       0x3a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_vibrato
-                0x00000000       0x74 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptVolSlide
-                0x00000000       0x66 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_volumeslide
-                0x00000000       0x7c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_tonevolslide
-                0x00000000       0x3c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_vibrvolslide
-                0x00000000       0x5e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_tremolo
-                0x00000000      0x122 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_e_cmds
-                0x00000000       0x4e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_posjump
-                0x00000000       0x2c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_patternbrk
-                0x00000000       0x68 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.blocked_e_cmds
-                0x00000000       0x4e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_setspeed
-                0x00000000       0x3c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_pernop
-                0x00000000       0x22 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_volchange
-                0x00000000       0x40 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_sampleoffset
-                0x00000000       0x76 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_filter
-                0x00000000       0x48 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_fineportaup
-                0x00000000       0x34 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_fineportadn
-                0x00000000       0x34 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_glissctrl
-                0x00000000       0x1c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_vibratoctrl
-                0x00000000       0x1c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_finetune
-                0x00000000       0x40 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_jumploop
-                0x00000000       0x7e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_tremoctrl
-                0x00000000       0x1c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_e8    0x00000000       0x1a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptDoRetrigger
-                0x00000000       0x54 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_retrignote
-                0x00000000       0x7a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_volfineup
-                0x00000000       0x40 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_volfinedn
-                0x00000000       0x40 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_notecut
-                0x00000000       0x30 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_notedelay
-                0x00000000       0x46 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_patterndelay
-                0x00000000       0x2e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.mt_funk  0x00000000       0x3a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.set_period
-                0x00000000      0x144 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.set_finetune
-                0x00000000       0x94 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.set_sampleoffset
-                0x00000000       0x78 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.set_toneporta
-                0x00000000       0xbe C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.getClockConstant
-                0x00000000       0x18 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerProcess
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerGetCurrentVoices
-                0x00000000       0x70 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerGetVoiceProgress
-                0x00000000       0x28 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerEnableMusic
-                0x00000000       0x22 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerGetE8
-                0x00000000        0x8 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerReserveChannelsForMusic
-                0x00000000       0x1a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerSetSampleVolume
-                0x00000000       0x36 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerModCreate
-                0x00000000      0x2a2 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerModDestroy
-                0x00000000       0x68 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerSfxCreateFromFile
-                0x00000000      0x196 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerSfxDestroy
-                0x00000000       0xaa C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.channelSetSfx
-                0x00000000       0x5e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerSfxStopOnChannel
-                0x00000000       0x98 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerSfxPlayLooped
-                0x00000000       0x78 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerSfxPlay
-                0x00000000      0x4fa C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerWaitForSfx
-                0x00000000       0x48 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerConfigureSongRepeat
-                0x00000000       0x22 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerSfxLengthInFrames
-                0x00000000       0x86 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerSampleDataCreate
-                0x00000000      0x100 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ptplayerSamplePackDestroy
-                0x00000000       0x2e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.pArpTab.1
-                0x00000000       0x20 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.pMult10.0
-                0x00000000       0x10 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.randCreate
-                0x00000000       0x4a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.randDestroy
-                0x00000000       0x14 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.randInit
-                0x00000000       0x36 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.randUl   0x00000000       0x36 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.randUlMax
-                0x00000000       0x22 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.randUlMinMax
-                0x00000000       0x1c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.copSetMoveVal.lto_priv.1
-                0x00000000       0x1c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.s_pCopperWaitXByBitplanes.lto_priv.1
-                0x00000000       0x12 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pView.lto_priv.1
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pChannelsData
-                0x00000000       0x60 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .MEMF_CHIP     0x00000000        0x8 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pInitialClearCopBlock
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.spriteChannelRequestCopperUpdate
-                0x00000000        0xe C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.spriteManagerCreate
-                0x00000000       0xde C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.spriteManagerDestroy
-                0x00000000       0x82 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.spriteAdd
-                0x00000000       0xcc C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.spriteRemove
-                0x00000000       0x9c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.spriteSetEnabled
-                0x00000000       0x4a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.spriteSetAttached
-                0x00000000       0x26 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.spriteRequestMetadataUpdate
-                0x00000000        0xe C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.spriteSetBitmap
-                0x00000000       0xa0 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.spriteProcessChannel
-                0x00000000      0x1e6 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.spriteProcess
-                0x00000000       0xfc C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.spriteSetHeight
-                0x00000000       0x26 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.statePop
-                0x00000000       0x5a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.s_uwOsMinDma
-                0x00000000        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.systemIsUsed
-                0x00000000        0xc C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.systemBlitterIsUsed
-                0x00000000        0xc C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.systemSetInt
-                0x00000000       0xcc C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.systemSetCiaCr
-                0x00000000       0x9e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.systemSetTimer
-                0x00000000       0xb8 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.systemDump
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.systemIdleBegin
-                0x00000000        0xa C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.systemIdleEnd
-                0x00000000        0xa C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.systemGetVersion
-                0x00000000        0xc C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.timerGetPrec
-                0x00000000       0xae C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.timerGetDelta
-                0x00000000       0x20 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.timerPeek
-                0x00000000       0x18 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.timerCheck
-                0x00000000       0x28 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.timerFormatPrec
-                0x00000000      0x118 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.timerWaitUs
-                0x00000000       0x4e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.cameraSetCoord
-                0x00000000       0x2c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.cameraMoveBy
-                0x00000000       0xba C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.cameraCenterAt
-                0x00000000       0xd4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.cameraGetXDiff
-                0x00000000       0x2e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.cameraGetYDiff
-                0x00000000       0x2e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.cameraGetDeltaX
-                0x00000000       0x2c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.cameraGetDeltaY
-                0x00000000       0x2e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.copSetMoveVal.lto_priv.2
-                0x00000000       0x1c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.s_pCopperWaitXByBitplanes.lto_priv.2
-                0x00000000       0x12 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.nearestPowerOf2
-                0x00000000       0x44 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.scrollBufferCreate
-                0x00000000      0x42e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.scrollBufferDestroy
-                0x00000000       0xba C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.scrollBufferGetRawCopperlistInstructionCountStart
-                0x00000000       0x18 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.scrollBufferGetRawCopperlistInstructionCountBreak
-                0x00000000       0x18 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.resetStartCopperlist
-                0x00000000      0x250 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.updateStartCopperlist
-                0x00000000       0xf4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.resetBreakCopperlist
-                0x00000000      0x20e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.updateBreakCopperlist
-                0x00000000       0xfc C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.disableBreakCopperlist
-                0x00000000       0x16 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.scrollBufferProcess
-                0x00000000      0x494 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.scrollBufferReset
-                0x00000000      0x586 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.scrollBufferBlitMask
-                0x00000000      0x1a0 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.simpleBufferIsRectVisible
-                0x00000000       0xe4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.shiftFromPowerOfTwo
-                0x00000000       0x28 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.tileBufferResetRedrawState
-                0x00000000       0xa0 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.tileBufferQueueAdd
-                0x00000000       0xe2 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.tileBufferQueueProcess
-                0x00000000       0xa4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.tileBufferCreate
-                0x00000000      0x362 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.tileBufferDestroy
-                0x00000000      0x10c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.tileBufferReset
-                0x00000000      0x450 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.tileBufferSetupTileDraw
-                0x00000000      0x1a4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.tileBufferContinueTileDraw
-                0x00000000      0x170 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.tileBufferProcess
-                0x00000000      0x91c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.tileBufferRedrawAll
-                0x00000000      0x316 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.tileBufferDrawTile
-                0x00000000       0x98 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.tileBufferDrawTileQuick
-                0x00000000      0x116 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.tileBufferInvalidateRect
-                0x00000000       0xfc C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.tileBufferInvalidateTile
-                0x00000000       0x36 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.tileBufferIsTileOnBuffer
-                0x00000000      0x128 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.tileBufferIsRectFullyOnBuffer
-                0x00000000      0x196 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.tileBufferSetTile
-                0x00000000       0x6c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.endianIntel16
-                0x00000000       0x20 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.endianIntel32
-                0x00000000       0x36 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.FOUR_DIV_PI.lto_priv.0
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata._FOUR_DIV_PI2.lto_priv.0
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.X4_CORRECTION_COMPONENT.lto_priv.0
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.PI_DIV_4.lto_priv.0
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.THREE_PI_DIV_4.lto_priv.0
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_maximum.lto_priv.0
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_minimum.lto_priv.0
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_overflow.lto_priv.0
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_pi.lto_priv.0
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_e.lto_priv.0
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_one.lto_priv.0
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_rad_to_deg_mult.lto_priv.0
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_deg_to_rad_mult.lto_priv.0
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bitmapLoadFromFile
-                0x00000000      0x360 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bitmapLoadFromMem
-                0x00000000      0x314 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bitmapCreateFromFile
-                0x00000000      0x258 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bitmapIsChip
-                0x00000000       0x1c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bitmapDump
-                0x00000000       0x22 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bitmapSave
-                0x00000000      0x1ee C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bitmapSaveBmp
-                0x00000000      0x4c0 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bmFrameDraw
-                0x00000000      0x3fe C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.FOUR_DIV_PI.lto_priv.1
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata._FOUR_DIV_PI2.lto_priv.1
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.X4_CORRECTION_COMPONENT.lto_priv.1
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.PI_DIV_4.lto_priv.1
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.THREE_PI_DIV_4.lto_priv.1
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_maximum.lto_priv.1
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_minimum.lto_priv.1
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_overflow.lto_priv.1
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_pi.lto_priv.1
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_e.lto_priv.1
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_one.lto_priv.1
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_from_int.lto_priv.0
-                0x00000000       0x14 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_to_int
-                0x00000000        0xa C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_rad_to_deg_mult.lto_priv.1
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_deg_to_rad_mult.lto_priv.1
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.chunkyFromPlanar16
-                0x00000000       0xfe C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.chunkyFromPlanar
-                0x00000000       0x4c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.chunkyToPlanar16
-                0x00000000       0xda C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.chunkyToPlanar
-                0x00000000       0x86 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.chunkyRotate
-                0x00000000      0x204 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.chunkyFromBitmap
-                0x00000000       0xb4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.chunkyToBitmap
-                0x00000000       0xba C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.g_pSprFetch
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.g_pCopLc
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.g_pCop2Lc
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.dirOpen  0x00000000       0xd6 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.dirRead  0x00000000       0x9a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.dirClose
-                0x00000000       0x40 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.dirExists
-                0x00000000       0x32 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.dirCreate
-                0x00000000       0x5a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.dirCreatePath
-                0x00000000      0x120 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.s_pCopperWaitXByBitplanes.lto_priv.4
-                0x00000000       0x12 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.vPortProcessManagers
-                0x00000000       0x28 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.viewProcessManagers
-                0x00000000       0x28 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.vPortUpdatePalette
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.vPortWaitUntilEnd
-                0x00000000       0x26 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fileGetSize
-                0x00000000       0x76 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fileWrite
-                0x00000000       0x48 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fileSeek
-                0x00000000       0x4a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fileGetPos
-                0x00000000       0x2e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fileIsEof
-                0x00000000       0x32 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fileFlush
-                0x00000000       0x28 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fileWriteStr
-                0x00000000       0x24 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fileExists
-                0x00000000       0x50 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fileDelete
-                0x00000000       0x32 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fileMove
-                0x00000000       0x36 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fontCreateFromMem
-                0x00000000      0x190 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fontDestroy
-                0x00000000       0x60 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fontTextFitsInTextBitmap
-                0x00000000       0x5c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fontDestroyTextBitMap
-                0x00000000       0x30 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fontDrawStr
-                0x00000000       0x80 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.paletteLoad
-                0x00000000       0x7a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.paletteLoadFromMem
-                0x00000000       0x48 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.paletteDim
-                0x00000000       0x76 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.paletteColorDim
-                0x00000000       0xf6 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.paletteDump
-                0x00000000       0xf4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.spriteDisableInCopBlockMode
-                0x00000000      0x106 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.spriteDisableInCopRawMode
-                0x00000000      0x144 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.charToUpper
-                0x00000000       0x30 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.strToUpper
-                0x00000000       0x52 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.stringIsEmpty
-                0x00000000       0x18 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.stringCopy
-                0x00000000       0x3a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.stringCopyLimited
-                0x00000000       0x52 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.FOUR_DIV_PI.lto_priv.2
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata._FOUR_DIV_PI2.lto_priv.2
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.X4_CORRECTION_COMPONENT.lto_priv.2
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.PI_DIV_4.lto_priv.2
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.THREE_PI_DIV_4.lto_priv.2
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_maximum.lto_priv.2
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_minimum.lto_priv.2
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_overflow.lto_priv.2
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_pi.lto_priv.2
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_e.lto_priv.2
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_one.lto_priv.2
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_rad_to_deg_mult.lto_priv.2
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_deg_to_rad_mult.lto_priv.2
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.int64_lo
-                0x00000000        0x6 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.int64_add
-                0x00000000       0x20 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.int64_shift
-                0x00000000       0xb6 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.int64_mul_i32_i32
-                0x00000000       0x26 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_add
-                0x00000000       0x40 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_sub
-                0x00000000       0x40 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_sadd
-                0x00000000       0x3a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_ssub
-                0x00000000       0x3a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_mul
-                0x00000000       0x8c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_smul
-                0x00000000       0x40 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_div
-                0x00000000      0x1b2 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_sdiv
-                0x00000000       0x40 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_mod
-                0x00000000       0x1c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_lerp8
-                0x00000000       0x98 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_lerp16
-                0x00000000       0x96 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_lerp32
-                0x00000000       0x90 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.FOUR_DIV_PI.lto_priv.3
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata._FOUR_DIV_PI2.lto_priv.3
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.X4_CORRECTION_COMPONENT.lto_priv.3
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.PI_DIV_4.lto_priv.3
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.THREE_PI_DIV_4.lto_priv.3
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_maximum.lto_priv.3
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_minimum.lto_priv.3
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_overflow.lto_priv.3
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_pi.lto_priv.3
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_e.lto_priv.3
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_one.lto_priv.3
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_from_int.lto_priv.1
-                0x00000000       0x14 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_rad_to_deg_mult.lto_priv.3
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_deg_to_rad_mult.lto_priv.3
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_exp
-                0x00000000       0xfc C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_log
-                0x00000000      0x10a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_rs
-                0x00000000        0x8 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16__log2_inner
-                0x00000000       0x98 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_log2
-                0x00000000       0x62 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_slog2
-                0x00000000       0x28 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.FOUR_DIV_PI.lto_priv.4
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata._FOUR_DIV_PI2.lto_priv.4
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.X4_CORRECTION_COMPONENT.lto_priv.4
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.PI_DIV_4.lto_priv.4
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.THREE_PI_DIV_4.lto_priv.4
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_maximum.lto_priv.4
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_minimum.lto_priv.4
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_overflow.lto_priv.4
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_pi.lto_priv.4
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_e.lto_priv.4
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_one.lto_priv.4
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_rad_to_deg_mult.lto_priv.4
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_deg_to_rad_mult.lto_priv.4
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_sqrt
-                0x00000000      0x138 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.FOUR_DIV_PI.lto_priv.5
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata._FOUR_DIV_PI2.lto_priv.5
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.X4_CORRECTION_COMPONENT.lto_priv.5
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.PI_DIV_4.lto_priv.5
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.THREE_PI_DIV_4.lto_priv.5
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_maximum.lto_priv.5
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_minimum.lto_priv.5
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_overflow.lto_priv.5
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_pi.lto_priv.5
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_e.lto_priv.5
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_one.lto_priv.5
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_rad_to_deg_mult.lto_priv.5
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_deg_to_rad_mult.lto_priv.5
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.scales
-                0x00000000       0x20 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.itoa_loop
-                0x00000000       0x96 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_to_str
-                0x00000000       0xee C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_from_str
-                0x00000000      0x246 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.FOUR_DIV_PI.lto_priv.6
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata._FOUR_DIV_PI2.lto_priv.6
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.X4_CORRECTION_COMPONENT.lto_priv.6
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.PI_DIV_4.lto_priv.6
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.THREE_PI_DIV_4.lto_priv.6
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_maximum.lto_priv.6
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_minimum.lto_priv.6
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_overflow.lto_priv.6
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_pi.lto_priv.6
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_e.lto_priv.6
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_one.lto_priv.6
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_rad_to_deg_mult.lto_priv.6
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.fix16_deg_to_rad_mult.lto_priv.6
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_sin_parabola
-                0x00000000       0x70 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_sin
-                0x00000000       0xd2 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_cos
-                0x00000000       0x18 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_tan
-                0x00000000       0x2c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_asin
-                0x00000000       0x72 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_acos
-                0x00000000       0x22 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_atan2
-                0x00000000      0x132 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fix16_atan
-                0x00000000       0x14 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fract32_create
-                0x00000000       0x4e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fract32_invert
-                0x00000000        0x8 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fract32_usmul
-                0x00000000       0x2e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fract32_smul
-                0x00000000       0x32 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.uint32_log2
-                0x00000000       0x76 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.memmove  0x00000000       0xae C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.KPrintF  0x00000000       0x6a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.warpmode
-                0x00000000       0x90 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.debug_cmd
-                0x00000000       0x40 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.debug_clear
-                0x00000000       0x16 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.debug_rect
-                0x00000000       0x6e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.debug_filled_rect
-                0x00000000       0x6e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.debug_text
-                0x00000000       0x4c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.debug_start_idle
-                0x00000000       0x1a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.debug_stop_idle
-                0x00000000       0x18 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.my_strncpy
-                0x00000000       0x3e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.debug_register_bitmap
-                0x00000000      0x106 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.debug_register_palette
-                0x00000000       0xb2 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.debug_register_copperlist
-                0x00000000       0x98 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata._ctype
-                0x00000000      0x200 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.__tolower
-                0x00000000       0x3c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.__toupper
-                0x00000000       0x3c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.errno     0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.__clzsi2
-                0x00000000       0x7a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.__muldi3
-                0x00000000      0x15c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
+ .text          0x00000000        0x0 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .data          0x00000000        0x0 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss           0x00000000        0x0 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
  .text._out_buffer
-                0x00000000       0x28 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
+                0x00000000       0x18 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
  .text._out_null
-                0x00000000       0x12 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
+                0x00000000        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
  .text._out_char
-                0x00000000       0x26 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text._out_fct
-                0x00000000       0x32 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text._strnlen_s
-                0x00000000       0x2a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text._is_digit
-                0x00000000       0x2c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text._atoi    0x00000000       0x54 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text._out_rev
-                0x00000000       0xce C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text._ntoa_format
-                0x00000000      0x208 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
+                0x00000000       0x38 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
  .text._ntoa_long
-                0x00000000       0xe8 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
+                0x00000000      0x6cc C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
  .text._vsnprintf
-                0x00000000      0x95c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.printf   0x00000000       0x3e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.sprintf  0x00000000       0x34 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
+                0x00000000      0x6d4 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.memmove  0x00000000       0x42 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.__clzsi2
+                0x00000000       0x4a C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.__muldi3
+                0x00000000       0xa6 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.printf   0x00000000       0x28 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.sprintf  0x00000000       0x28 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
  .text.snprintf
-                0x00000000       0x34 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.vprintf  0x00000000       0x28 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
+                0x00000000       0x28 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.vprintf  0x00000000       0x28 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
  .text.vsnprintf
-                0x00000000       0x22 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fctprintf
-                0x00000000       0x48 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fwrite   0x00000000       0x70 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fseek    0x00000000       0x62 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fflush   0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ftell    0x00000000       0x48 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.feof     0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.rename   0x00000000       0x46 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.remove   0x00000000       0x34 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text._putchar
-                0x00000000       0x64 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.sort_r_swap
-                0x00000000       0x46 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.sort_r_cmpswap
-                0x00000000       0x38 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.sort_r_swap_blocks
-                0x00000000       0x54 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.sort_r_simple
-                0x00000000      0x384 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.sort_r   0x00000000       0x22 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_qsortComp
-                0x00000000        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.qsortEmu
-                0x00000000       0x14 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.qsort    0x00000000       0x2a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.memcmp   0x00000000       0x62 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.strchr   0x00000000       0x28 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.strrchr  0x00000000       0x2c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.strcpy   0x00000000       0x28 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.strcat   0x00000000       0x24 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.strcmp   0x00000000       0x56 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.strncpy  0x00000000       0x54 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.strtoul  0x00000000      0x2e4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .debug_str     0x00000000        0x0 C:\Users\NZJeu\AppData\Local\Temp\ccrzlCI6.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccrzlCI6.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccC0aSD8.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccFRlRMa.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccIIwQVc.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccnpwPZe.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccUvRxhh.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccXmiNuj.debug.temp.o
- .debug_str     0x00000000        0x0 C:\Users\NZJeu\AppData\Local\Temp\ccKnScVl.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccKnScVl.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccxosClo.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\cciQYCHq.debug.temp.o
- .debug_info    0x00000000      0x19c C:\Users\NZJeu\AppData\Local\Temp\cc3hvD3s.debug.temp.o
- .debug_abbrev  0x00000000       0x1b C:\Users\NZJeu\AppData\Local\Temp\cc3hvD3s.debug.temp.o
- .debug_line    0x00000000       0x73 C:\Users\NZJeu\AppData\Local\Temp\cc3hvD3s.debug.temp.o
- .debug_str     0x00000000        0x0 C:\Users\NZJeu\AppData\Local\Temp\cc3hvD3s.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\cc3hvD3s.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccaR3Hsu.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccnfX2Ov.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccADQnbx.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccjU3oLy.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccKd1YgA.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\cche9LZB.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccOehzID.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccLQFSmF.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccsCdmeH.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\cc9nLP5I.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccWMlVSK.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccLUUGpQ.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccA2tsWV.debug.temp.o
- .debug_str     0x00000000        0x0 C:\Users\NZJeu\AppData\Local\Temp\ccZWAdo1.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccZWAdo1.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccoRHYP6.debug.temp.o
- .debug_str     0x00000000        0x0 C:\Users\NZJeu\AppData\Local\Temp\cc1Ibwvc.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\cc1Ibwvc.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\cc4bWz6h.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccJmlASn.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccoxKAEt.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccJHC9lz.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\cc4RuI3E.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccbfNrYK.debug.temp.o
- .debug_str     0x00000000        0x0 C:\Users\NZJeu\AppData\Local\Temp\cc4KnKOQ.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\cc4KnKOQ.debug.temp.o
- .debug_str     0x00000000        0x0 C:\Users\NZJeu\AppData\Local\Temp\ccXgY2EW.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccXgY2EW.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\cc8N2oy1.debug.temp.o
- .debug_str     0x00000000        0x0 C:\Users\NZJeu\AppData\Local\Temp\ccjl7Kr6.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccjl7Kr6.debug.temp.o
- .debug_str     0x00000000        0x0 C:\Users\NZJeu\AppData\Local\Temp\cc6H06fb.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\cc6H06fb.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccLufcig.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccqhuhkl.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccLZ5mhq.debug.temp.o
- .debug_str     0x00000000        0x0 C:\Users\NZJeu\AppData\Local\Temp\cc0akcsv.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\cc0akcsv.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccfmy1CA.debug.temp.o
- .debug_str     0x00000000        0x0 C:\Users\NZJeu\AppData\Local\Temp\cc0hSnJF.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\cc0hSnJF.debug.temp.o
- .debug_str     0x00000000        0x0 C:\Users\NZJeu\AppData\Local\Temp\ccfL3c5K.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccfL3c5K.debug.temp.o
- .debug_str     0x00000000        0x0 C:\Users\NZJeu\AppData\Local\Temp\cc8arAmQ.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\cc8arAmQ.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\cc1AOXDV.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccg8dpYZ.debug.temp.o
- .debug_str     0x00000000        0x0 C:\Users\NZJeu\AppData\Local\Temp\ccvFDQi4.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccvFDQi4.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\cco58hy8.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccbYgt1c.debug.temp.o
- .debug_str     0x00000000        0x0 C:\Users\NZJeu\AppData\Local\Temp\ccyDWDph.debug.temp.o
- .comment       0x00000000       0x13 C:\Users\NZJeu\AppData\Local\Temp\ccyDWDph.debug.temp.o
+                0x00000000       0x22 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.fwrite   0x00000000       0x48 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.memcmp   0x00000000       0x36 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.strchr   0x00000000       0x26 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.strrchr  0x00000000       0x2a C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.strcpy   0x00000000       0x36 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.strcat   0x00000000       0x4c C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.strcmp   0x00000000       0x2e C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.strncpy  0x00000000       0x56 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.mt_MusicChannels
+                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.mt_E8Trigger
+                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.mt_Enable
+                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_isNextTimerBSetRep
+                0x00000000        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
  .data          0x00000000        0x0 ace/CMakeFiles/ace.dir/src/bartman/gcc8_a_support.s.obj
  .bss           0x00000000        0x0 ace/CMakeFiles/ace.dir/src/bartman/gcc8_a_support.s.obj
 
@@ -1189,59 +53,7 @@ Name             Origin             Length             Attributes
 Linker script and memory map
 
 Address of section .text set to 0x0
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccrzlCI6.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccC0aSD8.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccFRlRMa.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccIIwQVc.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccnpwPZe.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccUvRxhh.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccXmiNuj.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccKnScVl.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccxosClo.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\cciQYCHq.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\cc3hvD3s.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccaR3Hsu.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccnfX2Ov.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccADQnbx.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccjU3oLy.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccKd1YgA.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\cche9LZB.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccOehzID.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccLQFSmF.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccsCdmeH.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\cc9nLP5I.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccWMlVSK.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccLUUGpQ.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccA2tsWV.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccZWAdo1.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccoRHYP6.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\cc1Ibwvc.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\cc4bWz6h.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccJmlASn.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccoxKAEt.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccJHC9lz.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\cc4RuI3E.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccbfNrYK.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\cc4KnKOQ.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccXgY2EW.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\cc8N2oy1.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccjl7Kr6.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\cc6H06fb.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccLufcig.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccqhuhkl.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccLZ5mhq.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\cc0akcsv.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccfmy1CA.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\cc0hSnJF.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccfL3c5K.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\cc8arAmQ.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\cc1AOXDV.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccg8dpYZ.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccvFDQi4.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\cco58hy8.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccbYgt1c.debug.temp.o
-LOAD C:\Users\NZJeu\AppData\Local\Temp\ccyDWDph.debug.temp.o
+LOAD C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
 LOAD ace/CMakeFiles/ace.dir/src/bartman/gcc8_a_support.s.obj
                 [!provide]                        PROVIDE (__executable_start = SEGMENT_START ("text-segment", 0x80000000))
                 0x80000074                        . = (SEGMENT_START ("text-segment", 0x80000000) + SIZEOF_HEADERS)
@@ -1301,302 +113,128 @@ LOAD ace/CMakeFiles/ace.dir/src/bartman/gcc8_a_support.s.obj
 .iplt
  *(.iplt)
 
-.text           0x00000000     0x669c
+.text           0x00000000     0x4238
  *(.text.unlikely .text.*_unlikely .text.unlikely.*)
  .text.unlikely
-                0x00000000       0xb8 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
+                0x00000000       0x8c C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
                 0x00000000                _start
  *(.text.exit .text.exit.*)
- .text.exit     0x000000b8       0x1e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
-                0x000000b8                exit
+ .text.exit     0x0000008c       0x12 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+                0x0000008c                exit
  *(.text.startup .text.startup.*)
+ .text.startup.main
+                0x0000009e      0x576 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+                0x0000009e                main
  *(.text.hot .text.hot.*)
+ .text.hot.keyIntServer
+                0x00000614       0x88 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.hot.int1Handler
+                0x0000069c        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.hot.int2Handler
+                0x0000069e       0x70 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.hot.int3Handler
+                0x0000070e       0x3a C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.hot.int4Handler
+                0x00000748       0x1c C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.hot.int5Handler
+                0x00000764        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.hot.int6Handler
+                0x00000766       0x98 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.hot.int7Handler
+                0x000007fe        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
  *(SORT_BY_NAME(.text.sorted.*))
  *(.text .stub .text.* .gnu.linkonce.t.*)
- .text.main     0x000000d6       0x58 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
-                0x000000d6                main
- .text.genericCreate
-                0x0000012e       0x80 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.genericProcess
-                0x000001ae       0x20 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.genericDestroy
-                0x000001ce       0x2a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.gameGsCreate
-                0x000001f8      0x414 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.gameGsLoop
-                0x0000060c      0x29c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.gameGsDestroy
-                0x000008a8       0x1a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.menuGsCreate
-                0x000008c2      0x14e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
  .text.menuGsLoop
-                0x00000a10       0x54 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.menuGsDestroy
-                0x00000a64       0x1a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ror16    0x00000a7e       0x5e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.blitManagerCreate
-                0x00000adc       0x14 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.blitManagerDestroy
-                0x00000af0       0x12 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.blitWait
-                0x00000b02       0x14 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.blitIsIdle
-                0x00000b16       0x3c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.blitUnsafeCopy
-                0x00000b52      0x458 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.blitUnsafeRect
-                0x00000faa      0x1fa C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.blitLine
-                0x000011a4      0x2f6 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.copSetMoveVal.lto_priv.0
-                0x0000149a       0x1c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.copCreate
-                0x000014b6       0x4a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.copDestroy
-                0x00001500       0x42 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.copSwapBuffers
-                0x00001542       0x46 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.copListCreate
-                0x00001588      0x1f0 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.copListDestroy
-                0x00001778       0xce C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.copBlockCreate
-                0x00001846      0x13a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.copBlockDestroy
-                0x00001980       0xb0 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.copBfrRealloc
-                0x00001a30       0xf6 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.copReorderBlocks
-                0x00001b26       0xc0 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.copUpdateFromBlocks
-                0x00001be6      0x224 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.copProcessBlocks
-                0x00001e0a       0x8a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.copBlockWait
-                0x00001e94       0x4a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.copMove  0x00001ede       0x82 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.copSetWait
-                0x00001f60       0x8e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.copSetMove
-                0x00001fee       0x58 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.gameExit
-                0x00002046        0xa C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.gameIsRunning
-                0x00002050        0x8 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.keyIntSetState
-                0x00002058       0x38 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.keyIntCheck
-                0x00002090       0x22 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.keyCheck
-                0x000020b2       0x26 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.keyIntServer
-                0x000020d8       0xe8 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.keyCreate
-                0x000021c0       0x20 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.keyDestroy
-                0x000021e0       0x18 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.keyProcess
-                0x000021f8        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text._memAllocRls
-                0x000021fc       0x88 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text._memFreeRls
-                0x00002284       0x38 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.randUw   0x000022bc       0x60 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.randUwMax
-                0x0000231c       0x3a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.randUwMinMax
-                0x00002356       0x38 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.stateManagerCreate
-                0x0000238e       0x1c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.stateManagerDestroy
-                0x000023aa       0x20 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.stateCreate
-                0x000023ca       0x44 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.stateDestroy
-                0x0000240e       0x14 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.statePush
-                0x00002422       0x56 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.statePopAll
-                0x00002478       0x38 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.stateChange
-                0x000024b0       0x6c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.stateProcess
-                0x0000251c       0x24 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.keyReset
-                0x00002540       0x2e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.int1Handler
-                0x0000256e        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.int2Handler
-                0x00002572       0xaa C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.int3Handler
-                0x0000261c       0xda C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.int4Handler
-                0x000026f6      0x110 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.int5Handler
-                0x00002806        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.int6Handler
-                0x0000280a       0xe4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.int7Handler
-                0x000028ee        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.msgPortCreate
-                0x000028f2       0xf4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
+                0x00000800       0xf0 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
  .text.msgPortDelete
-                0x000029e6       0x60 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.audioChannelAlloc
-                0x00002a46      0x118 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.audioChannelFree
-                0x00002b5e       0x7a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
+                0x000008f0       0x34 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
  .text.systemFlushIo
-                0x00002bd8      0x12e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.systemKill
-                0x00002d06       0xdc C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.systemCreate
-                0x00002de2      0x288 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.systemDestroy
-                0x0000306a       0xf6 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.systemUnuse
-                0x00003160      0x34e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
+                0x00000924       0x8a C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
  .text.systemUse
-                0x000034ae      0x21a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.systemGetBlitterFromOs
-                0x000036c8       0x36 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.systemReleaseBlitterToOs
-                0x000036fe       0x36 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.systemSetCiaInt
-                0x00003734       0x8a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.systemSetDmaBit
-                0x000037be       0x42 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
+                0x000009ae      0x194 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
  .text.systemSetDmaMask
-                0x00003800       0xb0 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.systemGetVerticalBlankFrequency
-                0x000038b0        0xc C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.systemIsPal
-                0x000038bc       0x1e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.systemCheckStack
-                0x000038da       0x2e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.timerCreate
-                0x00003908        0xc C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.timerDestroy
-                0x00003914        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.timerGet
-                0x00003918       0x10 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.timerOnInterrupt
-                0x00003928       0x12 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
+                0x00000b42       0x6a C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.systemUnuse.part.0
+                0x00000bac      0x26e C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text._memFreeRls
+                0x00000e1a       0x40 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.copBlockDestroy
+                0x00000e5a       0x98 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.copListDestroy
+                0x00000ef2      0x138 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text._memAllocRls
+                0x0000102a       0x60 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.copProcessBlocks
+                0x0000108a      0x260 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
  .text.timerProcess
-                0x0000393a       0x64 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.cameraCreate
-                0x0000399e       0xd0 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
+                0x000012ea       0x48 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
  .text.cameraDestroy
-                0x00003a6e       0x14 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
+                0x00001332       0x3c C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
  .text.cameraProcess
-                0x00003a82       0x46 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.cameraReset
-                0x00003ac8       0xc4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.cameraIsMoved
-                0x00003b8c       0x30 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.copSetMoveVal.lto_priv.3
-                0x00003bbc       0x1c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
+                0x0000136e       0x28 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
  .text.setBitplanePtrs
-                0x00003bd8       0xc4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.updateBitplanePtrs
-                0x00003c9c       0x8e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.simpleBufferInitializeCopperList
-                0x00003d2a      0x4aa C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.simpleBufferSetBack
-                0x000041d4        0xe C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.simpleBufferSetFront
-                0x000041e2        0xe C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.simpleBufferCreate
-                0x000041f0      0x3e0 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.simpleBufferDestroy
-                0x000045d0       0x84 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
+                0x00001396       0x78 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
  .text.simpleBufferProcess
-                0x00004654      0x2ba C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.simpleBufferGetRawCopperlistInstructionCount
-                0x0000490e       0x1c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bitmapCreate
-                0x0000492a      0x424 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bitmapDestroy
-                0x00004d4e      0x164 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bitmapIsInterleaved
-                0x00004eb2       0x2e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.bitmapGetByteWidth
-                0x00004ee0       0x30 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ciaGetTimerA
-                0x00004f10       0x3a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ciaSetTimerA
-                0x00004f4a       0x2e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ciaGetTimerB
-                0x00004f78       0x3a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.ciaSetTimerB
-                0x00004fb2       0x2e C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.getRayPos
-                0x00004fe0       0x54 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.viewCreate
-                0x00005034      0x278 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.viewDestroy
-                0x000052ac       0x60 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.viewUpdatePalette
-                0x0000530c       0x68 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
+                0x0000140e      0x2a8 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.bitmapDestroy.part.0
+                0x000016b6      0x160 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.simpleBufferDestroy
+                0x00001816       0x88 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
  .text.viewLoad
-                0x00005374      0x1d8 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.vPortCreate
-                0x0000554c      0x28a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.vPortDestroy
-                0x000057d6       0xa8 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.vPortWaitForPos
-                0x0000587e       0x9a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.vPortWaitForEnd
-                0x00005918       0x28 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
+                0x0000189e      0x1aa C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.viewDestroy
+                0x00001a48       0xf2 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.gameGsDestroy
+                0x00001b3a       0x16 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.menuGsDestroy
+                0x00001b50       0x16 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
  .text.vPortAddManager
-                0x00005940       0x98 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.vPortRmManager
-                0x000059d8       0x78 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.vPortGetManager
-                0x00005a50       0x40 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fileOpen
-                0x00005a90       0x32 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fileClose
-                0x00005ac2       0x28 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fileRead
-                0x00005aea       0x3c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fontGlyphWidth
-                0x00005b26       0x46 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fontCreate
-                0x00005b6c      0x18c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fontCreateTextBitMap
-                0x00005cf8       0xb8 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fontMeasureText
-                0x00005db0       0xa0 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
+                0x00001b66       0x4c C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.blitUnsafeCopy.constprop.0.isra.0
+                0x00001bb2      0x2a8 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.fontDrawTextBitMap.constprop.0
+                0x00001e5a       0xb6 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.fileRead.isra.0
+                0x00001f10       0x90 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.blitUnsafeRect.isra.0
+                0x00001fa0      0x11c C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.gameGsLoop
+                0x000020bc      0x66c C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.tagGet   0x00002728       0x4a C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.copListCreate.constprop.0
+                0x00002772      0x150 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.viewCreate.constprop.0
+                0x000028c2      0x1a0 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.strlen   0x00002a62       0x18 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+                0x00002a62                strlen
+ .text.memset   0x00002a7a       0x22 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+                0x00002a7a                memset
+ .text.bitmapCreate.part.0
+                0x00002a9c      0x318 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
  .text.fontCreateTextBitMapFromStr
-                0x00005e50       0x76 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fontDrawStr1bpp
-                0x00005ec6      0x13a C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fontFillTextBitMap
-                0x00006000       0x82 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fontDrawTextBitMap
-                0x00006082      0x1ea C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.stringDecimalFromULong
-                0x0000626c       0xbe C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.tagGet   0x0000632a       0x9c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.strlen   0x000063c6       0x20 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
-                0x000063c6                strlen
- .text.memset   0x000063e6       0x30 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
-                0x000063e6                memset
- .text.memcpy   0x00006416       0x4c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
-                0x00006416                memcpy
- .text.fopen    0x00006462       0x96 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fread    0x000064f8       0x70 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .text.fclose   0x00006568       0x26 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- *fill*         0x0000658e        0x2 4e714e71
- .text          0x00006590      0x10c ace/CMakeFiles/ace.dir/src/bartman/gcc8_a_support.s.obj
-                0x00006590                __mulsi3
-                0x000065b2                __udivsi3
-                0x0000660e                __divsi3
-                0x00006638                __modsi3
-                0x00006660                __umodsi3
-                0x0000668a                KPutCharX
-                0x00006698                PutChar
+                0x00002db4      0x218 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.simpleBufferCreate.constprop.0
+                0x00002fcc      0x660 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.fontCreate.constprop.0
+                0x0000362c      0x244 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.memcpy   0x00003870       0x1e C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+                0x00003870                memcpy
+ .text.vPortCreate.constprop.0
+                0x0000388e      0x174 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.gameGsCreate
+                0x00003a02      0x5a4 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.menuGsCreate
+                0x00003fa6       0xfa C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text.systemKill
+                0x000040a0       0x8c C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .text          0x0000412c      0x10c ace/CMakeFiles/ace.dir/src/bartman/gcc8_a_support.s.obj
+                0x0000412c                __mulsi3
+                0x0000414e                __udivsi3
+                0x000041aa                __divsi3
+                0x000041d4                __modsi3
+                0x000041fc                __umodsi3
+                0x00004226                KPutCharX
+                0x00004234                PutChar
  *(.gnu.warning)
 
 .fini
@@ -1605,22 +243,15 @@ LOAD ace/CMakeFiles/ace.dir/src/bartman/gcc8_a_support.s.obj
                 [!provide]                        PROVIDE (_etext = .)
                 [!provide]                        PROVIDE (etext = .)
 
-.rodata         0x0000669c      0x1c4
+.rodata         0x00004238       0xea
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x0000669c      0x186 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.s_pAceHwInterrupts
-                0x00006822       0x1c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.s_pCopperWaitXByBitplanes.lto_priv.3
-                0x0000683e       0x12 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.g_pCustom
-                0x00006850        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.g_pBplFetch
-                0x00006854        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .rodata.g_pCia
-                0x00006858        0x8 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
+ .rodata        0x00004238       0xd7 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ *fill*         0x0000430f        0x1 
+ .rodata.s_pCopperWaitXByBitplanes
+                0x00004310       0x12 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
 
-text            0x00006860        0x6
- text           0x00006860        0x6 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
+text            0x00004322        0x6
+ text           0x00004322        0x6 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
 
 .rodata1
  *(.rodata1)
@@ -1645,7 +276,7 @@ text            0x00006860        0x6
 
 .exception_ranges
  *(.exception_ranges*)
-                0x00008866                        . = DATA_SEGMENT_ALIGN (CONSTANT (MAXPAGESIZE), CONSTANT (COMMONPAGESIZE))
+                0x00006328                        . = DATA_SEGMENT_ALIGN (CONSTANT (MAXPAGESIZE), CONSTANT (COMMONPAGESIZE))
 
 .eh_frame
  *(.eh_frame)
@@ -1664,7 +295,7 @@ text            0x00006860        0x6
 .exception_ranges
  *(.exception_ranges*)
 
-.tdata          0x00008866        0x0
+.tdata          0x00006328        0x0
                 [!provide]                        PROVIDE (__tdata_start = .)
  *(.tdata .tdata.* .gnu.linkonce.td.*)
 
@@ -1672,22 +303,22 @@ text            0x00006860        0x6
  *(.tbss .tbss.* .gnu.linkonce.tb.*)
  *(.tcommon)
 
-.preinit_array  0x00008866        0x0
-                0x00008866                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x00006328        0x0
+                0x00006328                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array)
-                0x00008866                        PROVIDE (__preinit_array_end = .)
+                0x00006328                        PROVIDE (__preinit_array_end = .)
 
-.init_array     0x00008866        0x0
-                0x00008866                        PROVIDE (__init_array_start = .)
+.init_array     0x00006328        0x0
+                0x00006328                        PROVIDE (__init_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*))
  *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
-                0x00008866                        PROVIDE (__init_array_end = .)
+                0x00006328                        PROVIDE (__init_array_end = .)
 
-.fini_array     0x00008866        0x0
-                0x00008866                        PROVIDE (__fini_array_start = .)
+.fini_array     0x00006328        0x0
+                0x00006328                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_INIT_PRIORITY(.fini_array.*) SORT_BY_INIT_PRIORITY(.dtors.*))
  *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
-                0x00008866                        PROVIDE (__fini_array_end = .)
+                0x00006328                        PROVIDE (__fini_array_end = .)
 
 .ctors
  *crtbegin.o(.ctors)
@@ -1712,7 +343,7 @@ text            0x00006860        0x6
 
 .dynamic
  *(.dynamic)
-                0x00008866                        . = DATA_SEGMENT_RELRO_END (., 0x0)
+                0x00006328                        . = DATA_SEGMENT_RELRO_END (., 0x0)
 
 .got
  *(.got.plt)
@@ -1720,134 +351,113 @@ text            0x00006860        0x6
  *(.got)
  *(.igot)
 
-.data           0x00008866        0xc
+.data           0x00006328        0x3
  *(.data .data.* .gnu.linkonce.d.*)
+ .data.pipesdisplay
+                0x00006328        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
  .data.s_isGameRunning
-                0x00008866        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- *fill*         0x00008867        0x1 
- .data.s_pAceCiaTimerA
-                0x00008868        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .data.s_pAceCiaTimerB
-                0x0000886c        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .data.s_uwAceIntEna
-                0x00008870        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
+                0x0000632a        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
 
 .data1
  *(.data1)
-                0x00008872                        _edata = .
+                0x0000632b                        _edata = .
                 [!provide]                        PROVIDE (edata = .)
-                0x00008872                        . = .
-                0x00008872                        __bss_start = .
+                0x0000632b                        . = .
+                0x0000632b                        __bss_start = .
 
-.bss            0x00008872      0x29e
+.bss            0x0000632c      0x294
  *(.dynbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss.g_pStateManager
-                0x00008872        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.g_pGameState
-                0x00008876        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.g_pMenuState
-                0x0000887a        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pView.lto_priv.0
-                0x0000887e        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pVpScore
-                0x00008882        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pScoreBuffer
-                0x00008886        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pVpMain.lto_priv.0
-                0x0000888a        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pMainBuffer.lto_priv.0
-                0x0000888e        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pRandManager
-                0x00008892        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.player    0x00008896       0x10 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.toppipe   0x000088a6       0x10 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.bottompipe
-                0x000088b6       0x10 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.fallfontsmall
-                0x000088c6        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.scoretextbitmap
-                0x000088ca        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.scorebuffer
-                0x000088ce       0x14 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.gSCORE    0x000088e2        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.g_highScore
-                0x000088e6        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.startTime
-                0x000088ea        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pMenuView
-                0x000088ee        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pVpMain.lto_priv.1
-                0x000088f2        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pMainBuffer.lto_priv.1
-                0x000088f6        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.menufont  0x000088fa        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.menutextbitmap
-                0x000088fe        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.g_sCopManager
-                0x00008902        0x8 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.g_sKeyManager
-                0x0000890a       0x69 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- *fill*         0x00008973        0x1 
- .bss.s_uwOsIntEna
-                0x00008974        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_uwOsDmaCon
-                0x00008976        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_uwAceDmaCon
-                0x00008978        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_uwOsInitialDma
-                0x0000897a        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pOsCiaTimerA
-                0x0000897c        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pOsCiaTimerB
-                0x00008980        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pOsCiaIcr
-                0x00008984        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pOsCiaCra
-                0x00008986        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pOsCiaCrb
-                0x00008988        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pAceCiaCra
-                0x0000898a        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pAceCiaCrb
-                0x0000898c        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pHwVectors
-                0x0000898e        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pOsHwInterrupts
-                0x00008992       0x1c C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pAceInterrupts
-                0x000089ae       0x78 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pAceCiaInterrupts
-                0x00008a26       0x50 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_wSystemUses
-                0x00008a76        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_wSystemBlitterUses
-                0x00008a78        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.GfxBase   0x00008a7a        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pOsView
-                0x00008a7e        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_sIoAudio
-                0x00008a82       0x44 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pCiaResource
-                0x00008ac6        0x8 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_pProcess
-                0x00008ace        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.DOSBase   0x00008ad2        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.SysBase   0x00008ad6        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.g_sTimerManager
-                0x00008ada        0xc C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .bss.s_isPAL   0x00008ae6        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- *fill*         0x00008ae7        0x1 
  .bss.s_sTmpDest
-                0x00008ae8       0x28 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
+                0x0000632c       0x28 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_isPAL   0x00006354        0x1 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ *fill*         0x00006355        0x1 
+ .bss.s_uwAceDmaCon
+                0x00006356        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_pOsCiaCrb
+                0x00006358        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_pOsCiaCra
+                0x0000635a        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_pOsCiaIcr
+                0x0000635c        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_pOsCiaTimerB
+                0x0000635e        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_pOsCiaTimerA
+                0x00006362        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_pOsHwInterrupts
+                0x00006366       0x1c C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.menufont  0x00006382        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_pMainBuffer.lto_priv.1
+                0x00006386        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_pVpMain.lto_priv.1
+                0x0000638a        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_pMenuView
+                0x0000638e        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.pipes     0x00006392       0xa0 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.player    0x00006432       0x10 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.startTime
+                0x00006442        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.scorebuffer
+                0x00006446       0x14 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.fallfontsmall
+                0x0000645a        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.gSCORE    0x0000645e        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_pMainBuffer.lto_priv.0
+                0x00006462        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_pVpMain.lto_priv.0
+                0x00006466        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_pScoreBuffer
+                0x0000646a        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_pVpScore
+                0x0000646e        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_pView   0x00006472        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_pRandManager
+                0x00006476        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_uwOsDmaCon
+                0x0000647a        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_uwOsIntEna
+                0x0000647c        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_pHwVectors
+                0x0000647e        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_pCiaResource
+                0x00006482        0x8 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.g_sKeyManager
+                0x0000648a       0x69 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ *fill*         0x000064f3        0x1 
+ .bss.g_sTimerManager
+                0x000064f4        0xc C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_pAceCiaInterrupts
+                0x00006500       0x50 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.g_pGameState
+                0x00006550        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.g_pStateManager
+                0x00006554        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.g_sCopManager
+                0x00006558        0x8 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_wSystemBlitterUses
+                0x00006560        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_pProcess
+                0x00006562        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.DOSBase   0x00006566        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.SysBase   0x0000656a        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_pOsView
+                0x0000656e        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.GfxBase   0x00006572        0x4 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_sIoAudio
+                0x00006576       0x44 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_uwOsInitialDma
+                0x000065ba        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
+ .bss.s_wSystemUses
+                0x000065bc        0x2 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
  *(COMMON)
-                0x00008b10                        . = ALIGN ((. != 0x0)?0x4:0x1)
-                0x00008b10                        . = ALIGN (0x4)
-                0x00008b10                        . = SEGMENT_START ("ldata-segment", .)
-                0x00008b10                        . = ALIGN (0x4)
-                0x00008b10                        _end = .
+                0x000065c0                        . = ALIGN ((. != 0x0)?0x4:0x1)
+ *fill*         0x000065be        0x2 
+                0x000065c0                        . = ALIGN (0x4)
+                0x000065c0                        . = SEGMENT_START ("ldata-segment", .)
+                0x000065c0                        . = ALIGN (0x4)
+                0x000065c0                        _end = .
                 [!provide]                        PROVIDE (end = .)
-                0x00008b10                        . = DATA_SEGMENT_END (.)
+                0x000065c0                        . = DATA_SEGMENT_END (.)
 
 .stab
  *(.stab)
@@ -1869,7 +479,7 @@ text            0x00006860        0x6
 
 .comment        0x00000000       0x12
  *(.comment)
- .comment       0x00000000       0x12 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
+ .comment       0x00000000       0x12 C:\Users\NZJeu\AppData\Local\Temp\ccgCUrJt.ltrans0.ltrans.o
                                  0x13 (size before relaxing)
 
 .gnu.build.attributes
@@ -1887,281 +497,33 @@ text            0x00006860        0x6
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000     0x1128
+.debug_aranges  0x00000000       0x20
  *(.debug_aranges)
  .debug_aranges
-                0x00000000     0x1108 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .debug_aranges
-                0x00001108       0x20 ace/CMakeFiles/ace.dir/src/bartman/gcc8_a_support.s.obj
+                0x00000000       0x20 ace/CMakeFiles/ace.dir/src/bartman/gcc8_a_support.s.obj
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000    0x35621
+.debug_info     0x00000000       0x89
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000     0x9713 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .debug_info    0x00009713      0x55c C:\Users\NZJeu\AppData\Local\Temp\ccrzlCI6.debug.temp.o
-                0x00009713                main.c.83c152c8
- .debug_info    0x00009c6f     0x127c C:\Users\NZJeu\AppData\Local\Temp\ccC0aSD8.debug.temp.o
-                0x00009c6f                game.c.73915f43
- .debug_info    0x0000aeeb     0x1004 C:\Users\NZJeu\AppData\Local\Temp\ccFRlRMa.debug.temp.o
-                0x0000aeeb                menu.c.8d398a17
- .debug_info    0x0000beef     0x117e C:\Users\NZJeu\AppData\Local\Temp\ccIIwQVc.debug.temp.o
-                0x0000beef                audio.c.643328e9
- .debug_info    0x0000d06d     0x149f C:\Users\NZJeu\AppData\Local\Temp\ccnpwPZe.debug.temp.o
-                0x0000d06d                blit.c.537e729d
- .debug_info    0x0000e50c     0x13d9 C:\Users\NZJeu\AppData\Local\Temp\ccUvRxhh.debug.temp.o
-                0x0000e50c                bob.c.7dc9c705
- .debug_info    0x0000f8e5     0x282a C:\Users\NZJeu\AppData\Local\Temp\ccXmiNuj.debug.temp.o
-                0x0000f8e5                copper.c.6159bb5b
- .debug_info    0x0001210f      0x1a7 C:\Users\NZJeu\AppData\Local\Temp\ccKnScVl.debug.temp.o
-                0x0001210f                game.c.bed77145
- .debug_info    0x000122b6     0x1435 C:\Users\NZJeu\AppData\Local\Temp\ccxosClo.debug.temp.o
-                0x000122b6                joy.c.d7b3c5c2
- .debug_info    0x000136eb     0x10a9 C:\Users\NZJeu\AppData\Local\Temp\cciQYCHq.debug.temp.o
-                0x000136eb                key.c.42341145
- .debug_info    0x00014794      0x8e1 C:\Users\NZJeu\AppData\Local\Temp\ccaR3Hsu.debug.temp.o
-                0x00014794                memory.c.be5ab05e
- .debug_info    0x00015075     0x119c C:\Users\NZJeu\AppData\Local\Temp\ccnfX2Ov.debug.temp.o
-                0x00015075                mouse.c.90873935
- .debug_info    0x00016211     0x3646 C:\Users\NZJeu\AppData\Local\Temp\ccADQnbx.debug.temp.o
-                0x00016211                ptplayer.c.84b0af6f
- .debug_info    0x00019857      0x41b C:\Users\NZJeu\AppData\Local\Temp\ccjU3oLy.debug.temp.o
-                0x00019857                rand.c.65ae91f5
- .debug_info    0x00019c72     0x1079 C:\Users\NZJeu\AppData\Local\Temp\ccKd1YgA.debug.temp.o
-                0x00019c72                sprite.c.b9619ed6
- .debug_info    0x0001aceb      0x442 C:\Users\NZJeu\AppData\Local\Temp\cche9LZB.debug.temp.o
-                0x0001aceb                state.c.fd69ca8c
- .debug_info    0x0001b12d     0x5836 C:\Users\NZJeu\AppData\Local\Temp\ccOehzID.debug.temp.o
-                0x0001b12d                system.c.3b9d789b
- .debug_info    0x00020963      0x516 C:\Users\NZJeu\AppData\Local\Temp\ccLQFSmF.debug.temp.o
-                0x00020963                timer.c.c69f00c2
- .debug_info    0x00020e79      0xade C:\Users\NZJeu\AppData\Local\Temp\ccsCdmeH.debug.temp.o
-                0x00020e79                camera.c.381a1417
- .debug_info    0x00021957     0x1f15 C:\Users\NZJeu\AppData\Local\Temp\cc9nLP5I.debug.temp.o
-                0x00021957                scrollbuffer.c.737f80a8
- .debug_info    0x0002386c     0x1bf7 C:\Users\NZJeu\AppData\Local\Temp\ccWMlVSK.debug.temp.o
-                0x0002386c                simplebuffer.c.1f94b91e
- .debug_info    0x00025463     0x2672 C:\Users\NZJeu\AppData\Local\Temp\ccLUUGpQ.debug.temp.o
-                0x00025463                tilebuffer.c.866e472c
- .debug_info    0x00027ad5      0xb3f C:\Users\NZJeu\AppData\Local\Temp\ccA2tsWV.debug.temp.o
-                0x00027ad5                bitmap.c.c7843298
- .debug_info    0x00028614      0x40d C:\Users\NZJeu\AppData\Local\Temp\ccZWAdo1.debug.temp.o
-                0x00028614                bmframe.c.e3ddd982
- .debug_info    0x00028a21      0x87e C:\Users\NZJeu\AppData\Local\Temp\ccoRHYP6.debug.temp.o
-                0x00028a21                chunky.c.9f6edbf7
- .debug_info    0x0002929f      0xfae C:\Users\NZJeu\AppData\Local\Temp\cc1Ibwvc.debug.temp.o
-                0x0002929f                custom.c.25cc7413
- .debug_info    0x0002a24d     0x1097 C:\Users\NZJeu\AppData\Local\Temp\cc4bWz6h.debug.temp.o
-                0x0002a24d                dir.c.3bfa730e
- .debug_info    0x0002b2e4     0x1934 C:\Users\NZJeu\AppData\Local\Temp\ccJmlASn.debug.temp.o
-                0x0002b2e4                extview.c.900d12f7
- .debug_info    0x0002cc18      0x675 C:\Users\NZJeu\AppData\Local\Temp\ccoxKAEt.debug.temp.o
-                0x0002cc18                file.c.d58b758d
- .debug_info    0x0002d28d      0xaae C:\Users\NZJeu\AppData\Local\Temp\ccJHC9lz.debug.temp.o
-                0x0002d28d                font.c.577fa224
- .debug_info    0x0002dd3b      0x5db C:\Users\NZJeu\AppData\Local\Temp\cc4RuI3E.debug.temp.o
-                0x0002dd3b                palette.c.0bcbe332
- .debug_info    0x0002e316      0x8f4 C:\Users\NZJeu\AppData\Local\Temp\ccbfNrYK.debug.temp.o
-                0x0002e316                sprite.c.c2be3f5e
- .debug_info    0x0002ec0a      0x369 C:\Users\NZJeu\AppData\Local\Temp\cc4KnKOQ.debug.temp.o
-                0x0002ec0a                string.c.742eba9c
- .debug_info    0x0002ef73      0x28d C:\Users\NZJeu\AppData\Local\Temp\ccXgY2EW.debug.temp.o
-                0x0002ef73                tag.c.ad66109c
- .debug_info    0x0002f200      0x73d C:\Users\NZJeu\AppData\Local\Temp\cc8N2oy1.debug.temp.o
-                0x0002f200                fix16.c.9b620a42
- .debug_info    0x0002f93d      0x4ec C:\Users\NZJeu\AppData\Local\Temp\ccjl7Kr6.debug.temp.o
-                0x0002f93d                fix16_exp.c.d18cc50a
- .debug_info    0x0002fe29      0x359 C:\Users\NZJeu\AppData\Local\Temp\cc6H06fb.debug.temp.o
-                0x0002fe29                fix16_sqrt.c.09f7c89c
- .debug_info    0x00030182      0x4db C:\Users\NZJeu\AppData\Local\Temp\ccLufcig.debug.temp.o
-                0x00030182                fix16_str.c.8331180b
- .debug_info    0x0003065d      0x514 C:\Users\NZJeu\AppData\Local\Temp\ccqhuhkl.debug.temp.o
-                0x0003065d                fix16_trig.c.8ceed63b
- .debug_info    0x00030b71      0x2b4 C:\Users\NZJeu\AppData\Local\Temp\ccLZ5mhq.debug.temp.o
-                0x00030b71                fract32.c.0dd70773
- .debug_info    0x00030e25      0x1ce C:\Users\NZJeu\AppData\Local\Temp\cc0akcsv.debug.temp.o
-                0x00030e25                uint32.c.44918634
- .debug_info    0x00030ff3      0xbd9 C:\Users\NZJeu\AppData\Local\Temp\ccfmy1CA.debug.temp.o
-                0x00030ff3                gcc8_c_support.c.387e2c91
- .debug_info    0x00031bcc      0x19f C:\Users\NZJeu\AppData\Local\Temp\cc0hSnJF.debug.temp.o
-                0x00031bcc                ctype.c.4a8ebc5b
- .debug_info    0x00031d6b      0x101 C:\Users\NZJeu\AppData\Local\Temp\ccfL3c5K.debug.temp.o
-                0x00031d6b                errno.c.db88400e
- .debug_info    0x00031e6c      0x2cb C:\Users\NZJeu\AppData\Local\Temp\cc8arAmQ.debug.temp.o
-                0x00031e6c                intrin.c.26c19221
- .debug_info    0x00032137      0x91c C:\Users\NZJeu\AppData\Local\Temp\cc1AOXDV.debug.temp.o
-                0x00032137                printf.c.6bc60baf
- .debug_info    0x00032a53      0xfe1 C:\Users\NZJeu\AppData\Local\Temp\ccg8dpYZ.debug.temp.o
-                0x00032a53                stdio_file.c.b6a89f82
- .debug_info    0x00033a34      0x9bb C:\Users\NZJeu\AppData\Local\Temp\ccvFDQi4.debug.temp.o
-                0x00033a34                stdio_putchar.c.9e95a9ac
- .debug_info    0x000343ef      0xc1c C:\Users\NZJeu\AppData\Local\Temp\cco58hy8.debug.temp.o
-                0x000343ef                stdlib.c.bb3b0793
- .debug_info    0x0003500b      0x367 C:\Users\NZJeu\AppData\Local\Temp\ccbYgt1c.debug.temp.o
-                0x0003500b                string.c.962e51ff
- .debug_info    0x00035372      0x226 C:\Users\NZJeu\AppData\Local\Temp\ccyDWDph.debug.temp.o
-                0x00035372                strtoul.c.4acfcf8c
- .debug_info    0x00035598       0x89 ace/CMakeFiles/ace.dir/src/bartman/gcc8_a_support.s.obj
+ .debug_info    0x00000000       0x89 ace/CMakeFiles/ace.dir/src/bartman/gcc8_a_support.s.obj
 
-.debug_abbrev   0x00000000     0x4ef4
+.debug_abbrev   0x00000000       0x21
  *(.debug_abbrev)
- .debug_abbrev  0x00000000       0xdb C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .debug_abbrev  0x000000db      0x12b C:\Users\NZJeu\AppData\Local\Temp\ccrzlCI6.debug.temp.o
- .debug_abbrev  0x00000206      0x220 C:\Users\NZJeu\AppData\Local\Temp\ccC0aSD8.debug.temp.o
- .debug_abbrev  0x00000426      0x1c4 C:\Users\NZJeu\AppData\Local\Temp\ccFRlRMa.debug.temp.o
- .debug_abbrev  0x000005ea      0x1dc C:\Users\NZJeu\AppData\Local\Temp\ccIIwQVc.debug.temp.o
- .debug_abbrev  0x000007c6      0x22c C:\Users\NZJeu\AppData\Local\Temp\ccnpwPZe.debug.temp.o
- .debug_abbrev  0x000009f2      0x2a2 C:\Users\NZJeu\AppData\Local\Temp\ccUvRxhh.debug.temp.o
- .debug_abbrev  0x00000c94      0x30a C:\Users\NZJeu\AppData\Local\Temp\ccXmiNuj.debug.temp.o
- .debug_abbrev  0x00000f9e       0x5d C:\Users\NZJeu\AppData\Local\Temp\ccKnScVl.debug.temp.o
- .debug_abbrev  0x00000ffb      0x1d8 C:\Users\NZJeu\AppData\Local\Temp\ccxosClo.debug.temp.o
- .debug_abbrev  0x000011d3      0x1f4 C:\Users\NZJeu\AppData\Local\Temp\cciQYCHq.debug.temp.o
- .debug_abbrev  0x000013c7      0x1bf C:\Users\NZJeu\AppData\Local\Temp\ccaR3Hsu.debug.temp.o
- .debug_abbrev  0x00001586      0x1b4 C:\Users\NZJeu\AppData\Local\Temp\ccnfX2Ov.debug.temp.o
- .debug_abbrev  0x0000173a      0x2bd C:\Users\NZJeu\AppData\Local\Temp\ccADQnbx.debug.temp.o
- .debug_abbrev  0x000019f7      0x10f C:\Users\NZJeu\AppData\Local\Temp\ccjU3oLy.debug.temp.o
- .debug_abbrev  0x00001b06      0x257 C:\Users\NZJeu\AppData\Local\Temp\ccKd1YgA.debug.temp.o
- .debug_abbrev  0x00001d5d      0x128 C:\Users\NZJeu\AppData\Local\Temp\cche9LZB.debug.temp.o
- .debug_abbrev  0x00001e85      0x35c C:\Users\NZJeu\AppData\Local\Temp\ccOehzID.debug.temp.o
- .debug_abbrev  0x000021e1      0x192 C:\Users\NZJeu\AppData\Local\Temp\ccLQFSmF.debug.temp.o
- .debug_abbrev  0x00002373      0x1b4 C:\Users\NZJeu\AppData\Local\Temp\ccsCdmeH.debug.temp.o
- .debug_abbrev  0x00002527      0x2ef C:\Users\NZJeu\AppData\Local\Temp\cc9nLP5I.debug.temp.o
- .debug_abbrev  0x00002816      0x2f3 C:\Users\NZJeu\AppData\Local\Temp\ccWMlVSK.debug.temp.o
- .debug_abbrev  0x00002b09      0x32b C:\Users\NZJeu\AppData\Local\Temp\ccLUUGpQ.debug.temp.o
- .debug_abbrev  0x00002e34      0x1d4 C:\Users\NZJeu\AppData\Local\Temp\ccA2tsWV.debug.temp.o
- .debug_abbrev  0x00003008       0xe9 C:\Users\NZJeu\AppData\Local\Temp\ccZWAdo1.debug.temp.o
- .debug_abbrev  0x000030f1      0x125 C:\Users\NZJeu\AppData\Local\Temp\ccoRHYP6.debug.temp.o
- .debug_abbrev  0x00003216      0x171 C:\Users\NZJeu\AppData\Local\Temp\cc1Ibwvc.debug.temp.o
- .debug_abbrev  0x00003387      0x1ba C:\Users\NZJeu\AppData\Local\Temp\cc4bWz6h.debug.temp.o
- .debug_abbrev  0x00003541      0x2f2 C:\Users\NZJeu\AppData\Local\Temp\ccJmlASn.debug.temp.o
- .debug_abbrev  0x00003833       0xff C:\Users\NZJeu\AppData\Local\Temp\ccoxKAEt.debug.temp.o
- .debug_abbrev  0x00003932      0x208 C:\Users\NZJeu\AppData\Local\Temp\ccJHC9lz.debug.temp.o
- .debug_abbrev  0x00003b3a      0x14f C:\Users\NZJeu\AppData\Local\Temp\cc4RuI3E.debug.temp.o
- .debug_abbrev  0x00003c89      0x1f0 C:\Users\NZJeu\AppData\Local\Temp\ccbfNrYK.debug.temp.o
- .debug_abbrev  0x00003e79       0xa5 C:\Users\NZJeu\AppData\Local\Temp\cc4KnKOQ.debug.temp.o
- .debug_abbrev  0x00003f1e       0x7a C:\Users\NZJeu\AppData\Local\Temp\ccXgY2EW.debug.temp.o
- .debug_abbrev  0x00003f98      0x111 C:\Users\NZJeu\AppData\Local\Temp\cc8N2oy1.debug.temp.o
- .debug_abbrev  0x000040a9       0xb0 C:\Users\NZJeu\AppData\Local\Temp\ccjl7Kr6.debug.temp.o
- .debug_abbrev  0x00004159       0x62 C:\Users\NZJeu\AppData\Local\Temp\cc6H06fb.debug.temp.o
- .debug_abbrev  0x000041bb       0xf2 C:\Users\NZJeu\AppData\Local\Temp\ccLufcig.debug.temp.o
- .debug_abbrev  0x000042ad       0xaa C:\Users\NZJeu\AppData\Local\Temp\ccqhuhkl.debug.temp.o
- .debug_abbrev  0x00004357       0x84 C:\Users\NZJeu\AppData\Local\Temp\ccLZ5mhq.debug.temp.o
- .debug_abbrev  0x000043db       0x5b C:\Users\NZJeu\AppData\Local\Temp\cc0akcsv.debug.temp.o
- .debug_abbrev  0x00004436      0x20e C:\Users\NZJeu\AppData\Local\Temp\ccfmy1CA.debug.temp.o
- .debug_abbrev  0x00004644       0x94 C:\Users\NZJeu\AppData\Local\Temp\cc0hSnJF.debug.temp.o
- .debug_abbrev  0x000046d8       0x3b C:\Users\NZJeu\AppData\Local\Temp\ccfL3c5K.debug.temp.o
- .debug_abbrev  0x00004713       0xb8 C:\Users\NZJeu\AppData\Local\Temp\cc8arAmQ.debug.temp.o
- .debug_abbrev  0x000047cb      0x185 C:\Users\NZJeu\AppData\Local\Temp\cc1AOXDV.debug.temp.o
- .debug_abbrev  0x00004950      0x144 C:\Users\NZJeu\AppData\Local\Temp\ccg8dpYZ.debug.temp.o
- .debug_abbrev  0x00004a94      0x10a C:\Users\NZJeu\AppData\Local\Temp\ccvFDQi4.debug.temp.o
- .debug_abbrev  0x00004b9e      0x1d8 C:\Users\NZJeu\AppData\Local\Temp\cco58hy8.debug.temp.o
- .debug_abbrev  0x00004d76       0xb7 C:\Users\NZJeu\AppData\Local\Temp\ccbYgt1c.debug.temp.o
- .debug_abbrev  0x00004e2d       0xa6 C:\Users\NZJeu\AppData\Local\Temp\ccyDWDph.debug.temp.o
- .debug_abbrev  0x00004ed3       0x21 ace/CMakeFiles/ace.dir/src/bartman/gcc8_a_support.s.obj
+ .debug_abbrev  0x00000000       0x21 ace/CMakeFiles/ace.dir/src/bartman/gcc8_a_support.s.obj
 
-.debug_line     0x00000000    0x238b9
+.debug_line     0x00000000       0xd2
  *(.debug_line .debug_line.* .debug_line_end)
- .debug_line    0x00000000    0x1c1cd C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .debug_line    0x0001c1cd      0x237 C:\Users\NZJeu\AppData\Local\Temp\ccrzlCI6.debug.temp.o
- .debug_line    0x0001c404      0x2ab C:\Users\NZJeu\AppData\Local\Temp\ccC0aSD8.debug.temp.o
- .debug_line    0x0001c6af      0x293 C:\Users\NZJeu\AppData\Local\Temp\ccFRlRMa.debug.temp.o
- .debug_line    0x0001c942      0x258 C:\Users\NZJeu\AppData\Local\Temp\ccIIwQVc.debug.temp.o
- .debug_line    0x0001cb9a      0x2bb C:\Users\NZJeu\AppData\Local\Temp\ccnpwPZe.debug.temp.o
- .debug_line    0x0001ce55      0x2d1 C:\Users\NZJeu\AppData\Local\Temp\ccUvRxhh.debug.temp.o
- .debug_line    0x0001d126      0x3b4 C:\Users\NZJeu\AppData\Local\Temp\ccXmiNuj.debug.temp.o
- .debug_line    0x0001d4da      0x11e C:\Users\NZJeu\AppData\Local\Temp\ccKnScVl.debug.temp.o
- .debug_line    0x0001d5f8      0x2a3 C:\Users\NZJeu\AppData\Local\Temp\ccxosClo.debug.temp.o
- .debug_line    0x0001d89b      0x20d C:\Users\NZJeu\AppData\Local\Temp\cciQYCHq.debug.temp.o
- .debug_line    0x0001daa8      0x1d2 C:\Users\NZJeu\AppData\Local\Temp\ccaR3Hsu.debug.temp.o
- .debug_line    0x0001dc7a      0x2e2 C:\Users\NZJeu\AppData\Local\Temp\ccnfX2Ov.debug.temp.o
- .debug_line    0x0001df5c      0x261 C:\Users\NZJeu\AppData\Local\Temp\ccADQnbx.debug.temp.o
- .debug_line    0x0001e1bd      0x15e C:\Users\NZJeu\AppData\Local\Temp\ccjU3oLy.debug.temp.o
- .debug_line    0x0001e31b      0x2ab C:\Users\NZJeu\AppData\Local\Temp\ccKd1YgA.debug.temp.o
- .debug_line    0x0001e5c6      0x161 C:\Users\NZJeu\AppData\Local\Temp\cche9LZB.debug.temp.o
- .debug_line    0x0001e727      0x63f C:\Users\NZJeu\AppData\Local\Temp\ccOehzID.debug.temp.o
- .debug_line    0x0001ed66      0x1c0 C:\Users\NZJeu\AppData\Local\Temp\ccLQFSmF.debug.temp.o
- .debug_line    0x0001ef26      0x21b C:\Users\NZJeu\AppData\Local\Temp\ccsCdmeH.debug.temp.o
- .debug_line    0x0001f141      0x407 C:\Users\NZJeu\AppData\Local\Temp\cc9nLP5I.debug.temp.o
- .debug_line    0x0001f548      0x3ff C:\Users\NZJeu\AppData\Local\Temp\ccWMlVSK.debug.temp.o
- .debug_line    0x0001f947      0x458 C:\Users\NZJeu\AppData\Local\Temp\ccLUUGpQ.debug.temp.o
- .debug_line    0x0001fd9f      0x3bb C:\Users\NZJeu\AppData\Local\Temp\ccA2tsWV.debug.temp.o
- .debug_line    0x0002015a      0x203 C:\Users\NZJeu\AppData\Local\Temp\ccZWAdo1.debug.temp.o
- .debug_line    0x0002035d      0x2f4 C:\Users\NZJeu\AppData\Local\Temp\ccoRHYP6.debug.temp.o
- .debug_line    0x00020651      0x1ce C:\Users\NZJeu\AppData\Local\Temp\cc1Ibwvc.debug.temp.o
- .debug_line    0x0002081f      0x45e C:\Users\NZJeu\AppData\Local\Temp\cc4bWz6h.debug.temp.o
- .debug_line    0x00020c7d      0x386 C:\Users\NZJeu\AppData\Local\Temp\ccJmlASn.debug.temp.o
- .debug_line    0x00021003      0x23f C:\Users\NZJeu\AppData\Local\Temp\ccoxKAEt.debug.temp.o
- .debug_line    0x00021242      0x2f6 C:\Users\NZJeu\AppData\Local\Temp\ccJHC9lz.debug.temp.o
- .debug_line    0x00021538      0x2b2 C:\Users\NZJeu\AppData\Local\Temp\cc4RuI3E.debug.temp.o
- .debug_line    0x000217ea      0x1b7 C:\Users\NZJeu\AppData\Local\Temp\ccbfNrYK.debug.temp.o
- .debug_line    0x000219a1      0x11c C:\Users\NZJeu\AppData\Local\Temp\cc4KnKOQ.debug.temp.o
- .debug_line    0x00021abd      0x1c7 C:\Users\NZJeu\AppData\Local\Temp\ccXgY2EW.debug.temp.o
- .debug_line    0x00021c84      0x15c C:\Users\NZJeu\AppData\Local\Temp\cc8N2oy1.debug.temp.o
- .debug_line    0x00021de0      0x15b C:\Users\NZJeu\AppData\Local\Temp\ccjl7Kr6.debug.temp.o
- .debug_line    0x00021f3b      0x15d C:\Users\NZJeu\AppData\Local\Temp\cc6H06fb.debug.temp.o
- .debug_line    0x00022098      0x18e C:\Users\NZJeu\AppData\Local\Temp\ccLufcig.debug.temp.o
- .debug_line    0x00022226      0x15d C:\Users\NZJeu\AppData\Local\Temp\ccqhuhkl.debug.temp.o
- .debug_line    0x00022383      0x159 C:\Users\NZJeu\AppData\Local\Temp\ccLZ5mhq.debug.temp.o
- .debug_line    0x000224dc      0x123 C:\Users\NZJeu\AppData\Local\Temp\cc0akcsv.debug.temp.o
- .debug_line    0x000225ff      0x1db C:\Users\NZJeu\AppData\Local\Temp\ccfmy1CA.debug.temp.o
- .debug_line    0x000227da       0xd3 C:\Users\NZJeu\AppData\Local\Temp\cc0hSnJF.debug.temp.o
- .debug_line    0x000228ad       0xd3 C:\Users\NZJeu\AppData\Local\Temp\ccfL3c5K.debug.temp.o
- .debug_line    0x00022980       0xa2 C:\Users\NZJeu\AppData\Local\Temp\cc8arAmQ.debug.temp.o
- .debug_line    0x00022a22      0x16d C:\Users\NZJeu\AppData\Local\Temp\cc1AOXDV.debug.temp.o
- .debug_line    0x00022b8f      0x376 C:\Users\NZJeu\AppData\Local\Temp\ccg8dpYZ.debug.temp.o
- .debug_line    0x00022f05      0x2ca C:\Users\NZJeu\AppData\Local\Temp\ccvFDQi4.debug.temp.o
- .debug_line    0x000231cf      0x36f C:\Users\NZJeu\AppData\Local\Temp\cco58hy8.debug.temp.o
- .debug_line    0x0002353e      0x1c9 C:\Users\NZJeu\AppData\Local\Temp\ccbYgt1c.debug.temp.o
- .debug_line    0x00023707       0xe0 C:\Users\NZJeu\AppData\Local\Temp\ccyDWDph.debug.temp.o
- .debug_line    0x000237e7       0xd2 ace/CMakeFiles/ace.dir/src/bartman/gcc8_a_support.s.obj
+ .debug_line    0x00000000       0xd2 ace/CMakeFiles/ace.dir/src/bartman/gcc8_a_support.s.obj
 
-.debug_frame    0x00000000     0xb698
+.debug_frame    0x00000000       0xcc
  *(.debug_frame)
- .debug_frame   0x00000000     0xb5cc C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .debug_frame   0x0000b5cc       0xcc ace/CMakeFiles/ace.dir/src/bartman/gcc8_a_support.s.obj
+ .debug_frame   0x00000000       0xcc ace/CMakeFiles/ace.dir/src/bartman/gcc8_a_support.s.obj
 
-.debug_str      0x00000000      0xeb4
+.debug_str      0x00000000       0xa0
  *(.debug_str)
- .debug_str     0x00000000        0x0 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
- .debug_str     0x00000000       0x15 C:\Users\NZJeu\AppData\Local\Temp\ccC0aSD8.debug.temp.o
- .debug_str     0x00000015       0x15 C:\Users\NZJeu\AppData\Local\Temp\ccFRlRMa.debug.temp.o
- .debug_str     0x0000002a       0x2f C:\Users\NZJeu\AppData\Local\Temp\ccIIwQVc.debug.temp.o
- .debug_str     0x00000059       0xd1 C:\Users\NZJeu\AppData\Local\Temp\ccnpwPZe.debug.temp.o
- .debug_str     0x0000012a       0x70 C:\Users\NZJeu\AppData\Local\Temp\ccUvRxhh.debug.temp.o
- .debug_str     0x0000019a       0x60 C:\Users\NZJeu\AppData\Local\Temp\ccXmiNuj.debug.temp.o
- .debug_str     0x000001fa       0x34 C:\Users\NZJeu\AppData\Local\Temp\ccxosClo.debug.temp.o
- .debug_str     0x0000022e       0x1e C:\Users\NZJeu\AppData\Local\Temp\cciQYCHq.debug.temp.o
- .debug_str     0x0000024c       0x64 C:\Users\NZJeu\AppData\Local\Temp\ccaR3Hsu.debug.temp.o
- .debug_str     0x000002b0       0x24 C:\Users\NZJeu\AppData\Local\Temp\ccnfX2Ov.debug.temp.o
- .debug_str     0x000002d4      0x187 C:\Users\NZJeu\AppData\Local\Temp\ccADQnbx.debug.temp.o
- .debug_str     0x0000045b        0x6 C:\Users\NZJeu\AppData\Local\Temp\ccjU3oLy.debug.temp.o
- .debug_str     0x00000461       0xa3 C:\Users\NZJeu\AppData\Local\Temp\ccKd1YgA.debug.temp.o
- .debug_str     0x00000504       0x3b C:\Users\NZJeu\AppData\Local\Temp\cche9LZB.debug.temp.o
- .debug_str     0x0000053f      0x29e C:\Users\NZJeu\AppData\Local\Temp\ccOehzID.debug.temp.o
- .debug_str     0x000007dd        0xd C:\Users\NZJeu\AppData\Local\Temp\ccLQFSmF.debug.temp.o
- .debug_str     0x000007ea       0x2e C:\Users\NZJeu\AppData\Local\Temp\ccsCdmeH.debug.temp.o
- .debug_str     0x00000818       0xb4 C:\Users\NZJeu\AppData\Local\Temp\cc9nLP5I.debug.temp.o
- .debug_str     0x000008cc       0x69 C:\Users\NZJeu\AppData\Local\Temp\ccWMlVSK.debug.temp.o
- .debug_str     0x00000935      0x181 C:\Users\NZJeu\AppData\Local\Temp\ccLUUGpQ.debug.temp.o
- .debug_str     0x00000ab6       0x98 C:\Users\NZJeu\AppData\Local\Temp\ccA2tsWV.debug.temp.o
- .debug_str     0x00000b4e       0x11 C:\Users\NZJeu\AppData\Local\Temp\ccoRHYP6.debug.temp.o
- .debug_str     0x00000b5f       0x1d C:\Users\NZJeu\AppData\Local\Temp\cc4bWz6h.debug.temp.o
- .debug_str     0x00000b7c       0x63 C:\Users\NZJeu\AppData\Local\Temp\ccJmlASn.debug.temp.o
- .debug_str     0x00000bdf       0x20 C:\Users\NZJeu\AppData\Local\Temp\ccoxKAEt.debug.temp.o
- .debug_str     0x00000bff       0x4f C:\Users\NZJeu\AppData\Local\Temp\ccJHC9lz.debug.temp.o
- .debug_str     0x00000c4e       0x25 C:\Users\NZJeu\AppData\Local\Temp\cc4RuI3E.debug.temp.o
- .debug_str     0x00000c73       0x45 C:\Users\NZJeu\AppData\Local\Temp\ccbfNrYK.debug.temp.o
- .debug_str     0x00000cb8       0x25 C:\Users\NZJeu\AppData\Local\Temp\cc8N2oy1.debug.temp.o
- .debug_str     0x00000cdd        0x9 C:\Users\NZJeu\AppData\Local\Temp\ccLufcig.debug.temp.o
- .debug_str     0x00000ce6        0x8 C:\Users\NZJeu\AppData\Local\Temp\ccqhuhkl.debug.temp.o
- .debug_str     0x00000cee        0x8 C:\Users\NZJeu\AppData\Local\Temp\ccLZ5mhq.debug.temp.o
- .debug_str     0x00000cf6       0x80 C:\Users\NZJeu\AppData\Local\Temp\ccfmy1CA.debug.temp.o
- .debug_str     0x00000d76       0x3a C:\Users\NZJeu\AppData\Local\Temp\cc1AOXDV.debug.temp.o
- .debug_str     0x00000db0       0x4b C:\Users\NZJeu\AppData\Local\Temp\ccg8dpYZ.debug.temp.o
- .debug_str     0x00000dfb        0x7 C:\Users\NZJeu\AppData\Local\Temp\cco58hy8.debug.temp.o
- .debug_str     0x00000e02       0x12 C:\Users\NZJeu\AppData\Local\Temp\ccbYgt1c.debug.temp.o
- .debug_str     0x00000e14       0xa0 ace/CMakeFiles/ace.dir/src/bartman/gcc8_a_support.s.obj
+ .debug_str     0x00000000       0xa0 ace/CMakeFiles/ace.dir/src/bartman/gcc8_a_support.s.obj
 
 .debug_loc
  *(.debug_loc)
@@ -2194,10 +556,7 @@ text            0x00006860        0x6
  *(.debug_line_str)
 
 .debug_loclists
-                0x00000000       0xfc
  *(.debug_loclists)
- .debug_loclists
-                0x00000000       0xfc C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
 
 .debug_macro
  *(.debug_macro)
@@ -2206,10 +565,7 @@ text            0x00006860        0x6
  *(.debug_names)
 
 .debug_rnglists
-                0x00000000     0x13c6
  *(.debug_rnglists)
- .debug_rnglists
-                0x00000000     0x13c6 C:\Users\NZJeu\AppData\Local\Temp\ccx5ngr7.ltrans0.ltrans.o
 
 .debug_str_offsets
  *(.debug_str_offsets)
