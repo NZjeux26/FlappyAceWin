@@ -100,12 +100,12 @@ void gameGsCreate(void) {
 
   fallfontsmall = fontCreate("myacefont.fnt");//create font
 
-  tTextBitMap *highscorebitmap = fontCreateTextBitMapFromStr(fallfontsmall, "High Score: ");
+  tTextBitMap *highscorebitmap = fontCreateTextBitMapFromStr(fallfontsmall, "High Score ");
   fontDrawTextBitMap(s_pScoreBuffer->pBack, highscorebitmap, 0,10, 6, FONT_COOKIE);
   highscorebitmap = fontCreateTextBitMapFromStr(fallfontsmall, i_highScore);  //reuse the bitmap from writing the highscore text  
   fontDrawTextBitMap(s_pScoreBuffer->pBack, highscorebitmap, 73,10, 6, FONT_COOKIE); //write out the highscore
 
-  tTextBitMap *textbitmap = fontCreateTextBitMapFromStr(fallfontsmall, "Score: ");
+  tTextBitMap *textbitmap = fontCreateTextBitMapFromStr(fallfontsmall, "Score ");
   fontDrawTextBitMap(s_pScoreBuffer->pBack, textbitmap, 0,20, 6, FONT_COOKIE);
   
   stringDecimalFromULong(gSCORE, scorebuffer);
@@ -120,13 +120,14 @@ void gameGsCreate(void) {
   player.yvel = 2;
   player.colour = 5;
 
-  short pos = randUwMinMax(s_pRandManager, 30, 150);
-  short range = randUwMinMax(s_pRandManager, 20, 70);
   
-  short pipecolour = randUwMinMax(s_pRandManager,1, 6);
 
   //create first batch of pipes to fill the array
   for (short i = 0; i < MAXPIPES; i++) {
+    short pos = randUwMinMax(s_pRandManager, 30, 150); //the position of the 'centre' of the desired gap between pipes
+    short range = randUwMinMax(s_pRandManager, 20, 70); //the range/distance between the pipes, centred on the pos above.
+    short pipecolour = randUwMinMax(s_pRandManager,1, 6);
+
     pipes[i].toppipe.x = pipestart;
     pipes[i].toppipe.y = 0;
     pipes[i].toppipe.h = pipes[i].toppipe.y + pos - (range / 2); //the height of the pipe is the Y pos - half of the gap(range) / 2;
@@ -135,7 +136,7 @@ void gameGsCreate(void) {
 
     pipes[i].bottompipe.x = pipestart;
     pipes[i].bottompipe.y = pos + (range / 2); //the y pos of the bottom pipe is the Y pos of the gap + 1/2 it's width
-    pipes[i].bottompipe.h = 210 - pos; //the hight of the bottom pipe is the screen length - the y pos of the gap.
+    pipes[i].bottompipe.h = 190 - pos; //the hight of the bottom pipe is the screen length - the y pos of the gap.
     pipes[i].bottompipe.w = 15;
     pipes[i].bottompipe.colour = pipecolour;
   }
@@ -199,7 +200,7 @@ void gameGsLoop(void) {
 
         pipes[i].bottompipe.x = pipestart;
         pipes[i].bottompipe.y = pos + (range / 2);
-        pipes[i].bottompipe.h = 210 - pos;
+        pipes[i].bottompipe.h = 190 - pos;
       }
 
       else {//move the pipes across the playfield
@@ -226,7 +227,7 @@ void gameGsLoop(void) {
   	ULONG currentTime = timerGet();
     if(currentTime - startTime >= 100){
       pipesdisplay++;
-      if(pipesdisplay>=MAXPIPES){
+      if(pipesdisplay >= MAXPIPES){
         pipesdisplay = MAXPIPES -1;
       }
       startTime = currentTime;

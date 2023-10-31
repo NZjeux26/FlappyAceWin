@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.14.0)
 project(FlappyAceWin LANGUAGES ASM C)
-
+set(ACE_DEBUG ON)
+set(ACE_DEBUG_UAE ON)
 #set(CMAKE_C_STANDARD 17)
 file(GLOB_RECURSE SOURCES src/*.c main.c)
 
@@ -37,6 +38,7 @@ MATH(EXPR VER_MAJOR "0 + ${YEAR}")
 MATH(EXPR VER_MINOR "0 + ${MONTH}")
 MATH(EXPR VER_FIX "0 + ${DAY}")
 set(VERSION "${VER_MAJOR}.${VER_MINOR}.${VER_FIX}")
+
 
 target_compile_definitions(${FlappyAceWin_EXECUTABLE} PRIVATE FlappyAceWin_VERSION="${VERSION}")
 include_directories(${SDL2_INCLUDE_DIRS} include/)
