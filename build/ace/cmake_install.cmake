@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt/usr")
+  set(CMAKE_INSTALL_PREFIX "c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.5/bin/win32/opt/usr")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,7 +34,7 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.4/bin/win32/opt/bin/m68k-amiga-elf-objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.5/bin/win32/opt/bin/m68k-amiga-elf-objdump.exe")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)

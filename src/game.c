@@ -43,7 +43,7 @@ char scorebuffer[20];
 int gSCORE = 0;
 int g_highScore = 0; //needs to be assigned prior to initialization
 short pipesdisplay = 1;
-short pipestart = 265;
+short pipestart = 305; //set to 305 as the width of the pipes are 15 which is 320 the total width of the screen.
 
 ULONG startTime;
 UBYTE g_scored = false;
@@ -113,6 +113,7 @@ void gameGsCreate(void) {
   
   startTime = timerGet();
 
+  //placeholder for player
   player.x = 35;
   player.y = (s_pVpMain->uwHeight - player.h) / 2;
   player.w = 10;
@@ -124,7 +125,7 @@ void gameGsCreate(void) {
 
   //create first batch of pipes to fill the array
   for (short i = 0; i < MAXPIPES; i++) {
-    short pos = randUwMinMax(s_pRandManager, 30, 150); //the position of the 'centre' of the desired gap between pipes
+    short pos = randUwMinMax(s_pRandManager, 30, 120); //the position of the 'centre' of the desired gap between pipes
     short range = randUwMinMax(s_pRandManager, 20, 70); //the range/distance between the pipes, centred on the pos above.
     short pipecolour = randUwMinMax(s_pRandManager,1, 6);
 
@@ -136,7 +137,8 @@ void gameGsCreate(void) {
 
     pipes[i].bottompipe.x = pipestart;
     pipes[i].bottompipe.y = pos + (range / 2); //the y pos of the bottom pipe is the Y pos of the gap + 1/2 it's width
-    pipes[i].bottompipe.h = 190 - pos; //the hight of the bottom pipe is the screen length - the y pos of the gap.
+    pipes[i].bottompipe.h = 224 - pipes[i].bottompipe.y; //the height is simply the height of the screen 224pc - the Y of the bottom pipe.
+    if (pipes[i].bottompipe.h > 224) pipes[i].bottompipe.h = 220;
     pipes[i].bottompipe.w = 15;
     pipes[i].bottompipe.colour = pipecolour;
   }
@@ -200,7 +202,8 @@ void gameGsLoop(void) {
 
         pipes[i].bottompipe.x = pipestart;
         pipes[i].bottompipe.y = pos + (range / 2);
-        pipes[i].bottompipe.h = 190 - pos;
+        pipes[i].bottompipe.h = 224 - pipes[i].bottompipe.y;  //the hight of the bottom pipe is the screen length - the y pos of the gap.
+        if (pipes[i].bottompipe.h > 224) pipes[i].bottompipe.h = 220;//this will never work since it's the Y + the H that is the issue
       }
 
       else {//move the pipes across the playfield
@@ -225,7 +228,7 @@ void gameGsLoop(void) {
     }
  //**Draw things**
   	ULONG currentTime = timerGet();
-    if(currentTime - startTime >= 100){
+    if(currentTime - startTime > 60){
       pipesdisplay++;
       if(pipesdisplay >= MAXPIPES){
         pipesdisplay = MAXPIPES -1;
@@ -254,6 +257,7 @@ void gameGsLoop(void) {
     );
   }
   
+  copProcessBlocks();
   vPortWaitForEnd(s_pVpMain);
   }
  
