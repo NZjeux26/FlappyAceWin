@@ -73,8 +73,9 @@ void gameGsCreate(void) {
   TAG_END);
   s_pMainBuffer = simpleBufferCreate(0,
     TAG_SIMPLEBUFFER_VPORT, s_pVpMain,
-    TAG_SIMPLEBUFFER_BITMAP_FLAGS, BMF_CLEAR,
-  TAG_END);
+    TAG_SIMPLEBUFFER_BITMAP_FLAGS, 
+    TAG_SIMPLEBUFFER_IS_DBLBUF,1, //add this line in for double buffering
+    BMF_CLEAR,TAG_END);
 
   //palette with VBB set to four i can get 16-colours
   s_pVpScore->pPalette[0] = 0x0000; // First color is also border color 
@@ -91,6 +92,12 @@ void gameGsCreate(void) {
     0, s_pVpScore->uwHeight - 2,
     s_pVpScore->uwWidth - 1, s_pVpScore->uwHeight - 2,
     SCORE_COLOR, 0xFFFF, 0 // Try patterns 0xAAAA, 0xEEEE, etc.
+  );
+  //draw line for bottom of playfield.
+  blitRect(
+    s_pMainBuffer->pBack,
+    0, s_pVpMain->uwHeight - WALL_HEIGHT,
+    s_pVpMain->uwWidth, WALL_HEIGHT, WALL_COLOR
   );
 
   gSCORE = 99999999; 
@@ -121,8 +128,6 @@ void gameGsCreate(void) {
   player.yvel = 2;
   player.colour = 5;
 
-  
-
   //create first batch of pipes to fill the array
   for (short i = 0; i < MAXPIPES; i++) {
     short pos = randUwMinMax(s_pRandManager, 30, 120); //the position of the 'centre' of the desired gap between pipes
@@ -137,8 +142,8 @@ void gameGsCreate(void) {
 
     pipes[i].bottompipe.x = pipestart;
     pipes[i].bottompipe.y = pos + (range / 2); //the y pos of the bottom pipe is the Y pos of the gap + 1/2 it's width
-    pipes[i].bottompipe.h = 224 - pipes[i].bottompipe.y; //the height is simply the height of the screen 224pc - the Y of the bottom pipe.
-    if (pipes[i].bottompipe.h > 224) pipes[i].bottompipe.h = 220;
+    pipes[i].bottompipe.h = 223 - pipes[i].bottompipe.y; //the height is simply the height of the screen 224pc - the Y of the bottom pipe.
+    if (pipes[i].bottompipe.h > 223) pipes[i].bottompipe.h = 223;
     pipes[i].bottompipe.w = 15;
     pipes[i].bottompipe.colour = pipecolour;
   }
@@ -202,8 +207,8 @@ void gameGsLoop(void) {
 
         pipes[i].bottompipe.x = pipestart;
         pipes[i].bottompipe.y = pos + (range / 2);
-        pipes[i].bottompipe.h = 224 - pipes[i].bottompipe.y;  //the hight of the bottom pipe is the screen length - the y pos of the gap.
-        if (pipes[i].bottompipe.h > 224) pipes[i].bottompipe.h = 220;//this will never work since it's the Y + the H that is the issue
+        pipes[i].bottompipe.h = 223 - pipes[i].bottompipe.y;  //the hight of the bottom pipe is the screen length - the y pos of the gap.
+        if (pipes[i].bottompipe.h > 223) pipes[i].bottompipe.h = 223;//this will never work since it's the Y + the H that is the issue
       }
 
       else {//move the pipes across the playfield
@@ -228,7 +233,7 @@ void gameGsLoop(void) {
     }
  //**Draw things**
   	ULONG currentTime = timerGet();
-    if(currentTime - startTime > 60){
+    if(currentTime - startTime > 120){
       pipesdisplay++;
       if(pipesdisplay >= MAXPIPES){
         pipesdisplay = MAXPIPES -1;
@@ -257,6 +262,7 @@ void gameGsLoop(void) {
     );
   }
   
+  viewProcessManagers(s_pView);//might be wrong
   copProcessBlocks();
   vPortWaitForEnd(s_pVpMain);
   }
@@ -279,9 +285,6 @@ void updateScore(void) {  //bug seems to appear where text for 10000 + seems to 
     fontDrawTextBitMap(s_pScoreBuffer->pBack, scoretextbitmap, 40,20, 6, FONT_COOKIE);  //draw
 }
 
-void generatepipes(void){
-
-}
 // void highScoreCheck(void) {
 //   int score = gSCORE;
 //   char charScore[30];
