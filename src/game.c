@@ -53,8 +53,6 @@ tUwCoordYX s_pBottomPipePrevPos[MAXPIPES][2];
 tUwCoordYX s_pPlayerPrevPos[2];
 
 UBYTE s_ubBufferIndex = 0;
-UBYTE s_ubBufferIndexTopPipe = 0;
-UBYTE s_ubBufferIndexBottomPipe = 0;
 
 void gameGsCreate(void) {
   tRayPos sRayPos = getRayPos();
@@ -187,13 +185,13 @@ void gameGsLoop(void) {
   for (short i = 0; i < pipesdisplay; i++) {
       blitRect( 
       s_pMainBuffer->pBack,
-      s_pTopPipePrevPos[i][s_ubBufferIndexTopPipe].uwX, s_pTopPipePrevPos[i][s_ubBufferIndexTopPipe].uwY,
+      s_pTopPipePrevPos[i][s_ubBufferIndex].uwX, s_pTopPipePrevPos[i][s_ubBufferIndex].uwY,
       pipes[i].toppipe.w, pipes[i].toppipe.h, 0
       );
 
       blitRect( 
       s_pMainBuffer->pBack,
-      s_pBottomPipePrevPos[i][s_ubBufferIndexBottomPipe].uwX, s_pBottomPipePrevPos[i][s_ubBufferIndexBottomPipe].uwY,
+      s_pBottomPipePrevPos[i][s_ubBufferIndex].uwX, s_pBottomPipePrevPos[i][s_ubBufferIndex].uwY,
       pipes[i].bottompipe.w, pipes[i].bottompipe.h, 0
       );
   }
@@ -253,24 +251,23 @@ void gameGsLoop(void) {
   // Redraw the player at new position
   blitRect(s_pMainBuffer->pBack, player.x, player.y, player.w, player.h, player.colour);
    //update buffer position
-  s_ubBufferIndex = !s_ubBufferIndex;
+ 
 
   // //redraw each pipe pair in the array upto pipe display #
   for (short i = 0; i < pipesdisplay; i++) {
     //update toppipe previous position
-    s_pTopPipePrevPos[i][s_ubBufferIndexTopPipe].uwX = pipes[i].toppipe.x;
-    s_pTopPipePrevPos[i][s_ubBufferIndexTopPipe].uwY = pipes[i].toppipe.y;
+    s_pTopPipePrevPos[i][s_ubBufferIndex].uwX = pipes[i].toppipe.x;
+    s_pTopPipePrevPos[i][s_ubBufferIndex].uwY = pipes[i].toppipe.y;
     //redraw
     blitRect( 
     s_pMainBuffer->pBack,
     pipes[i].toppipe.x, pipes[i].toppipe.y,
     pipes[i].toppipe.w, pipes[i].toppipe.h, pipes[i].toppipe.colour
     );
-    //update index
-    s_ubBufferIndexTopPipe = !s_ubBufferIndexTopPipe;
+
     //repeat for bottom pipe
-    s_pBottomPipePrevPos[i][s_ubBufferIndexBottomPipe].uwX = pipes[i].bottompipe.x;
-    s_pBottomPipePrevPos[i][s_ubBufferIndexBottomPipe].uwY = pipes[i].bottompipe.y;
+    s_pBottomPipePrevPos[i][s_ubBufferIndex].uwX = pipes[i].bottompipe.x;
+    s_pBottomPipePrevPos[i][s_ubBufferIndex].uwY = pipes[i].bottompipe.y;
     
     blitRect( 
     s_pMainBuffer->pBack,
@@ -278,9 +275,9 @@ void gameGsLoop(void) {
     pipes[i].bottompipe.w, pipes[i].bottompipe.h, pipes[i].bottompipe.colour
     );
 
-     s_ubBufferIndexBottomPipe = !s_ubBufferIndexBottomPipe;
   }
-
+  //update the index
+  s_ubBufferIndex = !s_ubBufferIndex;
   viewProcessManagers(s_pView);//might be wrong
   copProcessBlocks();
   vPortWaitForEnd(s_pVpMain);
