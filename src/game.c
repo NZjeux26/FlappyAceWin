@@ -17,7 +17,7 @@
 #define WALL_HEIGHT 1
 #define WALL_COLOR 1
 #define PADDLE_SPEED 4
-#define MAXPIPES 3
+#define MAXPIPES 4
 //-------------------------------------------------------------- NEW STUFF START
 //AMiga Pal 320x256
 #define PLAYFIELD_HEIGHT (256-32) //32 for the top viewport height
@@ -112,14 +112,14 @@ void gameGsCreate(void) {
 
   fallfontsmall = fontCreate("myacefont.fnt");//create font
 
-  tTextBitMap *highscorebitmap = fontCreateTextBitMapFromStr(fallfontsmall, "High Score ");
-  fontDrawTextBitMap(s_pScoreBuffer->pBack, highscorebitmap, 0,10, 6, FONT_COOKIE);
+  tTextBitMap *highscorebitmap = fontCreateTextBitMapFromStr(fallfontsmall, "High Score ");//create the bitmap with HIGHSCORE
+  fontDrawTextBitMap(s_pScoreBuffer->pBack, highscorebitmap, 0,10, 6, FONT_COOKIE); //draw the text
   highscorebitmap = fontCreateTextBitMapFromStr(fallfontsmall, i_highScore);  //reuse the bitmap from writing the highscore text  
   fontDrawTextBitMap(s_pScoreBuffer->pBack, highscorebitmap, 73,10, 6, FONT_COOKIE); //write out the highscore
 
   tTextBitMap *textbitmap = fontCreateTextBitMapFromStr(fallfontsmall, "Score ");
   fontDrawTextBitMap(s_pScoreBuffer->pBack, textbitmap, 0,20, 6, FONT_COOKIE);
-  
+  //convert the score from int to string for drawing
   stringDecimalFromULong(gSCORE, scorebuffer);
   scoretextbitmap = fontCreateTextBitMapFromStr(fallfontsmall, scorebuffer); //redo bitmap
   
@@ -179,7 +179,7 @@ void gameGsLoop(void) {
 
   //undraw player
   blitRect(s_pMainBuffer->pBack, s_pPlayerPrevPos[s_ubBufferIndex].uwX,s_pPlayerPrevPos[s_ubBufferIndex].uwY, player.w, player.h, 0);
-  
+  redraw:
   //undraw each pipe pair in the array upto pipe display #
   //undraws the pipe X/Y coordinates from the array which are the previous frames' pipe X/Y positions
   for (short i = 0; i < pipesdisplay; i++) {
@@ -199,19 +199,20 @@ void gameGsLoop(void) {
   //**Move things accross**
 
   for (short i = 0; i < pipesdisplay; i++) {
-      if(pipes[i].toppipe.x < 5 || pipes[i].bottompipe.x < 5){//probably only need one pipe side but jsut in case something weird happens
+      if(pipes[i].toppipe.x <=0 || pipes[i].bottompipe.x <=0){//probably only need one pipe side but jsut in case something weird happens
         short pos = randUwMinMax(s_pRandManager, 30, 150); //recalculate position and the gap between pipes(range)
         short range = randUwMinMax(s_pRandManager, 20, 70);
+
         //move the pipe back to the start and redraw with new calculations.
         pipes[i].toppipe.x = pipestart;
         pipes[i].toppipe.y = 0;
         pipes[i].toppipe.h = pipes[i].toppipe.y + pos - (range / 2);
-   
+        
         pipes[i].bottompipe.x = pipestart;
         pipes[i].bottompipe.y = pos + (range / 2);
         pipes[i].bottompipe.h = 223 - pipes[i].bottompipe.y;  //the hight of the bottom pipe is the screen length - the y pos of the gap.
         if (pipes[i].bottompipe.h > 223) pipes[i].bottompipe.h = 223;//this will never work since it's the Y + the H that is the issue
-  
+        goto redraw;
       }
 
       else {//move the pipes across the playfield
