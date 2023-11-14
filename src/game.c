@@ -179,7 +179,7 @@ void gameGsLoop(void) {
 
   //undraw player
   blitRect(s_pMainBuffer->pBack, s_pPlayerPrevPos[s_ubBufferIndex].uwX,s_pPlayerPrevPos[s_ubBufferIndex].uwY, player.w, player.h, 0);
-  redraw:
+
   //undraw each pipe pair in the array upto pipe display #
   //undraws the pipe X/Y coordinates from the array which are the previous frames' pipe X/Y positions
   for (short i = 0; i < pipesdisplay; i++) {
@@ -212,7 +212,7 @@ void gameGsLoop(void) {
         pipes[i].bottompipe.y = pos + (range / 2);
         pipes[i].bottompipe.h = 223 - pipes[i].bottompipe.y;  //the hight of the bottom pipe is the screen length - the y pos of the gap.
         if (pipes[i].bottompipe.h > 223) pipes[i].bottompipe.h = 223;//this will never work since it's the Y + the H that is the issue
-        goto redraw;
+       
       }
 
       else {//move the pipes across the playfield
