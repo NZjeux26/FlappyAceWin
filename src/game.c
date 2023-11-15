@@ -48,8 +48,8 @@ short pipestart = 305; //set to 305 as the width of the pipes are 15 which is 32
 ULONG startTime;
 UBYTE g_scored = false;
 //arrays holding previous positions of the player and pipes
-tUwCoordYX s_pTopPipePrevPos[MAXPIPES][2]; //2d array the size of max pipes, with the max pipes being the index of the pipe and the 2nd part the double buffer
-tUwCoordYX s_pBottomPipePrevPos[MAXPIPES][2];
+tUwRect s_pTopPipePrevPos[MAXPIPES][2]; //2d array the size of max pipes, with the max pipes being the index of the pipe and the 2nd part the double buffer
+tUwRect s_pBottomPipePrevPos[MAXPIPES][2];
 tUwCoordYX s_pPlayerPrevPos[2];
 
 UBYTE s_ubBufferIndex = 0;
@@ -99,7 +99,7 @@ void gameGsCreate(void) {
     s_pVpScore->uwWidth - 1, s_pVpScore->uwHeight - 2,
     SCORE_COLOR, 0xFFFF, 0 // Try patterns 0xAAAA, 0xEEEE, etc.
   );
-  //draw line for bottom of playfield.
+ // draw line for bottom of playfield.
   blitRect(
     s_pMainBuffer->pBack,
     0, s_pVpMain->uwHeight - WALL_HEIGHT, s_pVpMain->uwWidth, WALL_HEIGHT, WALL_COLOR
@@ -119,9 +119,11 @@ void gameGsCreate(void) {
 
   tTextBitMap *textbitmap = fontCreateTextBitMapFromStr(fallfontsmall, "Score ");
   fontDrawTextBitMap(s_pScoreBuffer->pBack, textbitmap, 0,20, 6, FONT_COOKIE);
+  
   //convert the score from int to string for drawing
   stringDecimalFromULong(gSCORE, scorebuffer);
   scoretextbitmap = fontCreateTextBitMapFromStr(fallfontsmall, scorebuffer); //redo bitmap
+  gSCORE = 0;
   
   startTime = timerGet();
   
@@ -144,6 +146,15 @@ void gameGsCreate(void) {
     pipes[i].toppipe.h = pipes[i].toppipe.y + pos - (range / 2); //the height of the pipe is the Y pos - half of the gap(range) / 2;
     pipes[i].toppipe.w = 15;
     pipes[i].toppipe.colour = pipecolour;
+    //manually setting the prepos values so they are not null values when the first undraw occurs
+    s_pTopPipePrevPos[i][0].uwX = pipes[i].toppipe.x;
+    s_pTopPipePrevPos[i][0].uwY = pipes[i].toppipe.y;
+    s_pTopPipePrevPos[i][0].uwWidth = pipes[i].toppipe.w;
+    s_pTopPipePrevPos[i][0].uwHeight = pipes[i].toppipe.h;
+    s_pTopPipePrevPos[i][1].uwX = pipes[i].toppipe.x;
+    s_pTopPipePrevPos[i][1].uwY = pipes[i].toppipe.y;
+    s_pTopPipePrevPos[i][1].uwWidth = pipes[i].toppipe.w;
+    s_pTopPipePrevPos[i][1].uwHeight = pipes[i].toppipe.h;;
 
     pipes[i].bottompipe.x = pipestart;
     pipes[i].bottompipe.y = pos + (range / 2); //the y pos of the bottom pipe is the Y pos of the gap + 1/2 it's width
@@ -151,6 +162,15 @@ void gameGsCreate(void) {
     if (pipes[i].bottompipe.h > 223) pipes[i].bottompipe.h = 223;
     pipes[i].bottompipe.w = 15;
     pipes[i].bottompipe.colour = pipecolour;
+
+    s_pBottomPipePrevPos[i][0].uwX = pipes[i].bottompipe.x;
+    s_pBottomPipePrevPos[i][0].uwY = pipes[i].bottompipe.y;
+    s_pBottomPipePrevPos[i][0].uwWidth = pipes[i].bottompipe.w;
+    s_pBottomPipePrevPos[i][0].uwHeight = pipes[i].bottompipe.h;
+    s_pBottomPipePrevPos[i][1].uwX = pipes[i].bottompipe.x;
+    s_pBottomPipePrevPos[i][1].uwY = pipes[i].bottompipe.y;
+    s_pBottomPipePrevPos[i][1].uwWidth = pipes[i].bottompipe.w;
+    s_pBottomPipePrevPos[i][1].uwHeight = pipes[i].bottompipe.h;
   }
 
   systemUnuse();
@@ -186,13 +206,13 @@ void gameGsLoop(void) {
       blitRect( 
       s_pMainBuffer->pBack,
       s_pTopPipePrevPos[i][s_ubBufferIndex].uwX, s_pTopPipePrevPos[i][s_ubBufferIndex].uwY,
-      pipes[i].toppipe.w, pipes[i].toppipe.h, 0
+      s_pTopPipePrevPos[i][s_ubBufferIndex].uwWidth, s_pTopPipePrevPos[i][s_ubBufferIndex].uwHeight, 0
       );
 
       blitRect( 
       s_pMainBuffer->pBack,
       s_pBottomPipePrevPos[i][s_ubBufferIndex].uwX, s_pBottomPipePrevPos[i][s_ubBufferIndex].uwY,
-      pipes[i].bottompipe.w, pipes[i].bottompipe.h, 0
+      s_pBottomPipePrevPos[i][s_ubBufferIndex].uwWidth, s_pBottomPipePrevPos[i][s_ubBufferIndex].uwHeight, 0
       );
   }
  
@@ -202,7 +222,7 @@ void gameGsLoop(void) {
       if(pipes[i].toppipe.x <=0 || pipes[i].bottompipe.x <=0){//probably only need one pipe side but jsut in case something weird happens
         short pos = randUwMinMax(s_pRandManager, 30, 150); //recalculate position and the gap between pipes(range)
         short range = randUwMinMax(s_pRandManager, 20, 70);
-
+      
         //move the pipe back to the start and redraw with new calculations.
         pipes[i].toppipe.x = pipestart;
         pipes[i].toppipe.y = 0;
@@ -212,7 +232,8 @@ void gameGsLoop(void) {
         pipes[i].bottompipe.y = pos + (range / 2);
         pipes[i].bottompipe.h = 223 - pipes[i].bottompipe.y;  //the hight of the bottom pipe is the screen length - the y pos of the gap.
         if (pipes[i].bottompipe.h > 223) pipes[i].bottompipe.h = 223;//this will never work since it's the Y + the H that is the issue
-       
+        //add to scoreboard
+        g_scored = true;
       }
 
       else {//move the pipes across the playfield
@@ -259,6 +280,8 @@ void gameGsLoop(void) {
     //update toppipe previous position
     s_pTopPipePrevPos[i][s_ubBufferIndex].uwX = pipes[i].toppipe.x;
     s_pTopPipePrevPos[i][s_ubBufferIndex].uwY = pipes[i].toppipe.y;
+    s_pTopPipePrevPos[i][s_ubBufferIndex].uwWidth = pipes[i].toppipe.w;
+    s_pTopPipePrevPos[i][s_ubBufferIndex].uwHeight = pipes[i].toppipe.h;;
     //redraw
     blitRect( 
     s_pMainBuffer->pBack,
@@ -269,13 +292,19 @@ void gameGsLoop(void) {
     //repeat for bottom pipe
     s_pBottomPipePrevPos[i][s_ubBufferIndex].uwX = pipes[i].bottompipe.x;
     s_pBottomPipePrevPos[i][s_ubBufferIndex].uwY = pipes[i].bottompipe.y;
-    
+    s_pBottomPipePrevPos[i][s_ubBufferIndex].uwWidth = pipes[i].bottompipe.w;
+    s_pBottomPipePrevPos[i][s_ubBufferIndex].uwHeight = pipes[i].bottompipe.h;
+
     blitRect( 
     s_pMainBuffer->pBack,
     pipes[i].bottompipe.x, pipes[i].bottompipe.y,
     pipes[i].bottompipe.w, pipes[i].bottompipe.h, pipes[i].bottompipe.colour
     );
 
+  }
+  if(g_scored){//if the player scores, update the score board.
+    g_scored = false;
+    updateScore();
   }
   //update the index
   s_ubBufferIndex = !s_ubBufferIndex;
