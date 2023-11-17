@@ -110,11 +110,26 @@ CMakeFiles/FlappyAceWin.elf.dir/src/menu.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/FlappyAceWin.elf.dir/src/menu.c.s"
 	c:\Users\NZJeu\.vscode\extensions\bartmanabyss.amiga-debug-1.7.5\bin\win32\opt\bin\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.5/bin/win32/opt $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\FlappyAceWin\src\menu.c -o CMakeFiles\FlappyAceWin.elf.dir\src\menu.c.s
 
+CMakeFiles/FlappyAceWin.elf.dir/src/mystdlib.c.obj: CMakeFiles/FlappyAceWin.elf.dir/flags.make
+CMakeFiles/FlappyAceWin.elf.dir/src/mystdlib.c.obj: F:/FlappyAceWin/src/mystdlib.c
+CMakeFiles/FlappyAceWin.elf.dir/src/mystdlib.c.obj: CMakeFiles/FlappyAceWin.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=F:\FlappyAceWin\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/FlappyAceWin.elf.dir/src/mystdlib.c.obj"
+	c:\Users\NZJeu\.vscode\extensions\bartmanabyss.amiga-debug-1.7.5\bin\win32\opt\bin\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.5/bin/win32/opt $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/FlappyAceWin.elf.dir/src/mystdlib.c.obj -MF CMakeFiles\FlappyAceWin.elf.dir\src\mystdlib.c.obj.d -o CMakeFiles\FlappyAceWin.elf.dir\src\mystdlib.c.obj -c F:\FlappyAceWin\src\mystdlib.c
+
+CMakeFiles/FlappyAceWin.elf.dir/src/mystdlib.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/FlappyAceWin.elf.dir/src/mystdlib.c.i"
+	c:\Users\NZJeu\.vscode\extensions\bartmanabyss.amiga-debug-1.7.5\bin\win32\opt\bin\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.5/bin/win32/opt $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E F:\FlappyAceWin\src\mystdlib.c > CMakeFiles\FlappyAceWin.elf.dir\src\mystdlib.c.i
+
+CMakeFiles/FlappyAceWin.elf.dir/src/mystdlib.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/FlappyAceWin.elf.dir/src/mystdlib.c.s"
+	c:\Users\NZJeu\.vscode\extensions\bartmanabyss.amiga-debug-1.7.5\bin\win32\opt\bin\m68k-amiga-elf-gcc.exe --sysroot=c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.5/bin/win32/opt $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S F:\FlappyAceWin\src\mystdlib.c -o CMakeFiles\FlappyAceWin.elf.dir\src\mystdlib.c.s
+
 # Object files for target FlappyAceWin.elf
 FlappyAceWin_elf_OBJECTS = \
 "CMakeFiles/FlappyAceWin.elf.dir/main.c.obj" \
 "CMakeFiles/FlappyAceWin.elf.dir/src/game.c.obj" \
-"CMakeFiles/FlappyAceWin.elf.dir/src/menu.c.obj"
+"CMakeFiles/FlappyAceWin.elf.dir/src/menu.c.obj" \
+"CMakeFiles/FlappyAceWin.elf.dir/src/mystdlib.c.obj"
 
 # External object files for target FlappyAceWin.elf
 FlappyAceWin_elf_EXTERNAL_OBJECTS = \
@@ -172,6 +187,7 @@ FlappyAceWin_elf_EXTERNAL_OBJECTS = \
 FlappyAceWin.elf: CMakeFiles/FlappyAceWin.elf.dir/main.c.obj
 FlappyAceWin.elf: CMakeFiles/FlappyAceWin.elf.dir/src/game.c.obj
 FlappyAceWin.elf: CMakeFiles/FlappyAceWin.elf.dir/src/menu.c.obj
+FlappyAceWin.elf: CMakeFiles/FlappyAceWin.elf.dir/src/mystdlib.c.obj
 FlappyAceWin.elf: ace/CMakeFiles/ace.dir/src/ace/managers/audio.c.obj
 FlappyAceWin.elf: ace/CMakeFiles/ace.dir/src/ace/managers/blit.c.obj
 FlappyAceWin.elf: ace/CMakeFiles/ace.dir/src/ace/managers/bob.c.obj
@@ -224,7 +240,7 @@ FlappyAceWin.elf: ace/CMakeFiles/ace.dir/src/mini_std/string.c.obj
 FlappyAceWin.elf: ace/CMakeFiles/ace.dir/src/mini_std/strtoul.c.obj
 FlappyAceWin.elf: CMakeFiles/FlappyAceWin.elf.dir/build.make
 FlappyAceWin.elf: CMakeFiles/FlappyAceWin.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=F:\FlappyAceWin\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable FlappyAceWin.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=F:\FlappyAceWin\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable FlappyAceWin.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\FlappyAceWin.elf.dir\link.txt --verbose=$(VERBOSE)
 	c:\Users\NZJeu\.vscode\extensions\bartmanabyss.amiga-debug-1.7.5\bin\win32\opt\..\elf2hunk.exe FlappyAceWin.elf FlappyAceWin.exe
 	c:\Users\NZJeu\.vscode\extensions\bartmanabyss.amiga-debug-1.7.5\bin\win32\opt\bin\m68k-amiga-elf-objdump.exe --disassemble -S FlappyAceWin.elf > FlappyAceWin.s

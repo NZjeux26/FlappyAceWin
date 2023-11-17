@@ -49,10 +49,12 @@ CMakeFiles/FlappyAceWin.elf.dir/src/game.c.obj: F:/FlappyAceWin/src/game.c \
   F:/FlappyAceWin/deps/ace/include/ace/utils/font.h \
   F:/FlappyAceWin/deps/ace/include/ace/utils/string.h \
   F:/FlappyAceWin/deps/ace/include/ace/utils/tag.h \
+  F:/FlappyAceWin/deps/ace/include/mini_std/stdio.h \
   F:/FlappyAceWin/deps/ace/include/mini_std/printf.h \
   F:/FlappyAceWin/deps/ace/include/mini_std/stdio.h \
   F:/FlappyAceWin/deps/ace/include/mini_std/string.h \
   F:/FlappyAceWin/src/game.h \
+  F:/FlappyAceWin/src/mystdlib.h \
   F:/FlappyAceWin/src/states.h
 
 CMakeFiles/FlappyAceWin.elf.dir/src/menu.c.obj: F:/FlappyAceWin/src/menu.c \
@@ -81,6 +83,23 @@ CMakeFiles/FlappyAceWin.elf.dir/src/menu.c.obj: F:/FlappyAceWin/src/menu.c \
   F:/FlappyAceWin/deps/ace/include/mini_std/string.h \
   F:/FlappyAceWin/src/menu.h \
   F:/FlappyAceWin/src/states.h
+
+CMakeFiles/FlappyAceWin.elf.dir/src/mystdlib.c.obj: F:/FlappyAceWin/src/mystdlib.c \
+  F:/FlappyAceWin/deps/ace/include/ace/macros.h \
+  F:/FlappyAceWin/deps/ace/include/ace/managers/blit.h \
+  F:/FlappyAceWin/deps/ace/include/ace/managers/log.h \
+  F:/FlappyAceWin/deps/ace/include/ace/managers/memory.h \
+  F:/FlappyAceWin/deps/ace/include/ace/managers/timer.h \
+  F:/FlappyAceWin/deps/ace/include/ace/types.h \
+  F:/FlappyAceWin/deps/ace/include/ace/utils/bitmap.h \
+  F:/FlappyAceWin/deps/ace/include/ace/utils/custom.h \
+  F:/FlappyAceWin/deps/ace/include/ace/utils/file.h \
+  F:/FlappyAceWin/deps/ace/include/ace/utils/font.h \
+  F:/FlappyAceWin/deps/ace/include/ace/utils/string.h \
+  F:/FlappyAceWin/deps/ace/include/mini_std/stdio.h \
+  F:/FlappyAceWin/deps/ace/include/mini_std/printf.h \
+  F:/FlappyAceWin/deps/ace/include/mini_std/stdio.h \
+  F:/FlappyAceWin/deps/ace/include/mini_std/string.h
 
 
 F:/FlappyAceWin/deps/ace/include/ace/utils/tag.h:
@@ -147,4 +166,8 @@ F:/FlappyAceWin/deps/ace/include/ace/utils/font.h:
 
 F:/FlappyAceWin/deps/ace/include/ace/utils/string.h:
 
+F:/FlappyAceWin/src/mystdlib.h:
+
 F:/FlappyAceWin/src/menu.c:
+
+F:/FlappyAceWin/src/mystdlib.c:

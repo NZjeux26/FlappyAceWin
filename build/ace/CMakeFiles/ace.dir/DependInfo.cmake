@@ -14,8 +14,6 @@ set(CMAKE_ASM_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_ASM
-  "ACE_DEBUG"
-  "ACE_DEBUG_UAE"
   "AMIGA"
   "BARTMAN_GCC"
   "PRINTF_DISABLE_SUPPORT_FLOAT"

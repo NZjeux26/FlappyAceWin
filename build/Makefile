@@ -284,6 +284,30 @@ src/menu.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlappyAceWin.elf.dir\build.make CMakeFiles/FlappyAceWin.elf.dir/src/menu.c.s
 .PHONY : src/menu.c.s
 
+src/mystdlib.obj: src/mystdlib.c.obj
+.PHONY : src/mystdlib.obj
+
+# target to build an object file
+src/mystdlib.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlappyAceWin.elf.dir\build.make CMakeFiles/FlappyAceWin.elf.dir/src/mystdlib.c.obj
+.PHONY : src/mystdlib.c.obj
+
+src/mystdlib.i: src/mystdlib.c.i
+.PHONY : src/mystdlib.i
+
+# target to preprocess a source file
+src/mystdlib.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlappyAceWin.elf.dir\build.make CMakeFiles/FlappyAceWin.elf.dir/src/mystdlib.c.i
+.PHONY : src/mystdlib.c.i
+
+src/mystdlib.s: src/mystdlib.c.s
+.PHONY : src/mystdlib.s
+
+# target to generate assembly for a file
+src/mystdlib.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FlappyAceWin.elf.dir\build.make CMakeFiles/FlappyAceWin.elf.dir/src/mystdlib.c.s
+.PHONY : src/mystdlib.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -309,6 +333,9 @@ help:
 	@echo ... src/menu.obj
 	@echo ... src/menu.i
 	@echo ... src/menu.s
+	@echo ... src/mystdlib.obj
+	@echo ... src/mystdlib.i
+	@echo ... src/mystdlib.s
 .PHONY : help
 
 

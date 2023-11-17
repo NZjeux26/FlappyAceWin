@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/FlappyAceWin.elf.dir/src/game.c.obj.d"
   "CMakeFiles/FlappyAceWin.elf.dir/src/menu.c.obj"
   "CMakeFiles/FlappyAceWin.elf.dir/src/menu.c.obj.d"
+  "CMakeFiles/FlappyAceWin.elf.dir/src/mystdlib.c.obj"
+  "CMakeFiles/FlappyAceWin.elf.dir/src/mystdlib.c.obj.d"
   "FlappyAceWin.elf"
   "FlappyAceWin.elf.manifest"
   "FlappyAceWin.elf.pdb"

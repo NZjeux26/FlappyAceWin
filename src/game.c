@@ -1,5 +1,6 @@
 #include "game.h"
 #include "states.h"
+#include "mystdlib.h"
 #include <ace/managers/key.h>
 #include <ace/managers/game.h>
 #include <ace/managers/system.h>
@@ -10,13 +11,14 @@
 #include <ace/utils/file.h>
 #include <ace/utils/font.h>
 #include <ace/utils/string.h>
+#include <mini_std/stdio.h>
 
 #define false 0
 #define true 1
 #define SCORE_COLOR 1
 #define WALL_HEIGHT 1
 #define WALL_COLOR 1
-#define PADDLE_SPEED 4
+#define PADDLE_SPEED 3
 #define MAXPIPES 4
 //-------------------------------------------------------------- NEW STUFF START
 //AMiga Pal 320x256
@@ -106,7 +108,7 @@ void gameGsCreate(void) {
   );            //x1                          and y1
 
   gSCORE = 99999999; 
-  g_highScore = 0;//getHighScore();  //get the highscore from the file, returning zero if no file
+  g_highScore = getHighScore();  //get the highscore from the file, returning zero if no file
   char i_highScore[20]; //buffer string to hold the highscore
   stringDecimalFromULong(g_highScore, i_highScore); //convert to short
 
@@ -138,7 +140,7 @@ void gameGsCreate(void) {
   //create first batch of pipes to fill the array
   for (short i = 0; i < MAXPIPES; i++) {
     short pos = randUwMinMax(s_pRandManager, 30, 120); //the position of the 'centre' of the desired gap between pipes
-    short range = randUwMinMax(s_pRandManager, 20, 70); //the range/distance between the pipes, centred on the pos above.
+    short range = randUwMinMax(s_pRandManager, 40, 90); //the range/distance between the pipes, centred on the pos above.
     short pipecolour = randUwMinMax(s_pRandManager,1, 6);
 
     pipes[i].toppipe.x = pipestart;
@@ -240,13 +242,19 @@ void gameGsLoop(void) {
         pipes[i].toppipe.x -= 1;
         pipes[i].bottompipe.x -= 1;
       }
+
+      if(Collision(&player, &pipes[i].toppipe) || Collision(&player, &pipes[i].bottompipe)){
+        highScoreCheck();
+        stateChange(g_pStateManager, g_pMenuState);
+        return;
+      }
   }
 
   if(keyCheck(KEY_SPACE)){  //move player up
-    //player.y = MAX(player.y - PADDLE_SPEED, 0);
+    player.y = MAX(player.y - PADDLE_SPEED, 0);
   }
   else{
-    //player.y = MIN(player.y + player.yvel , 210);
+    player.y = MIN(player.y + player.yvel , 210);
   }
    if (keyCheck(KEY_D))
     { // move player right
@@ -302,7 +310,7 @@ void gameGsLoop(void) {
     );
 
   }
-  if(g_scored){//if the player scores, update the score board.
+  if(g_scored){//if the player scores, update the score board. 
     g_scored = false;
     updateScore();
   }
@@ -331,61 +339,61 @@ void updateScore(void) {  //bug seems to appear where text for 10000 + seems to 
     fontDrawTextBitMap(s_pScoreBuffer->pBack, scoretextbitmap, 40,20, 6, FONT_COOKIE);  //draw
 }
 
-// void highScoreCheck(void) {
-//   int score = gSCORE;
-//   char charScore[30];
-//   systemUse();
-//   char filename[20] = "scoresheet.txt";
+void highScoreCheck(void) {
+  int score = gSCORE;
+  char charScore[30];
+  systemUse();
+  char filename[20] = "scoresheet.txt";
     
-//   if(!fileExists(filename)){  //check if the file exists, if not create and add the score
-//       tFile *file = fileOpen(filename, "w");
-//       stringDecimalFromULong(score,charScore);
-//       fileWriteStr(file, charScore);//add the score to the file 
-//       fileClose(file); 
-//   }
-//   else{//if file exsits, read the score chec against the player score, if greater write to file else do nothing
-//     tFile *file = fileOpen(filename, "a");
-//     char tempscore[10];
-//     short tScore;
-//     fileRead(file,tempscore,10);//read the score
-//     //function to return highest score in the file.
+  if(!fileExists(filename)){  //check if the file exists, if not create and add the score
+      tFile *file = fileOpen(filename, "w");
+      stringDecimalFromULong(score,charScore);
+      fileWriteStr(file, charScore);//add the score to the file 
+      fileClose(file); 
+  }
+  else{//if file exsits, read the score chec against the player score, if greater write to file else do nothing
+    tFile *file = fileOpen(filename, "rb");
+    char tempscore[10];
+    short tScore = 0;
+    fileRead(file,tempscore,10);//read the score
+    //function to return highest score in the file.
 
-//     //tScore = strtol(tempscore, NULL, 10);//convert to short.
-//     tScore = getHighScore();
-//     logWrite("TScore Is: %d\n", tScore);
-//     if(score > tScore){//if score is greater than the current HS then add it to the end.
-//       stringDecimalFromULong(score,charScore);
-//       fileWriteStr(file, "\n");
-//       fileWriteStr(file,charScore);
-//       fileClose(file);
-//     }
-//     else fileClose(file);//else do nothing
-//   }
-//   systemUnuse();
-// }
+    //tScore = strtol(tempscore, NULL, 10);//convert to short.
+    tScore = getHighScore();
+    logWrite("TScore Is: %d\n", tScore);
+    if(score > tScore){//if score is greater than the current HS then add it to the end.
+      stringDecimalFromULong(score,charScore);
+      fileWriteStr(file, "\n");
+      fileWriteStr(file,charScore);
+      fileClose(file);
+    }
+    else fileClose(file);//else do nothing
+  }
+  systemUnuse();
+}
 // //reads through the scoresheet to find the highest score and returns that to compare it with the current score by the player
-// short getHighScore(void){
-//   char filename[20] = "scoresheet.txt";
-//   int highScore = 0;
-//   if((!fileExists(filename))) return 0;
+short getHighScore(void){
+  char filename[20] = "scoresheet.txt";
+  int highScore = 0;
+  if((!fileExists(filename))) return 0;
 
-//   tFile *file = fileOpen(filename, "r");
-//   if(!file) return 101; //set to 1 so i know it was a cope out
+  tFile *file = fileOpen(filename, "r");
+  if(!file) return 102; //set to 1 so i know it was a cope out
 
-//   char tline[512];
-//   while(fgets(tline, 512, file)){//issues getting the tokens into the array of lines
-//     char *token = strtok(tline, "\n");
-//     while(token){
-//       logWrite("File Reading: %s\n", token); 
-//       int tScore = strtol(token, NULL, 10);  //convert to short
-//       if(tScore > highScore) highScore = tScore;  //if the read score is > than the HS then overwirte it.
-//       token = strtok(NULL, "\n");
-//       if(token == NULL) break;
-//     }
-//   }
-//   fileClose(file);
+  char tline[512];
+  while(fgets(tline, 512, file)){//issues getting the tokens into the array of lines
+    char *token = strtok(tline, "\n");
+    while(token){
+      logWrite("File Reading: %s\n", token); 
+      int tScore = strtol(token, NULL, 10);  //convert to short
+      if(tScore > highScore) highScore = tScore;  //if the read score is > than the HS then overwirte it.
+      token = strtok(NULL, "\n");
+      if(token == NULL) break;
+    }
+  }
+  fileClose(file);
  
-//   return highScore; //return the Highest found score.
-//   /*In Theory the last int he file should be the highest if this works correctly. This could get resource intensive if a person has hundreds of High scores*/
-// }
+  return highScore; //return the Highest found score.
+  /*In Theory the last int he file should be the highest if this works correctly. This could get resource intensive if a person has hundreds of High scores*/
+}
 
