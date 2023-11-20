@@ -102,12 +102,12 @@ void gameGsCreate(void) {
     SCORE_COLOR, 0xFFFF, 0 // Try patterns 0xAAAA, 0xEEEE, etc.
   );
  // draw line for bottom of playfield.
-  blitRect(
-    s_pMainBuffer->pBack,
-    0, s_pVpMain->uwHeight - WALL_HEIGHT, s_pVpMain->uwWidth, WALL_HEIGHT, WALL_COLOR
-  );            //x1                          and y1
+  // blitRect(
+  //   s_pMainBuffer->pBack,
+  //   0, s_pVpMain->uwHeight - WALL_HEIGHT, s_pVpMain->uwWidth, WALL_HEIGHT, WALL_COLOR
+  // );            //x1                          and y1
 
-  gSCORE = 99999999; 
+  gSCORE = 99999999;  //set to 99999999 so the bitmap is big enough to handle larger numbers
   g_highScore = getHighScore();  //get the highscore from the file, returning zero if no file
   char i_highScore[20]; //buffer string to hold the highscore
   stringDecimalFromULong(g_highScore, i_highScore); //convert to short
@@ -242,46 +242,44 @@ void gameGsLoop(void) {
         pipes[i].toppipe.x -= 1;
         pipes[i].bottompipe.x -= 1;
       }
-
+      //if the player touches a pipe
       if(Collision(&player, &pipes[i].toppipe) || Collision(&player, &pipes[i].bottompipe)){
-        highScoreCheck();
-        stateChange(g_pStateManager, g_pMenuState);
+        stateChange(g_pStateManager, g_pMenuState); //switch to the menu state to ask to replay
+        highScoreCheck(); //check the HS and write if required
+        pipesdisplay = 1; //reset the pipedisplay to 1 so on reply not all pipes are spawned
         return;
       }
   }
 
+  //controls
   if(keyCheck(KEY_SPACE)){  //move player up
     player.y = MAX(player.y - PADDLE_SPEED, 0);
   }
   else{
     player.y = MIN(player.y + player.yvel , 210);
   }
-   if (keyCheck(KEY_D))
-    { // move player right
-      player.x = MIN(player.x + PADDLE_SPEED, 275);
-    }
-    if (keyCheck(KEY_A))
-    { // move player left
-      player.x = MAX(player.x - PADDLE_SPEED, 0);
-    }
- //**Draw things**
-  	ULONG currentTime = timerGet();
+  if (keyCheck(KEY_D)){ // move player right
+    player.x = MIN(player.x + PADDLE_SPEED, 275);
+  }
+  if (keyCheck(KEY_A)){ // move player left
+    player.x = MAX(player.x - PADDLE_SPEED, 0);
+  }
+
+  ULONG currentTime = timerGet();
     if(currentTime - startTime > 120){
       pipesdisplay++;
-      if(pipesdisplay >= MAXPIPES){
-        pipesdisplay = MAXPIPES -1;
-      }
-      startTime = currentTime;
+    if(pipesdisplay >= MAXPIPES){
+      pipesdisplay = MAXPIPES -1;
     }
+    startTime = currentTime;
+  }
+   //**Draw things**
 
-  
   //update the previous position array
   s_pPlayerPrevPos[s_ubBufferIndex].uwX = player.x;
   s_pPlayerPrevPos[s_ubBufferIndex].uwY = player.y;
   // Redraw the player at new position
   blitRect(s_pMainBuffer->pBack, player.x, player.y, player.w, player.h, player.colour);
-   //update buffer position
- 
 
   // //redraw each pipe pair in the array upto pipe display #
   for (short i = 0; i < pipesdisplay; i++) {
@@ -320,7 +318,6 @@ void gameGsLoop(void) {
   copProcessBlocks();
   vPortWaitForEnd(s_pVpMain);
   }
- 
 }
 
 void gameGsDestroy(void) {
@@ -342,9 +339,9 @@ void updateScore(void) {  //bug seems to appear where text for 10000 + seems to 
 void highScoreCheck(void) {
   int score = gSCORE;
   char charScore[30];
-  systemUse();
   char filename[20] = "scoresheet.txt";
-    
+  systemUse();
+
   if(!fileExists(filename)){  //check if the file exists, if not create and add the score
       tFile *file = fileOpen(filename, "w");
       stringDecimalFromULong(score,charScore);
@@ -352,47 +349,51 @@ void highScoreCheck(void) {
       fileClose(file); 
   }
   else{//if file exsits, read the score chec against the player score, if greater write to file else do nothing
-    tFile *file = fileOpen(filename, "rb");
-    char tempscore[10];
-    short tScore = 0;
-    fileRead(file,tempscore,10);//read the score
+    short tScore = g_highScore; //since the highscore should be pulled in at the start, no need to call it again
     //function to return highest score in the file.
-
-    //tScore = strtol(tempscore, NULL, 10);//convert to short.
-    tScore = getHighScore();
     logWrite("TScore Is: %d\n", tScore);
+
     if(score > tScore){//if score is greater than the current HS then add it to the end.
+      tFile *file = fileOpen(filename, "wb");
       stringDecimalFromULong(score,charScore);
-      fileWriteStr(file, "\n");
       fileWriteStr(file,charScore);
+      fileWriteStr(file, ","); //using comma to seperate the scores
       fileClose(file);
     }
-    else fileClose(file);//else do nothing
   }
   systemUnuse();
 }
 // //reads through the scoresheet to find the highest score and returns that to compare it with the current score by the player
 short getHighScore(void){
-  char filename[20] = "scoresheet.txt";
   int highScore = 0;
-  if((!fileExists(filename))) return 0;
+  char filename[20] = "scoresheet.txt";
+  systemUse();
+  
+  if((!fileExists(filename))){
+    systemUnuse();
+    return 0; //return 0 if the file does not exist
+  } 
 
   tFile *file = fileOpen(filename, "r");
-  if(!file) return 102; //set to 1 so i know it was a cope out
+  if(!file) {
+    systemUnuse();
+    return 102; //set to 2 so i know it was a cope out
+  }
 
   char tline[512];
   while(fgets(tline, 512, file)){//issues getting the tokens into the array of lines
-    char *token = strtok(tline, "\n");
+    char *token = strtok(tline, ",");
     while(token){
       logWrite("File Reading: %s\n", token); 
-      int tScore = strtol(token, NULL, 10);  //convert to short
+      int tScore = strtol(token, &token, 10);  //convert to short //why is this returning zero?
       if(tScore > highScore) highScore = tScore;  //if the read score is > than the HS then overwirte it.
       token = strtok(NULL, "\n");
       if(token == NULL) break;
     }
   }
+  
   fileClose(file);
- 
+  systemUnuse();
   return highScore; //return the Highest found score.
   /*In Theory the last int he file should be the highest if this works correctly. This could get resource intensive if a person has hundreds of High scores*/
 }
