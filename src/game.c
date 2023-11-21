@@ -351,7 +351,7 @@ void highScoreCheck(void) {
   else{//if file exsits, read the score chec against the player score, if greater write to file else do nothing
     short tScore = g_highScore; //since the highscore should be pulled in at the start, no need to call it again
     //function to return highest score in the file.
-    logWrite("TScore Is: %d\n", tScore);
+   // logWrite("TScore Is: %d\n", tScore);
 
     if(score > tScore){//if score is greater than the current HS then add it to the end.
       tFile *file = fileOpen(filename, "wb");
@@ -384,7 +384,7 @@ short getHighScore(void){
   while(fgets(tline, 512, file)){//issues getting the tokens into the array of lines
     char *token = strtok(tline, ",");
     while(token){
-      logWrite("File Reading: %s\n", token); 
+      //logWrite("File Reading: %s\n", token); 
       int tScore = strtol(token, &token, 10);  //convert to short //why is this returning zero?
       if(tScore > highScore) highScore = tScore;  //if the read score is > than the HS then overwirte it.
       token = strtok(NULL, "\n");
