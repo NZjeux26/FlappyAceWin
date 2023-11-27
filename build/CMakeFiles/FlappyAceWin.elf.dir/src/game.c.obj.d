@@ -26,6 +26,7 @@ CMakeFiles/FlappyAceWin.elf.dir/src/game.c.obj: \
  F:\FlappyAceWin\deps\ace\include/ace/managers/rand.h \
  F:\FlappyAceWin\deps\ace\include/ace/utils/font.h \
  F:\FlappyAceWin\deps\ace\include/ace/utils/string.h \
+ F:\FlappyAceWin\deps\ace\include/ace/utils/palette.h \
  F:\FlappyAceWin\deps\ace\include/mini_std/stdio.h
 F:\FlappyAceWin\src\game.h:
 F:\FlappyAceWin\deps\ace\include/ace/utils/file.h:
@@ -54,4 +55,5 @@ F:\FlappyAceWin\deps\ace\include/ace/managers/blit.h:
 F:\FlappyAceWin\deps\ace\include/ace/managers/rand.h:
 F:\FlappyAceWin\deps\ace\include/ace/utils/font.h:
 F:\FlappyAceWin\deps\ace\include/ace/utils/string.h:
+F:\FlappyAceWin\deps\ace\include/ace/utils/palette.h:
 F:\FlappyAceWin\deps\ace\include/mini_std/stdio.h:

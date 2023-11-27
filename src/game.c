@@ -11,6 +11,7 @@
 #include <ace/utils/file.h>
 #include <ace/utils/font.h>
 #include <ace/utils/string.h>
+#include <ace/utils/palette.h>
 #include <mini_std/stdio.h>
 
 #define false 0
@@ -20,6 +21,7 @@
 #define WALL_COLOR 1
 #define PADDLE_SPEED 3
 #define MAXPIPES 4
+#define MAXBIRDS 5
 //-------------------------------------------------------------- NEW STUFF START
 //AMiga Pal 320x256
 #define PLAYFIELD_HEIGHT (256-32) //32 for the top viewport height
@@ -31,6 +33,10 @@ static tSimpleBufferManager *s_pScoreBuffer;
 static tVPort *s_pVpMain; // Viewport for playfield
 static tSimpleBufferManager *s_pMainBuffer;
 static tRandManager *s_pRandManager;
+
+static tBitMap *s_pBmBirds[MAXBIRDS];
+static tBitMap *s_pBmBirdMask[MAXBIRDS];
+static tBitMap *s_pBmBird;
 
 g_obj player; //player object declaration
 g_obj toppipe;
@@ -45,6 +51,8 @@ char scorebuffer[20];
 int gSCORE = 0;
 int g_highScore = 0; //needs to be assigned prior to initialization
 short pipesdisplay = 1;
+short birdplay = 0;
+short oddframe = 0;
 short pipestart = 305; //set to 305 as the width of the pipes are 15 which is 320 the total width of the screen.
 
 ULONG startTime;
@@ -52,6 +60,7 @@ UBYTE g_scored = false;
 //arrays holding previous positions of the player and pipes
 tUwRect s_pTopPipePrevPos[MAXPIPES][2]; //2d array the size of max pipes, with the max pipes being the index of the pipe and the 2nd part the double buffer
 tUwRect s_pBottomPipePrevPos[MAXPIPES][2];
+
 tUwCoordYX s_pPlayerPrevPos[2];
 
 UBYTE s_ubBufferIndex = 0;
@@ -81,19 +90,12 @@ void gameGsCreate(void) {
   TAG_END);
     s_pMainBuffer = simpleBufferCreate(0,
     TAG_SIMPLEBUFFER_VPORT, s_pVpMain,
-    TAG_SIMPLEBUFFER_BITMAP_FLAGS, BMF_CLEAR,
+    TAG_SIMPLEBUFFER_BITMAP_FLAGS, BMF_INTERLEAVED,
     TAG_SIMPLEBUFFER_IS_DBLBUF, 1, //add this line in for double buffering
-    BMF_CLEAR,TAG_END);
+    TAG_END);
 
-  //palette with VBB set to four i can get 16-colours
-  s_pVpScore->pPalette[0] = 0x0000; // First color is also border color 
-  s_pVpScore->pPalette[1] = 0x0888; // Gray
-  s_pVpScore->pPalette[2] = 0x0800; // Red - not max, a bit dark
-  s_pVpScore->pPalette[3] = 0x0008; // Blue - same brightness as red 
-  s_pVpScore->pPalette[4] = 0x0080; // Green - same brightness as blue
-  s_pVpScore->pPalette[5] = 0xFFC0; // Yellow
-  s_pVpScore->pPalette[6] = 0xFFFF; // white
-
+  paletteLoad("data/flappypal3.plt", s_pVpScore->pPalette, 16); //replaces palette
+  makebirds();//make the bitmaps for the frames
   // Draw line separating score VPort and main VPort, leave one line blank after it
   blitLine(
     s_pScoreBuffer->pBack,
@@ -115,12 +117,12 @@ void gameGsCreate(void) {
   fallfontsmall = fontCreate("myacefont.fnt");//create font
 
   tTextBitMap *highscorebitmap = fontCreateTextBitMapFromStr(fallfontsmall, "High Score ");//create the bitmap with HIGHSCORE
-  fontDrawTextBitMap(s_pScoreBuffer->pBack, highscorebitmap, 0,10, 6, FONT_COOKIE); //draw the text
+  fontDrawTextBitMap(s_pScoreBuffer->pBack, highscorebitmap, 0,10, 5, FONT_COOKIE); //draw the text
   highscorebitmap = fontCreateTextBitMapFromStr(fallfontsmall, i_highScore);  //reuse the bitmap from writing the highscore text  
-  fontDrawTextBitMap(s_pScoreBuffer->pBack, highscorebitmap, 73,10, 6, FONT_COOKIE); //write out the highscore
+  fontDrawTextBitMap(s_pScoreBuffer->pBack, highscorebitmap, 73,10, 5, FONT_COOKIE); //write out the highscore
 
   tTextBitMap *textbitmap = fontCreateTextBitMapFromStr(fallfontsmall, "Score ");
-  fontDrawTextBitMap(s_pScoreBuffer->pBack, textbitmap, 0,20, 6, FONT_COOKIE);
+  fontDrawTextBitMap(s_pScoreBuffer->pBack, textbitmap, 0,20, 5, FONT_COOKIE);
   
   //convert the score from int to string for drawing
   stringDecimalFromULong(gSCORE, scorebuffer);
@@ -132,8 +134,8 @@ void gameGsCreate(void) {
   //placeholder for player
   player.x = 35;
   player.y = (s_pVpMain->uwHeight - player.h) / 2;
-  player.w = 10;
-  player.h = 10;
+  player.w = 16;
+  player.h = 12;
   player.yvel = 2;
   player.colour = 5;
  
@@ -141,7 +143,7 @@ void gameGsCreate(void) {
   for (short i = 0; i < MAXPIPES; i++) {
     short pos = randUwMinMax(s_pRandManager, 30, 120); //the position of the 'centre' of the desired gap between pipes
     short range = randUwMinMax(s_pRandManager, 40, 90); //the range/distance between the pipes, centred on the pos above.
-    short pipecolour = randUwMinMax(s_pRandManager,1, 6);
+    short pipecolour = randUwMinMax(s_pRandManager,2, 16);
 
     pipes[i].toppipe.x = pipestart;
     pipes[i].toppipe.y = 0;
@@ -198,10 +200,13 @@ void gameGsLoop(void) {
     gameExit();
   }
   else {
-
+  
   //undraw player
-  blitRect(s_pMainBuffer->pBack, s_pPlayerPrevPos[s_ubBufferIndex].uwX,s_pPlayerPrevPos[s_ubBufferIndex].uwY, player.w, player.h, 0);
-
+  //blitRect(s_pMainBuffer->pBack, s_pPlayerPrevPos[s_ubBufferIndex].uwX,s_pPlayerPrevPos[s_ubBufferIndex].uwY, player.w, player.h, 0);
+  blitCopy(s_pBmBirds[birdplay],0,0,
+  s_pMainBuffer->pBack, s_pPlayerPrevPos[s_ubBufferIndex].uwX,s_pPlayerPrevPos[s_ubBufferIndex].uwY,
+  16,12,0);//16w,12h, 0 colour from the palette
+ 
   //undraw each pipe pair in the array upto pipe display #
   //undraws the pipe X/Y coordinates from the array which are the previous frames' pipe X/Y positions
   for (short i = 0; i < pipesdisplay; i++) {
@@ -243,20 +248,22 @@ void gameGsLoop(void) {
         pipes[i].bottompipe.x -= 1;
       }
       //if the player touches a pipe
-      if(Collision(&player, &pipes[i].toppipe) || Collision(&player, &pipes[i].bottompipe)){
-        stateChange(g_pStateManager, g_pMenuState); //switch to the menu state to ask to replay
-        highScoreCheck(); //check the HS and write if required
-        pipesdisplay = 1; //reset the pipedisplay to 1 so on reply not all pipes are spawned
-        return;
-      }
+      // if(Collision(&player, &pipes[i].toppipe) || Collision(&player, &pipes[i].bottompipe)){
+      //   stateChange(g_pStateManager, g_pMenuState); //switch to the menu state to ask to replay
+      //   highScoreCheck(); //check the HS and write if required
+      //   pipesdisplay = 1; //reset the pipedisplay to 1 so on reply not all pipes are spawned
+      //   return;
+      // }
   }
 
   //controls
   if(keyCheck(KEY_SPACE)){  //move player up
     player.y = MAX(player.y - PADDLE_SPEED, 0);
+    birdplay++;
   }
   else{
     player.y = MIN(player.y + player.yvel , 210);
+   
   }
   if (keyCheck(KEY_D)){ // move player right
     player.x = MIN(player.x + PADDLE_SPEED, 275);
@@ -264,22 +271,26 @@ void gameGsLoop(void) {
   if (keyCheck(KEY_A)){ // move player left
     player.x = MAX(player.x - PADDLE_SPEED, 0);
   }
-
-  ULONG currentTime = timerGet();
-    if(currentTime - startTime > 120){
-      pipesdisplay++;
-    if(pipesdisplay >= MAXPIPES){
-      pipesdisplay = MAXPIPES -1;
-    }
-    startTime = currentTime;
-  }
+  //this is done here, since the player has been undrawn, so we want to swap the player frame while it's undrawn
+  //oddframe is used to slow the animation down 
+  oddframe++;
+  //if(oddframe == 2){
+   // oddframe = 0;
+    //birdplay++; //increase the animation frame to the next frame
+  if(birdplay == MAXBIRDS -1) birdplay = 0; //reset animation loop back to 0
+  //}
+  
    //**Draw things**
 
   //update the previous position array
   s_pPlayerPrevPos[s_ubBufferIndex].uwX = player.x;
   s_pPlayerPrevPos[s_ubBufferIndex].uwY = player.y;
   // Redraw the player at new position
-  blitRect(s_pMainBuffer->pBack, player.x, player.y, player.w, player.h, player.colour);
+  blitCopyMask(
+  s_pBmBirds[birdplay],0,0,
+  s_pMainBuffer->pBack,player.x,player.y, 
+  16, 12,s_pBmBirdMask[birdplay]->Planes[0]);
+  
 
   // //redraw each pipe pair in the array upto pipe display #
   for (short i = 0; i < pipesdisplay; i++) {
@@ -308,6 +319,16 @@ void gameGsLoop(void) {
     );
 
   }
+  //timer handling the pipes being spawned, reset to 1 at game reset
+  ULONG currentTime = timerGet();
+    if(currentTime - startTime > 120){
+      pipesdisplay++;
+    if(pipesdisplay >= MAXPIPES){
+      pipesdisplay = MAXPIPES -1;
+    }
+    startTime = currentTime;
+  }
+
   if(g_scored){//if the player scores, update the score board. 
     g_scored = false;
     updateScore();
@@ -323,6 +344,11 @@ void gameGsLoop(void) {
 void gameGsDestroy(void) {
   logBlockBegin("gameGsDestroy");
   systemUse();
+  for(short int i = 0; i < MAXBIRDS; i++){
+    bitmapDestroy(s_pBmBirdMask[i]);
+    bitmapDestroy(s_pBmBirds[i]);
+  }
+  bitmapDestroy(s_pBmBird);
   // This will also destroy all associated viewports and viewport managers
   viewDestroy(s_pView);
   logBlockEnd("gameGsDestroy");
@@ -398,3 +424,16 @@ short getHighScore(void){
   /*In Theory the last int he file should be the highest if this works correctly. This could get resource intensive if a person has hundreds of High scores*/
 }
 
+void makebirds(void){
+  //s_pBmBird = bitmapCreate(16,12,4,0); //16px wide, 12 high
+  s_pBmBirds[0] = bitmapCreateFromFile("data/birdt1.bm",0);
+  s_pBmBirdMask[0] = bitmapCreateFromFile("data/birdt1_mask.bm", 0);
+  s_pBmBirds[1] = bitmapCreateFromFile("data/birdt2.bm",0);
+  s_pBmBirdMask[1] = bitmapCreateFromFile("data/birdt2_mask.bm", 0);
+  s_pBmBirds[2] = bitmapCreateFromFile("data/birdt3.bm",0);
+  s_pBmBirdMask[2] = bitmapCreateFromFile("data/birdt3_mask.bm", 0);
+  s_pBmBirds[3] = bitmapCreateFromFile("data/birdt4.bm",0);
+  s_pBmBirdMask[3] = bitmapCreateFromFile("data/birdt4_mask.bm", 0);
+  s_pBmBirds[4] = bitmapCreateFromFile("data/birdt5.bm",0);
+  s_pBmBirdMask[4] = bitmapCreateFromFile("data/birdt5_mask.bm", 0);
+}

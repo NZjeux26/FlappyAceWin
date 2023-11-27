@@ -49,6 +49,7 @@
 	},
 	"cmake.configureOnOpen": false,
 	"C_Cpp.default.compilerPath": "C:\\msys64\\mingw64\\bin\\gcc.exe",
+	"dotnet.defaultSolution": "disable",
 	// //"cmake.buildDirectory": "${workspaceFolder}/amiga"
 	// "cmake.configureSettings": {
 	// 	"CMAKE_TOOLCHAIN_FILE" : "C:/Users/Amiga/AmigaDev/LandsOfLore/deps/vcpkg/scripts/buildsystems/vcpkg.cmake"

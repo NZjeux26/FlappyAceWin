@@ -9,6 +9,7 @@ void gameGsDestroy(void);
 void updateScore(void);
 void highScoreCheck(void);
 short getHighScore(void);
+void makebirds(void);
 
 typedef struct g_obj {//struct for player parameters
     short x;        //position X

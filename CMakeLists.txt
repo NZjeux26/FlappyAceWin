@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14.0)
 project(FlappyAceWin LANGUAGES ASM C)
-#set(ACE_DEBUG ON)
-#set(ACE_DEBUG_UAE ON)
+set(ACE_DEBUG ON)
+set(ACE_DEBUG_UAE ON)
 #set(CMAKE_C_STANDARD 17)
 file(GLOB_RECURSE SOURCES src/*.c main.c my_strtol.c)
 
@@ -27,7 +27,6 @@ else()
 	add_executable(${FlappyAceWin_EXECUTABLE} ${SOURCES})
 endif()
 
-
 add_subdirectory(deps/ace ace)
 
 # Version stuff
@@ -50,8 +49,6 @@ if(GAME_DEBUG)
 	target_compile_definitions(${FlappyAceWin_EXECUTABLE} PRIVATE GAME_DEBUG)
 	target_compile_definitions(ace PUBLIC ACE_DEBUG_ALL ACE_DEBUG_UAE)
 endif()
-
-
 
 set(RES_DIR ${CMAKE_CURRENT_LIST_DIR}/res)
 set(DATA_DIR ${CMAKE_CURRENT_BINARY_DIR}/data)
@@ -77,3 +74,25 @@ add_custom_target(generateAdf
 	COMMAND ${CMAKE_COMMAND} -E rm -rf "${ADF_DIR}"
 	COMMENT "Generating ADF file"
 )
+
+# #Convert bitmaps
+# Convenience variables for source/destination paths
+#set(RES_DIR ${CMAKE_CURRENT_LIST_DIR}/res)
+#et(DATA_DIR ${CMAKE_CURRENT_BINARY_DIR}/data)
+
+# Create directory for converted files next to built executable
+#file(MAKE_DIRECTORY ${DATA_DIR})
+
+# # Convert palette and background image
+# convertPalette(${GAME_LINKED} ${RES_DIR}/flappypal.gpl ${DATA_DIR}/flappypal.plt)
+
+# convertBitmaps(
+#   TARGET ${GAME_LINKED} PALETTE ${RES_DIR}/flappypal.gpl
+#   MASK_COLOR "#FF00FF"
+#   SOURCES
+#     ${RES_DIR}/pipemiddle.png
+#   DESTINATIONS
+#     ${DATA_DIR}/pipe_middle.bm
+#   MASKS
+#     ${DATA_DIR}/pipe_mask.bm
+# )

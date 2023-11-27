@@ -3,13 +3,13 @@
 
 # compile ASM with c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.5/bin/win32/opt/bin/m68k-amiga-elf-gcc.exe
 # compile C with c:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.5/bin/win32/opt/bin/m68k-amiga-elf-gcc.exe
-ASM_DEFINES = -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG
+ASM_DEFINES = -DACE_DEBUG -DACE_DEBUG_UAE -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG
 
 ASM_INCLUDES = -IF:\FlappyAceWin\deps\ace\include\bartman -IF:\FlappyAceWin\deps\ace\include\mini_std -IF:\FlappyAceWin\deps\ace\include
 
 ASM_FLAGS = -Wa,-g,--register-prefix-optional
 
-C_DEFINES = -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG
+C_DEFINES = -DACE_DEBUG -DACE_DEBUG_UAE -DAMIGA -DBARTMAN_GCC -DPRINTF_DISABLE_SUPPORT_FLOAT -DPRINTF_DISABLE_SUPPORT_LONG_LONG
 
 C_INCLUDES = -IF:\FlappyAceWin\deps\ace\include\bartman -IF:\FlappyAceWin\deps\ace\include\mini_std -IF:\FlappyAceWin\deps\ace\include
 

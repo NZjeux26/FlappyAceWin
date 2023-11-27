@@ -47,6 +47,7 @@ CMakeFiles/FlappyAceWin.elf.dir/src/game.c.obj: F:/FlappyAceWin/src/game.c \
   F:/FlappyAceWin/deps/ace/include/ace/utils/extview.h \
   F:/FlappyAceWin/deps/ace/include/ace/utils/file.h \
   F:/FlappyAceWin/deps/ace/include/ace/utils/font.h \
+  F:/FlappyAceWin/deps/ace/include/ace/utils/palette.h \
   F:/FlappyAceWin/deps/ace/include/ace/utils/string.h \
   F:/FlappyAceWin/deps/ace/include/ace/utils/tag.h \
   F:/FlappyAceWin/deps/ace/include/mini_std/stdio.h \
@@ -163,6 +164,8 @@ F:/FlappyAceWin/deps/ace/include/ace/managers/viewport/simplebuffer.h:
 F:/FlappyAceWin/deps/ace/include/ace/utils/extview.h:
 
 F:/FlappyAceWin/deps/ace/include/ace/utils/font.h:
+
+F:/FlappyAceWin/deps/ace/include/ace/utils/palette.h:
 
 F:/FlappyAceWin/deps/ace/include/ace/utils/string.h:
 
