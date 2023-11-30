@@ -66,8 +66,8 @@ include CMakeFiles/generateZip.dir/compiler_depend.make
 include CMakeFiles/generateZip.dir/progress.make
 
 CMakeFiles/generateZip:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=F:\FlappyAceWin\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating FlappyAceWin 23_11_27.zip"
-	F:\cmake-3.28.0-rc3-windows-x86_64\bin\cmake.exe -E tar cf "FlappyAceWin 23_11_27.zip" --format=zip F:/FlappyAceWin/build/FlappyAceWin.exe F:/FlappyAceWin/build/myacefont.fnt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=F:\FlappyAceWin\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating FlappyAceWin 23_11_30.zip"
+	F:\cmake-3.28.0-rc3-windows-x86_64\bin\cmake.exe -E tar cf "FlappyAceWin 23_11_30.zip" --format=zip F:/FlappyAceWin/build/FlappyAceWin.exe F:/FlappyAceWin/build/myacefont.fnt
 
 generateZip: CMakeFiles/generateZip
 generateZip: CMakeFiles/generateZip.dir/build.make

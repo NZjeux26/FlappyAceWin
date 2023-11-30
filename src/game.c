@@ -36,7 +36,10 @@ static tRandManager *s_pRandManager;
 
 static tBitMap *s_pBmBirds[MAXBIRDS];
 static tBitMap *s_pBmBirdMask[MAXBIRDS];
-static tBitMap *s_pBmBird;
+static tBitMap *s_pBmTopPipe[MAXPIPES];
+static tBitMap *s_pBmBottomPipe[MAXPIPES];
+static tBitMap *s_pBmTopPipeMask[MAXPIPES];
+static tBitMap *s_pBmBottomPipeMask[MAXPIPES];
 
 g_obj player; //player object declaration
 g_obj toppipe;
@@ -53,7 +56,7 @@ int g_highScore = 0; //needs to be assigned prior to initialization
 short pipesdisplay = 1;
 short birdplay = 0;
 short oddframe = 0;
-short pipestart = 305; //set to 305 as the width of the pipes are 15 which is 320 the total width of the screen.
+short pipestart = 304; //set to 305 as the width of the pipes are 15 which is 320 the total width of the screen.
 
 ULONG startTime;
 UBYTE g_scored = false;
@@ -141,6 +144,7 @@ void gameGsCreate(void) {
  
   //create first batch of pipes to fill the array
   for (short i = 0; i < MAXPIPES; i++) {
+    makePipes();
     short pos = randUwMinMax(s_pRandManager, 30, 120); //the position of the 'centre' of the desired gap between pipes
     short range = randUwMinMax(s_pRandManager, 40, 90); //the range/distance between the pipes, centred on the pos above.
     short pipecolour = randUwMinMax(s_pRandManager,2, 16);
@@ -148,7 +152,7 @@ void gameGsCreate(void) {
     pipes[i].toppipe.x = pipestart;
     pipes[i].toppipe.y = 0;
     pipes[i].toppipe.h = pipes[i].toppipe.y + pos - (range / 2); //the height of the pipe is the Y pos - half of the gap(range) / 2;
-    pipes[i].toppipe.w = 15;
+    pipes[i].toppipe.w = 16;
     pipes[i].toppipe.colour = pipecolour;
     //manually setting the prepos values so they are not null values when the first undraw occurs
     s_pTopPipePrevPos[i][0].uwX = pipes[i].toppipe.x;
@@ -164,7 +168,7 @@ void gameGsCreate(void) {
     pipes[i].bottompipe.y = pos + (range / 2); //the y pos of the bottom pipe is the Y pos of the gap + 1/2 it's width
     pipes[i].bottompipe.h = 223 - pipes[i].bottompipe.y; //the height is simply the height of the screen 224pc - the Y of the bottom pipe.
     if (pipes[i].bottompipe.h > 223) pipes[i].bottompipe.h = 223;
-    pipes[i].bottompipe.w = 15;
+    pipes[i].bottompipe.w = 16;
     pipes[i].bottompipe.colour = pipecolour;
 
     s_pBottomPipePrevPos[i][0].uwX = pipes[i].bottompipe.x;
@@ -205,22 +209,21 @@ void gameGsLoop(void) {
   //blitRect(s_pMainBuffer->pBack, s_pPlayerPrevPos[s_ubBufferIndex].uwX,s_pPlayerPrevPos[s_ubBufferIndex].uwY, player.w, player.h, 0);
   blitCopy(s_pBmBirds[birdplay],0,0,
   s_pMainBuffer->pBack, s_pPlayerPrevPos[s_ubBufferIndex].uwX,s_pPlayerPrevPos[s_ubBufferIndex].uwY,
-  16,12,0);//16w,12h, 0 colour from the palette
+  player.w,player.h,0);//16w,12h, 0 colour from the palette
  
   //undraw each pipe pair in the array upto pipe display #
   //undraws the pipe X/Y coordinates from the array which are the previous frames' pipe X/Y positions
   for (short i = 0; i < pipesdisplay; i++) {
-      blitRect( 
-      s_pMainBuffer->pBack,
-      s_pTopPipePrevPos[i][s_ubBufferIndex].uwX, s_pTopPipePrevPos[i][s_ubBufferIndex].uwY,
-      s_pTopPipePrevPos[i][s_ubBufferIndex].uwWidth, s_pTopPipePrevPos[i][s_ubBufferIndex].uwHeight, 0
+      blitCopy(s_pBmTopPipe[i],0,0,
+      s_pMainBuffer->pBack,s_pTopPipePrevPos[i][s_ubBufferIndex].uwX,s_pTopPipePrevPos[i][s_ubBufferIndex].uwY,
+      s_pTopPipePrevPos[i][s_ubBufferIndex].uwWidth,s_pTopPipePrevPos[i][s_ubBufferIndex].uwHeight,0
       );
 
-      blitRect( 
-      s_pMainBuffer->pBack,
-      s_pBottomPipePrevPos[i][s_ubBufferIndex].uwX, s_pBottomPipePrevPos[i][s_ubBufferIndex].uwY,
-      s_pBottomPipePrevPos[i][s_ubBufferIndex].uwWidth, s_pBottomPipePrevPos[i][s_ubBufferIndex].uwHeight, 0
+      blitCopy(s_pBmBottomPipe[i],0,0,
+      s_pMainBuffer->pBack,s_pBottomPipePrevPos[i][s_ubBufferIndex].uwX,s_pBottomPipePrevPos[i][s_ubBufferIndex].uwY,
+      s_pBottomPipePrevPos[i][s_ubBufferIndex].uwWidth,s_pBottomPipePrevPos[i][s_ubBufferIndex].uwHeight,0
       );
+    
   }
  
   //**Move things accross**
@@ -263,22 +266,11 @@ void gameGsLoop(void) {
   }
   else{
     player.y = MIN(player.y + player.yvel , 210);
-   
+    birdplay = 4;
   }
-  if (keyCheck(KEY_D)){ // move player right
-    player.x = MIN(player.x + PADDLE_SPEED, 275);
-  }
-  if (keyCheck(KEY_A)){ // move player left
-    player.x = MAX(player.x - PADDLE_SPEED, 0);
-  }
+
   //this is done here, since the player has been undrawn, so we want to swap the player frame while it's undrawn
-  //oddframe is used to slow the animation down 
-  oddframe++;
-  //if(oddframe == 2){
-   // oddframe = 0;
-    //birdplay++; //increase the animation frame to the next frame
-  if(birdplay == MAXBIRDS -1) birdplay = 0; //reset animation loop back to 0
-  //}
+  if(birdplay == MAXBIRDS) birdplay = 0; //reset animation loop back to 0
   
    //**Draw things**
 
@@ -289,7 +281,7 @@ void gameGsLoop(void) {
   blitCopyMask(
   s_pBmBirds[birdplay],0,0,
   s_pMainBuffer->pBack,player.x,player.y, 
-  16, 12,s_pBmBirdMask[birdplay]->Planes[0]);
+  player.w, player.h,s_pBmBirdMask[birdplay]->Planes[0]);
   
 
   // //redraw each pipe pair in the array upto pipe display #
@@ -300,10 +292,9 @@ void gameGsLoop(void) {
     s_pTopPipePrevPos[i][s_ubBufferIndex].uwWidth = pipes[i].toppipe.w;
     s_pTopPipePrevPos[i][s_ubBufferIndex].uwHeight = pipes[i].toppipe.h;;
     //redraw
-    blitRect( 
-    s_pMainBuffer->pBack,
-    pipes[i].toppipe.x, pipes[i].toppipe.y,
-    pipes[i].toppipe.w, pipes[i].toppipe.h, pipes[i].toppipe.colour
+    blitCopyMask(s_pBmTopPipe[i],0,0,
+    s_pMainBuffer->pBack,pipes[i].toppipe.x,pipes[i].toppipe.y,
+    pipes[i].toppipe.w, pipes[i].toppipe.h,s_pBmTopPipeMask[i]->Planes[0]
     );
 
     //repeat for bottom pipe
@@ -312,10 +303,9 @@ void gameGsLoop(void) {
     s_pBottomPipePrevPos[i][s_ubBufferIndex].uwWidth = pipes[i].bottompipe.w;
     s_pBottomPipePrevPos[i][s_ubBufferIndex].uwHeight = pipes[i].bottompipe.h;
 
-    blitRect( 
-    s_pMainBuffer->pBack,
-    pipes[i].bottompipe.x, pipes[i].bottompipe.y,
-    pipes[i].bottompipe.w, pipes[i].bottompipe.h, pipes[i].bottompipe.colour
+    blitCopyMask(s_pBmBottomPipe[i],0,0,
+    s_pMainBuffer->pBack,pipes[i].bottompipe.x,pipes[i].bottompipe.y,
+    pipes[i].bottompipe.w, pipes[i].bottompipe.h,s_pBmBottomPipeMask[i]->Planes[0]
     );
 
   }
@@ -337,7 +327,9 @@ void gameGsLoop(void) {
   s_ubBufferIndex = !s_ubBufferIndex;
   viewProcessManagers(s_pView);//might be wrong
   copProcessBlocks();
+  systemIdleBegin();
   vPortWaitForEnd(s_pVpMain);
+  systemIdleEnd();
   }
 }
 
@@ -348,7 +340,12 @@ void gameGsDestroy(void) {
     bitmapDestroy(s_pBmBirdMask[i]);
     bitmapDestroy(s_pBmBirds[i]);
   }
-  bitmapDestroy(s_pBmBird);
+  for(short int i = 0; i < MAXPIPES; i++){
+    bitmapDestroy(s_pBmBottomPipe[i]);
+    bitmapDestroy(s_pBmBottomPipeMask[i]);
+    bitmapDestroy(s_pBmTopPipe[i]);
+    bitmapDestroy(s_pBmTopPipeMask[i]);
+  }
   // This will also destroy all associated viewports and viewport managers
   viewDestroy(s_pView);
   logBlockEnd("gameGsDestroy");
@@ -436,4 +433,13 @@ void makebirds(void){
   s_pBmBirdMask[3] = bitmapCreateFromFile("data/birdt4_mask.bm", 0);
   s_pBmBirds[4] = bitmapCreateFromFile("data/birdt5.bm",0);
   s_pBmBirdMask[4] = bitmapCreateFromFile("data/birdt5_mask.bm", 0);
+}
+
+void makePipes(){
+  for(short i = 0; i < MAXPIPES; i++) {
+    s_pBmTopPipe[i] = bitmapCreateFromFile("data/pipetop.bm",0);
+    s_pBmTopPipeMask[i] = bitmapCreateFromFile("data/pipetop_mask.bm",0);
+    s_pBmBottomPipe[i] = bitmapCreateFromFile("data/pipebottom.bm",0);
+    s_pBmBottomPipeMask[i] = bitmapCreateFromFile("data/pipebottom_mask.bm",0);
+  }
 }
