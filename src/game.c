@@ -8,6 +8,7 @@
 #include <ace/managers/blit.h> // Blitting fns
 #include <ace/managers/state.h>
 #include <ace/managers/rand.h>
+#include <ace/managers/sprite.h>
 #include <ace/utils/file.h>
 #include <ace/utils/font.h>
 #include <ace/utils/string.h>
@@ -40,6 +41,8 @@ static tBitMap *s_pBmTopPipe[MAXPIPES];
 static tBitMap *s_pBmBottomPipe[MAXPIPES];
 static tBitMap *s_pBmTopPipeMask[MAXPIPES];
 static tBitMap *s_pBmBottomPipeMask[MAXPIPES];
+static tBitMap *s_pSprite0Data,*s_pSprite3Data;
+static tSprite *s_pSprite3, *s_pSprite0;
 
 g_obj player; //player object declaration
 g_obj toppipe;
@@ -99,6 +102,25 @@ void gameGsCreate(void) {
 
   paletteLoad("data/flappypal3.plt", s_pVpScore->pPalette, 16); //replaces palette
   makebirds();//make the bitmaps for the frames
+  
+  spriteManagerCreate(s_pView, 0);
+  systemSetDmaBit(DMAB_SPRITE, 1);
+  
+  //spriteProcessChannel(3);
+
+  
+  //s_pSprite3Data = bitmapCreate(16,226,2,BMF_CLEAR);
+  //s_pSprite0Data = bitmapCreateFromFile("data/fullpipe.bm",0);
+  //s_pSprite3Data = bitmapCreateFromFile("data/fullpipe.bm",0);
+
+
+  s_pSprite0Data = bitmapCreate(16, 34, 2, BMF_INTERLEAVED);
+  s_pSprite0 = spriteAdd(0,s_pSprite0Data);//top
+  blitRect(s_pSprite0->pBitmap,0,0,16,34,2);
+  
+
+  //s_pSprite3 = spriteAdd(3,s_pSprite3Data);//bottom
+ 
   // Draw line separating score VPort and main VPort, leave one line blank after it
   blitLine(
     s_pScoreBuffer->pBack,
@@ -203,8 +225,8 @@ void gameGsLoop(void) {
   if(keyCheck(KEY_ESCAPE)) {
     gameExit();
   }
-  else {
-  
+  //else {
+  spriteProcessChannel(0);
   //undraw player
   //blitRect(s_pMainBuffer->pBack, s_pPlayerPrevPos[s_ubBufferIndex].uwX,s_pPlayerPrevPos[s_ubBufferIndex].uwY, player.w, player.h, 0);
   blitCopy(s_pBmBirds[birdplay],0,0,
@@ -223,7 +245,6 @@ void gameGsLoop(void) {
       s_pMainBuffer->pBack,s_pBottomPipePrevPos[i][s_ubBufferIndex].uwX,s_pBottomPipePrevPos[i][s_ubBufferIndex].uwY,
       s_pBottomPipePrevPos[i][s_ubBufferIndex].uwWidth,s_pBottomPipePrevPos[i][s_ubBufferIndex].uwHeight,0
       );
-    
   }
  
   //**Move things accross**
@@ -310,14 +331,14 @@ void gameGsLoop(void) {
 
   }
   //timer handling the pipes being spawned, reset to 1 at game reset
-  ULONG currentTime = timerGet();
-    if(currentTime - startTime > 120){
-      pipesdisplay++;
-    if(pipesdisplay >= MAXPIPES){
-      pipesdisplay = MAXPIPES -1;
-    }
-    startTime = currentTime;
-  }
+  // ULONG currentTime = timerGet();
+  //   if(currentTime - startTime > 120){
+  //     pipesdisplay++;
+  //   if(pipesdisplay >= MAXPIPES){
+  //     pipesdisplay = MAXPIPES -1;
+  //   }
+  //   startTime = currentTime;
+  // }
 
   if(g_scored){//if the player scores, update the score board. 
     g_scored = false;
@@ -328,10 +349,11 @@ void gameGsLoop(void) {
   viewProcessManagers(s_pView);//might be wrong
   copProcessBlocks();
   systemIdleBegin();
-  vPortWaitForEnd(s_pVpMain);
+  vPortWaitUntilEnd(s_pVpMain);
+  //vPortWaitForEnd(s_pVpMain);
   systemIdleEnd();
   }
-}
+//}
 
 void gameGsDestroy(void) {
   logBlockBegin("gameGsDestroy");
@@ -346,6 +368,9 @@ void gameGsDestroy(void) {
     bitmapDestroy(s_pBmTopPipe[i]);
     bitmapDestroy(s_pBmTopPipeMask[i]);
   }
+  spriteRemove(s_pSprite0);
+  systemSetDmaBit(DMAB_SPRITE, 0);
+  spriteManagerDestroy();
   // This will also destroy all associated viewports and viewport managers
   viewDestroy(s_pView);
   logBlockEnd("gameGsDestroy");

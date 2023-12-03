@@ -45,7 +45,8 @@
 		"maze.h": "c",
 		"gfxbase.h": "c",
 		"cstdio": "c",
-		"states.h": "c"
+		"states.h": "c",
+		"sprite.h": "c"
 	},
 	"cmake.configureOnOpen": false,
 	"C_Cpp.default.compilerPath": "C:\\msys64\\mingw64\\bin\\gcc.exe",
