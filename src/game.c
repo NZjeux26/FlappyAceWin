@@ -41,8 +41,11 @@ static tBitMap *s_pBmTopPipe[MAXPIPES];
 static tBitMap *s_pBmBottomPipe[MAXPIPES];
 static tBitMap *s_pBmTopPipeMask[MAXPIPES];
 static tBitMap *s_pBmBottomPipeMask[MAXPIPES];
-static tBitMap *s_pSprite0Data,*s_pSprite3Data;
-static tSprite *s_pSprite3, *s_pSprite0;
+static tBitMap *s_pSprite0Data;
+static tBitMap *s_pSpriteSrc;
+static tBitMap *s_pSprite3Data;
+static tSprite *s_pSprite3;
+static tSprite *s_pSprite0;
 
 g_obj player; //player object declaration
 g_obj toppipe;
@@ -59,7 +62,7 @@ int g_highScore = 0; //needs to be assigned prior to initialization
 short pipesdisplay = 1;
 short birdplay = 0;
 short oddframe = 0;
-short pipestart = 304; //set to 305 as the width of the pipes are 15 which is 320 the total width of the screen.
+short pipestart = 304; //set to 304 as the width of the pipes are 16 which is 320 the total width of the screen.
 
 ULONG startTime;
 UBYTE g_scored = false;
@@ -100,26 +103,22 @@ void gameGsCreate(void) {
     TAG_SIMPLEBUFFER_IS_DBLBUF, 1, //add this line in for double buffering
     TAG_END);
 
-  paletteLoad("data/flappypal3.plt", s_pVpScore->pPalette, 16); //replaces palette
+  paletteLoad("data/flappypal6.plt", s_pVpScore->pPalette, 20); //replaces palette
   makebirds();//make the bitmaps for the frames
   
   spriteManagerCreate(s_pView, 0);
   systemSetDmaBit(DMAB_SPRITE, 1);
-  
-  //spriteProcessChannel(3);
 
-  
-  //s_pSprite3Data = bitmapCreate(16,226,2,BMF_CLEAR);
-  //s_pSprite0Data = bitmapCreateFromFile("data/fullpipe.bm",0);
-  //s_pSprite3Data = bitmapCreateFromFile("data/fullpipe.bm",0);
-
-
-  s_pSprite0Data = bitmapCreate(16, 34, 2, BMF_INTERLEAVED);
+  s_pSpriteSrc = bitmapCreateFromFile("data/fullpipe.bm",0);//could make these sprites and sprite datas an array.
+  s_pSprite0Data = bitmapCreate(16,112,2,BMF_INTERLEAVED);
+  blitCopy(s_pSpriteSrc,0,112,
+  s_pSprite0Data,0,0,
+  16,112,0);
   s_pSprite0 = spriteAdd(0,s_pSprite0Data);//top
-  blitRect(s_pSprite0->pBitmap,0,0,16,34,2);
   
-
-  //s_pSprite3 = spriteAdd(3,s_pSprite3Data);//bottom
+  
+  s_pSprite3Data = bitmapCreateFromFile("data/fullpipe.bm",0);
+  s_pSprite3 = spriteAdd(1,s_pSprite3Data);//bottom
  
   // Draw line separating score VPort and main VPort, leave one line blank after it
   blitLine(
@@ -128,11 +127,6 @@ void gameGsCreate(void) {
     s_pVpScore->uwWidth - 1, s_pVpScore->uwHeight - 2,
     SCORE_COLOR, 0xFFFF, 0 // Try patterns 0xAAAA, 0xEEEE, etc.
   );
- // draw line for bottom of playfield.
-  // blitRect(
-  //   s_pMainBuffer->pBack,
-  //   0, s_pVpMain->uwHeight - WALL_HEIGHT, s_pVpMain->uwWidth, WALL_HEIGHT, WALL_COLOR
-  // );            //x1                          and y1
 
   gSCORE = 99999999;  //set to 99999999 so the bitmap is big enough to handle larger numbers
   g_highScore = getHighScore();  //get the highscore from the file, returning zero if no file
@@ -163,13 +157,34 @@ void gameGsCreate(void) {
   player.h = 12;
   player.yvel = 2;
   player.colour = 5;
+  short pos = randUwMinMax(s_pRandManager, 62, 156); //the position of the 'centre' of the desired gap between pipes atted 32 to previous values since the sprites don't care about viewports
+  short range = randUwMinMax(s_pRandManager, 45, 95); //the range/distance between the pipes, centred on the pos above.
+  short pipecolour = randUwMinMax(s_pRandManager,2, 16);
+
+    s_pSprite0->wX = pipestart;
+    s_pSprite0->wY = 32;
+    s_pSprite0->uwHeight = (s_pSprite0->wY - 32) + pos - (range / 2); // need to subtract 32 (scoreboardviewport) back off the Y pos to align  correctly in the main viewport.
+    
  
+ 
+    s_pSprite3->wX = pipestart;
+    s_pSprite3->wY = pos + (range / 2);
+    s_pSprite3->uwHeight = 256 - s_pSprite3->wY;
   //create first batch of pipes to fill the array
   for (short i = 0; i < MAXPIPES; i++) {
-    makePipes();
-    short pos = randUwMinMax(s_pRandManager, 30, 120); //the position of the 'centre' of the desired gap between pipes
-    short range = randUwMinMax(s_pRandManager, 40, 90); //the range/distance between the pipes, centred on the pos above.
-    short pipecolour = randUwMinMax(s_pRandManager,2, 16);
+    //makePipes();
+    // short pos = randUwMinMax(s_pRandManager, 62, 156); //the position of the 'centre' of the desired gap between pipes atted 32 to previous values since the sprites don't care about viewports
+    // short range = randUwMinMax(s_pRandManager, 45, 95); //the range/distance between the pipes, centred on the pos above.
+    // short pipecolour = randUwMinMax(s_pRandManager,2, 16);
+
+    // s_pSprite0->wX = pipestart;
+    // s_pSprite0->wY = 32;
+    // s_pSprite0->uwHeight = (s_pSprite0->wY - 32) + pos - (range / 2); // need to subtract 32 (scoreboardviewport) back off the Y pos to align  correctly in the main viewport.
+    // //s_pSprite0->wY = 32 + s_pSprite0->uwHeight;
+
+    // s_pSprite3->wX = pipestart;
+    // s_pSprite3->wY = pos + (range / 2);
+    // s_pSprite3->uwHeight = 256 - s_pSprite3->wY;
 
     pipes[i].toppipe.x = pipestart;
     pipes[i].toppipe.y = 0;
@@ -225,8 +240,13 @@ void gameGsLoop(void) {
   if(keyCheck(KEY_ESCAPE)) {
     gameExit();
   }
-  //else {
+  
+  //update x 
+  spriteProcess(s_pSprite0);
   spriteProcessChannel(0);
+
+  spriteProcess(s_pSprite3);
+  spriteProcessChannel(1);
   //undraw player
   //blitRect(s_pMainBuffer->pBack, s_pPlayerPrevPos[s_ubBufferIndex].uwX,s_pPlayerPrevPos[s_ubBufferIndex].uwY, player.w, player.h, 0);
   blitCopy(s_pBmBirds[birdplay],0,0,
@@ -236,15 +256,19 @@ void gameGsLoop(void) {
   //undraw each pipe pair in the array upto pipe display #
   //undraws the pipe X/Y coordinates from the array which are the previous frames' pipe X/Y positions
   for (short i = 0; i < pipesdisplay; i++) {
-      blitCopy(s_pBmTopPipe[i],0,0,
-      s_pMainBuffer->pBack,s_pTopPipePrevPos[i][s_ubBufferIndex].uwX,s_pTopPipePrevPos[i][s_ubBufferIndex].uwY,
-      s_pTopPipePrevPos[i][s_ubBufferIndex].uwWidth,s_pTopPipePrevPos[i][s_ubBufferIndex].uwHeight,0
-      );
 
-      blitCopy(s_pBmBottomPipe[i],0,0,
-      s_pMainBuffer->pBack,s_pBottomPipePrevPos[i][s_ubBufferIndex].uwX,s_pBottomPipePrevPos[i][s_ubBufferIndex].uwY,
-      s_pBottomPipePrevPos[i][s_ubBufferIndex].uwWidth,s_pBottomPipePrevPos[i][s_ubBufferIndex].uwHeight,0
-      );
+       //update x 
+      // spriteProcess(s_pSprite0);
+      // spriteProcessChannel(0);
+      // blitCopy(s_pBmTopPipe[i],0,0,
+      // s_pMainBuffer->pBack,s_pTopPipePrevPos[i][s_ubBufferIndex].uwX,s_pTopPipePrevPos[i][s_ubBufferIndex].uwY,
+      // s_pTopPipePrevPos[i][s_ubBufferIndex].uwWidth,s_pTopPipePrevPos[i][s_ubBufferIndex].uwHeight,0
+      // );
+
+      // blitCopy(s_pBmBottomPipe[i],0,0,
+      // s_pMainBuffer->pBack,s_pBottomPipePrevPos[i][s_ubBufferIndex].uwX,s_pBottomPipePrevPos[i][s_ubBufferIndex].uwY,
+      // s_pBottomPipePrevPos[i][s_ubBufferIndex].uwWidth,s_pBottomPipePrevPos[i][s_ubBufferIndex].uwHeight,0
+      // );
   }
  
   //**Move things accross**
@@ -306,30 +330,30 @@ void gameGsLoop(void) {
   
 
   // //redraw each pipe pair in the array upto pipe display #
-  for (short i = 0; i < pipesdisplay; i++) {
-    //update toppipe previous position
-    s_pTopPipePrevPos[i][s_ubBufferIndex].uwX = pipes[i].toppipe.x;
-    s_pTopPipePrevPos[i][s_ubBufferIndex].uwY = pipes[i].toppipe.y;
-    s_pTopPipePrevPos[i][s_ubBufferIndex].uwWidth = pipes[i].toppipe.w;
-    s_pTopPipePrevPos[i][s_ubBufferIndex].uwHeight = pipes[i].toppipe.h;;
-    //redraw
-    blitCopyMask(s_pBmTopPipe[i],0,0,
-    s_pMainBuffer->pBack,pipes[i].toppipe.x,pipes[i].toppipe.y,
-    pipes[i].toppipe.w, pipes[i].toppipe.h,s_pBmTopPipeMask[i]->Planes[0]
-    );
+  // for (short i = 0; i < pipesdisplay; i++) {
+  //   //update toppipe previous position
+  //   s_pTopPipePrevPos[i][s_ubBufferIndex].uwX = pipes[i].toppipe.x;
+  //   s_pTopPipePrevPos[i][s_ubBufferIndex].uwY = pipes[i].toppipe.y;
+  //   s_pTopPipePrevPos[i][s_ubBufferIndex].uwWidth = pipes[i].toppipe.w;
+  //   s_pTopPipePrevPos[i][s_ubBufferIndex].uwHeight = pipes[i].toppipe.h;;
+  //   //redraw
+  //   blitCopyMask(s_pBmTopPipe[i],0,0,
+  //   s_pMainBuffer->pBack,pipes[i].toppipe.x,pipes[i].toppipe.y,
+  //   pipes[i].toppipe.w, pipes[i].toppipe.h,s_pBmTopPipeMask[i]->Planes[0]
+  //   );
 
-    //repeat for bottom pipe
-    s_pBottomPipePrevPos[i][s_ubBufferIndex].uwX = pipes[i].bottompipe.x;
-    s_pBottomPipePrevPos[i][s_ubBufferIndex].uwY = pipes[i].bottompipe.y;
-    s_pBottomPipePrevPos[i][s_ubBufferIndex].uwWidth = pipes[i].bottompipe.w;
-    s_pBottomPipePrevPos[i][s_ubBufferIndex].uwHeight = pipes[i].bottompipe.h;
+  //   //repeat for bottom pipe
+  //   s_pBottomPipePrevPos[i][s_ubBufferIndex].uwX = pipes[i].bottompipe.x;
+  //   s_pBottomPipePrevPos[i][s_ubBufferIndex].uwY = pipes[i].bottompipe.y;
+  //   s_pBottomPipePrevPos[i][s_ubBufferIndex].uwWidth = pipes[i].bottompipe.w;
+  //   s_pBottomPipePrevPos[i][s_ubBufferIndex].uwHeight = pipes[i].bottompipe.h;
 
-    blitCopyMask(s_pBmBottomPipe[i],0,0,
-    s_pMainBuffer->pBack,pipes[i].bottompipe.x,pipes[i].bottompipe.y,
-    pipes[i].bottompipe.w, pipes[i].bottompipe.h,s_pBmBottomPipeMask[i]->Planes[0]
-    );
+  //   blitCopyMask(s_pBmBottomPipe[i],0,0,
+  //   s_pMainBuffer->pBack,pipes[i].bottompipe.x,pipes[i].bottompipe.y,
+  //   pipes[i].bottompipe.w, pipes[i].bottompipe.h,s_pBmBottomPipeMask[i]->Planes[0]
+  //   );
 
-  }
+  // }
   //timer handling the pipes being spawned, reset to 1 at game reset
   // ULONG currentTime = timerGet();
   //   if(currentTime - startTime > 120){
@@ -353,7 +377,6 @@ void gameGsLoop(void) {
   //vPortWaitForEnd(s_pVpMain);
   systemIdleEnd();
   }
-//}
 
 void gameGsDestroy(void) {
   logBlockBegin("gameGsDestroy");
@@ -369,6 +392,7 @@ void gameGsDestroy(void) {
     bitmapDestroy(s_pBmTopPipeMask[i]);
   }
   spriteRemove(s_pSprite0);
+  spriteRemove(s_pSprite3);
   systemSetDmaBit(DMAB_SPRITE, 0);
   spriteManagerDestroy();
   // This will also destroy all associated viewports and viewport managers
