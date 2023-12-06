@@ -163,7 +163,7 @@ void gameGsCreate(void) {
 
     s_pSprite0->wX = pipestart;
     s_pSprite0->wY = 32;
-    s_pSprite0->uwHeight = (s_pSprite0->wY - 32) + pos - (range / 2); // need to subtract 32 (scoreboardviewport) back off the Y pos to align  correctly in the main viewport.
+    s_pSprite0->uwHeight = 30;//(s_pSprite0->wY - 32) + pos - (range / 2); // need to subtract 32 (scoreboardviewport) back off the Y pos to align  correctly in the main viewport.
     
  
  
@@ -307,13 +307,20 @@ void gameGsLoop(void) {
   //controls
   if(keyCheck(KEY_SPACE)){  //move player up
     player.y = MAX(player.y - PADDLE_SPEED, 0);
-    birdplay++;
+    birdplay++; //run the animation
   }
   else{
-    player.y = MIN(player.y + player.yvel , 210);
-    birdplay = 4;
+    //player.y = MIN(player.y + player.yvel , 210);
+    birdplay = 4; //set the bird to wings down for falling
   }
-
+     if (keyCheck(KEY_D))
+    { // move player right
+      player.x = MIN(player.x + PADDLE_SPEED, 275);
+    }
+    if (keyCheck(KEY_A))
+    { // move player left
+      player.x = MAX(player.x - PADDLE_SPEED, 0);
+    }
   //this is done here, since the player has been undrawn, so we want to swap the player frame while it's undrawn
   if(birdplay == MAXBIRDS) birdplay = 0; //reset animation loop back to 0
   
