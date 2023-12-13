@@ -38,12 +38,15 @@ static tRandManager *s_pRandManager;
 static tBitMap *s_pBmBirds[MAXBIRDS];
 static tBitMap *s_pBmBirdMask[MAXBIRDS];
 static tBitMap *s_pSprite0Data;
+static tBitMap *s_pSpriteBottomData[MAXPIPES];
+static tBitMap *s_pSpriteTopData[MAXPIPES];
 static tBitMap *s_pSpriteSrc;
 static tBitMap *s_pSprite3Data;
 
 static tSprite *s_pSprite3;
 static tSprite *s_pSprite0;
-
+static tSprite *s_pSpriteTop[MAXPIPES];
+static tSprite *s_pSpriteBottom[MAXPIPES];
 g_obj player; //player object declaration
 
 tFont *fallfontsmall; //global for font
@@ -55,9 +58,11 @@ int g_highScore = 0; //needs to be assigned prior to initialization
 short pipesdisplay = 0;
 short birdplay = 0;
 short pipestart = 304; //set to 304 as the width of the pipes are 16 which is 320 the total width of the screen.
+short topPipeOffset = 0;
 
 ULONG startTime;
 UBYTE g_scored = false;
+
 //arrays holding previous positions of the player and pipes
 tUwCoordYX s_pPlayerPrevPos[2];
 
@@ -102,7 +107,7 @@ void gameGsCreate(void) {
   s_pSprite0Data = bitmapCreate(16,112,2,BMF_INTERLEAVED);//112 is the half hieght of the screen and the max size of the sprite.
   s_pSprite0 = spriteAdd(0,s_pSprite0Data);//top
   
-  s_pSprite3Data = bitmapCreateFromFile("data/fullpipe.bm",0);
+  s_pSprite3Data = bitmapCreate(16,112,2,BMF_INTERLEAVED);//bitmapCreateFromFile("data/fullpipe.bm",0);
   s_pSprite3 = spriteAdd(1,s_pSprite3Data);//bottom
  
   // Draw line separating score VPort and main VPort, leave one line blank after it
@@ -140,12 +145,13 @@ void gameGsCreate(void) {
   player.y = (s_pVpMain->uwHeight - player.h) / 2;
   player.w = 15;
   player.h = 12;
-  player.yvel = 2;
-  player.colour = 5;
+
   short pos = randUwMinMax(s_pRandManager, 62, 156); //the position of the 'centre' of the desired gap between pipes atted 32 to previous values since the sprites don't care about viewports
   short range = randUwMinMax(s_pRandManager, 45, 95); //the range/distance between the pipes, centred on the pos above.
-
-    UWORD uwHeight = (s_pSprite0->wY) + pos - (range / 2);
+  logWrite("POS is %d, range is %d", pos, range);
+    s_pSprite0->wY = 32;
+    UWORD uwHeight = s_pSprite0->wY + pos - (range / 2);
+    logWrite("Height is %d", uwHeight);
     blitCopy(
       s_pSpriteSrc,0,s_pSpriteSrc->Rows - uwHeight,
       s_pSprite0Data,0,0,
@@ -153,16 +159,15 @@ void gameGsCreate(void) {
     );
     s_pSprite0->uwHeight = uwHeight;
     s_pSprite0->wX = pipestart;
-    s_pSprite0->wY = 32;
- 
+
     s_pSprite3->wX = pipestart;
     s_pSprite3->wY = pos + (range / 2);
     s_pSprite3->uwHeight = 256 - s_pSprite3->wY;
   //create first batch of pipes to fill the array
+  //makePipes();
   for (short i = 0; i < MAXPIPES; i++) {
-    //makePipes();
-    // short pos = randUwMinMax(s_pRandManager, 62, 156); //the position of the 'centre' of the desired gap between pipes atted 32 to previous values since the sprites don't care about viewports
-    // short range = randUwMinMax(s_pRandManager, 45, 95); //the range/distance between the pipes, centred on the pos above.
+     short pos = randUwMinMax(s_pRandManager, 62, 156); //the position of the 'centre' of the desired gap between pipes atted 32 to previous values since the sprites don't care about viewports
+     short range = randUwMinMax(s_pRandManager, 45, 95); //the range/distance between the pipes, centred on the pos above.
   }
 
   systemUnuse();
@@ -177,11 +182,17 @@ The third condition checks if the y-coordinate of the first block is less than t
 The fourth condition checks if the y-coordinate of the first block plus the height of the first block is greater than the y-coordinate of the second block. This ensures that the first block is not below the second block.
 If all of these conditions are met, then the two blocks collide.*/
 //collision detection function takes a player object and a sprite object and return if there is a collision. 14 is the 'width' of the sprite
-UBYTE Collision(g_obj *a, tSprite b)
+UBYTE Collision(g_obj *a, tSprite b, UBYTE top)
 {
+  if(top){
+    return (a->x < b.wX + 14 && 
+          a->x + a->w > b.wX && 
+          a->y < b.wY + (b.uwHeight - 32) && //32 is subtracted since the sprites(for toppipe) start from Y = 0 not The viewport height which is 32.
+          a->y + a->h > b.wY);
+  }
   return (a->x < b.wX + 14 && 
           a->x + a->w > b.wX && 
-          a->y < b.wY + b.uwHeight && 
+          a->y < b.wY + b.uwHeight && //32 is subtracted since the sprites(for toppipe) start from Y = 0 not The viewport height which is 32.
           a->y + a->h > b.wY);
 }
 
@@ -212,17 +223,19 @@ void gameGsLoop(void) {
 
         spriteSetEnabled(s_pSprite0,0);
         spriteSetEnabled(s_pSprite3,0);
-        
-        s_pSprite0->wY = 0;
-        UWORD uwHeight = (s_pSprite0->wY) + pos - (range / 2);
+        logWrite("Height now is %d", s_pSprite0->uwHeight);
+        s_pSprite0->wY = 32;
+        UWORD uwHeight = s_pSprite0->wY + pos - (range / 2);
+        logWrite("Height is %d", uwHeight);
         blitCopy(
           s_pSpriteSrc,0,s_pSpriteSrc->Rows - uwHeight,
           s_pSprite0Data,0,0,
           16, uwHeight, MINTERM_COOKIE
         );
         s_pSprite0->uwHeight = uwHeight;
+         logWrite("Height now is %d", s_pSprite0->uwHeight);
         s_pSprite0->wX = pipestart;
-        s_pSprite0->wY = 32;
+        //s_pSprite0->wY = 32;
        
         s_pSprite3->wX = pipestart;
         s_pSprite3->wY = pos + (range / 2);
@@ -240,7 +253,9 @@ void gameGsLoop(void) {
         s_pSprite3->wX -= 1;
       }
       //if the player touches a pipe
-      if(Collision(&player, *s_pSprite0) || Collision(&player, *s_pSprite3)){ //** issue, seems to be the toppipe on first run is the full screen height of the playfield just not showing
+      if(Collision(&player, *s_pSprite0,true) || Collision(&player, *s_pSprite3,false)){ //true set for toppie to sub 32 for the starting y value.
+        logWrite("Contact, player.x = %d, player.y = %d", player.x,player.y);
+        logWrite("Contact, Toppipe.x = %d, toppipe.y = %d, toppipe height = %d",s_pSprite0->wX,s_pSprite0->wY,s_pSprite0->uwHeight);
         stateChange(g_pStateManager, g_pMenuState); //switch to the menu state to ask to replay
         //need to destroy the sprites and data
         highScoreCheck(); //check the HS and write if required
@@ -404,4 +419,15 @@ void makebirds(void){
   s_pBmBirdMask[3] = bitmapCreateFromFile("data/birdt4_mask.bm", 0);
   s_pBmBirds[4] = bitmapCreateFromFile("data/birdt5.bm",0);
   s_pBmBirdMask[4] = bitmapCreateFromFile("data/birdt5_mask.bm", 0);
+}
+
+void makePipes(void) {
+  s_pSpriteSrc = bitmapCreateFromFile("data/fullpipe.bm",0);
+  for(short i = 0; i < MAXPIPES; i++){
+    s_pSpriteTopData[i] = bitmapCreate(16,112,2,BMF_INTERLEAVED);//112 is the half hieght of the screen and the max size of the sprite.
+    s_pSpriteTop[i] = spriteAdd(i,s_pSpriteTopData[i]);//top //i is the channel number, they are in pairs upto 3 pairs. On paper it's four pairs but in reality no.
+    
+    s_pSpriteBottomData[i] = bitmapCreateFromFile("data/fullpipe.bm",0);
+    s_pSpriteBottom[i] = spriteAdd(i,s_pSpriteBottomData[i]);//bottom
+  }
 }
