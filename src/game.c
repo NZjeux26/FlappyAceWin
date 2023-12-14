@@ -38,8 +38,8 @@ static tRandManager *s_pRandManager;
 static tBitMap *s_pBmBirds[MAXBIRDS];
 static tBitMap *s_pBmBirdMask[MAXBIRDS];
 static tBitMap *s_pSprite0Data;
-static tBitMap *s_pSpriteBottomData[MAXPIPES];
 static tBitMap *s_pSpriteTopData[MAXPIPES];
+static tBitMap *s_pSpriteBottomData[MAXPIPES];
 static tBitMap *s_pSpriteSrc;
 static tBitMap *s_pSprite3Data;
 
@@ -146,8 +146,8 @@ void gameGsCreate(void) {
   player.w = 15;
   player.h = 12;
 
-  short pos = randUwMinMax(s_pRandManager, 62, 156); //the position of the 'centre' of the desired gap between pipes atted 32 to previous values since the sprites don't care about viewports
-  short range = randUwMinMax(s_pRandManager, 45, 95); //the range/distance between the pipes, centred on the pos above.
+  short pos = randUwMinMax(s_pRandManager, 65, 122); //the position of the 'centre' of the desired gap between pipes atted 32 to previous values since the sprites don't care about viewports
+  short range = randUwMinMax(s_pRandManager, 46, 94); //the range/distance between the pipes, centred on the pos above.
   logWrite("POS is %d, range is %d", pos, range);
     s_pSprite0->wY = 32;
     UWORD uwHeight = s_pSprite0->wY + pos - (range / 2);
@@ -168,6 +168,21 @@ void gameGsCreate(void) {
   for (short i = 0; i < MAXPIPES; i++) {
      short pos = randUwMinMax(s_pRandManager, 62, 156); //the position of the 'centre' of the desired gap between pipes atted 32 to previous values since the sprites don't care about viewports
      short range = randUwMinMax(s_pRandManager, 45, 95); //the range/distance between the pipes, centred on the pos above.
+    
+    //top pipes intionlistion
+     s_pSpriteTop[i]->wY = 32;
+     UWORD uwHeight = s_pSpriteTop[i]->wY + pos - (range / 2);
+      blitCopy(
+      s_pSpriteSrc,0,s_pSpriteSrc->Rows - uwHeight,
+      s_pSpriteTopData[i],0,0,
+      16, uwHeight, MINTERM_COOKIE
+    );
+    s_pSpriteTop[i]->uwHeight = uwHeight;
+    s_pSpriteTop[i]->wX = pipestart;
+    //bottompipe
+    s_pSpriteBottom[i]->wX = pipestart;
+    s_pSpriteBottom[i]->wY = pos + (range / 2);
+    s_pSpriteBottom[i]->uwHeight = 256 - s_pSprite3->wY;
   }
 
   systemUnuse();
@@ -201,13 +216,18 @@ void gameGsLoop(void) {
   if(keyCheck(KEY_ESCAPE)) {
     gameExit();
   }
-  
-  //update x 
-  spriteProcess(s_pSprite0);
-  spriteProcessChannel(0);
-  
-  spriteProcess(s_pSprite3);
-  spriteProcessChannel(1);
+  //activates the sprite channels.
+  for(short j = 0; j < (MAXPIPES * 2); j+= 2) {
+     //update x 
+    spriteProcess(s_pSpriteTop[j]);
+    spriteProcessChannel(j);
+  }
+   for(short j = 1; j < (MAXPIPES * 2); j+= 2) {
+     //update x 
+    spriteProcess(s_pSpriteBottom[j]); //
+    spriteProcessChannel(j);
+  }
+ 
   //undraw player
 
   blitCopy(s_pBmBirds[birdplay],0,0,
@@ -216,8 +236,8 @@ void gameGsLoop(void) {
  
   //**Move things accross**
 
-  //for (short i = 0; i < pipesdisplay; i++) {
-      if(s_pSprite0->wX <=0 || s_pSprite3->wX <=0){//probably only need one pipe side but jsut in case something weird happens
+  for (short i = 0; i < pipesdisplay; i++) {
+      if(s_pSpriteTop[i]->wX <=0 || s_pSpriteBottom[i]->wX <=0){//probably only need one pipe side but jsut in case something weird happens
         short pos = randUwMinMax(s_pRandManager, 62, 156); //recalculate position and the gap between pipes(range)
         short range = randUwMinMax(s_pRandManager, 45, 90);
 
@@ -262,7 +282,7 @@ void gameGsLoop(void) {
         pipesdisplay = 1; //reset the pipedisplay to 1 so on reply not all pipes are spawned
         return;
       }
-  //}
+  }
 
   //controls
   if(keyCheck(KEY_SPACE)){  //move player up
