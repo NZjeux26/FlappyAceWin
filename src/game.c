@@ -20,7 +20,7 @@
 #define SCORE_COLOR 1
 #define WALL_HEIGHT 1
 #define WALL_COLOR 1
-#define PADDLE_SPEED 3
+#define PADDLE_SPEED 2
 #define MAXPIPES 4
 #define MAXBIRDS 5
 //-------------------------------------------------------------- NEW STUFF START
@@ -40,6 +40,7 @@ static tBitMap *s_pBmBirdMask[MAXBIRDS];
 static tBitMap *s_pSpriteTopData[MAXPIPES];
 static tBitMap *s_pSpriteBottomData[MAXPIPES];
 static tBitMap *s_pSpriteSrc;
+static tBitMap *pBmBackground;
 
 static tSprite *s_pSpriteTop[MAXPIPES];
 static tSprite *s_pSpriteBottom[MAXPIPES];
@@ -95,7 +96,13 @@ void gameGsCreate(void) {
 
   paletteLoad("data/flappypal6.plt", s_pVpScore->pPalette, 32); //replaces palette
   makebirds();//make the bitmaps for the frames
-  
+  // pBmBackground = bitmapCreateFromFile("data/background.bm",0);//load the background
+  // for(short x = 0; x < s_pMainBuffer->uBfrBounds.uwX; x+=16){
+  //   for(short y = 0; y < s_pMainBuffer->uBfrBounds.uwY; y+=16){
+  //     blitCopyAligned(pBmBackground,0,0,s_pMainBuffer->pBack,x,y,16,16);
+  //   }
+  // }
+  // bitmapDestroy(pBmBackground);
   spriteManagerCreate(s_pView, 0);
   systemSetDmaBit(DMAB_SPRITE, 1);
  
@@ -134,17 +141,18 @@ void gameGsCreate(void) {
   player.y = (s_pVpMain->uwHeight - player.h) / 2;
   player.w = 15;
   player.h = 12;
+  player.yvel = 2;
 
   //create first batch of pipes to fill the array
   makePipes();
   for (short i = 0; i < MAXPIPES; i++) {
     short pos = randUwMinMax(s_pRandManager, 62, 150); //recalculate position and the gap between pipes(range)
     short range = randUwMinMax(s_pRandManager, 56, 86);
-    logWrite(" %d 1POS is %d, range is %d",i, pos, range);
+  
     //top pipes intionlistion
     s_pSpriteTop[i]->wY = 32;
     UWORD uwHeight = (s_pSpriteTop[i]->wY + pos - (range / 2)) -32;//maybe sub 32?
-    logWrite("1TopHeight is %d", uwHeight);
+  
     blitCopy(
     s_pSpriteSrc,0,s_pSpriteSrc->Rows - uwHeight,
     s_pSpriteTopData[i],0,0,
@@ -155,9 +163,10 @@ void gameGsCreate(void) {
     //bottompipe
     s_pSpriteBottom[i]->wX = pipestart;
     s_pSpriteBottom[i]->wY = pos + (range / 2);
-    logWrite("1BotY = %d", s_pSpriteBottom[i]->wY);
     s_pSpriteBottom[i]->uwHeight = 256 - s_pSpriteBottom[i]->wY;
-    logWrite("1TBotHeight is %d", s_pSpriteBottom[i]->uwHeight);
+
+    spriteSetEnabled(s_pSpriteTop[i],0); //disable the sprite so it doesn't show.
+    spriteSetEnabled(s_pSpriteBottom[i],0);
   }
 
   systemUnuse();
@@ -182,7 +191,7 @@ UBYTE Collision(g_obj *a, tSprite b, UBYTE top)
   }
   return (a->x < b.wX + 14 && 
           a->x + a->w > b.wX && 
-          a->y < b.wY + b.uwHeight && //32 is subtracted since the sprites(for toppipe) start from Y = 0 not The viewport height which is 32.
+          a->y < b.wY + b.uwHeight && 
           a->y + a->h > b.wY);
 }
 
@@ -191,18 +200,18 @@ void gameGsLoop(void) {
   if(keyCheck(KEY_ESCAPE)) {
     gameExit();
   }
+  for (short int i = 0; i <pipesdisplay; i++) {//enables only the active sprites so they don;t stack at the startpoint.
+    spriteSetEnabled(s_pSpriteTop[i],1);
+    spriteSetEnabled(s_pSpriteBottom[i],1);
+  }
   //activates the sprite channels.
-  for(short j = 0; j < MAXPIPES; j++) {
+  for(short j = 0; j < MAXPIPES; j++) {//does this need to hapopen every loop?
      //process each sprite
     spriteProcess(s_pSpriteTop[j]);
     spriteProcess(s_pSpriteBottom[j]); //
     spriteProcessChannel(j * 2);
     spriteProcessChannel(j * 2 + 1);
   }
-  // for(short j = 0; j < MAXPIPES; j++) {
-  //   //process each channel
-  //   spriteProcessChannel(j);
-  // }
 
   //undraw player
 
@@ -216,14 +225,12 @@ void gameGsLoop(void) {
       if(s_pSpriteTop[i]->wX <=0 || s_pSpriteBottom[i]->wX <=0){//probably only need one pipe side but jsut in case something weird happens
         short pos = randUwMinMax(s_pRandManager, 62, 150); //recalculate position and the gap between pipes(range)
         short range = randUwMinMax(s_pRandManager, 56, 86);
-        logWrite("2POS is %d, range is %d", pos, range);
-        spriteSetEnabled(s_pSpriteTop[i],0);
+       
+        spriteSetEnabled(s_pSpriteTop[i],0);//unenable the sprite
         spriteSetEnabled(s_pSpriteBottom[i],0);
-        //logWrite("Height now is %d", s_pSprite0->uwHeight);
-        //top pipes intionlistion
+       
         s_pSpriteTop[i]->wY = 32;
         UWORD uwHeight = (s_pSpriteTop[i]->wY + pos - (range / 2)) - 32;
-        logWrite("2Height is %d", uwHeight);
         blitCopy(
         s_pSpriteSrc,0,s_pSpriteSrc->Rows - uwHeight,
         s_pSpriteTopData[i],0,0,
@@ -231,6 +238,7 @@ void gameGsLoop(void) {
         );
         s_pSpriteTop[i]->uwHeight = uwHeight;
         s_pSpriteTop[i]->wX = pipestart;
+
         //bottompipe
         s_pSpriteBottom[i]->wX = pipestart;
         s_pSpriteBottom[i]->wY = pos + (range / 2);
@@ -239,7 +247,7 @@ void gameGsLoop(void) {
         spriteSetEnabled(s_pSpriteTop[i],1);
         spriteSetEnabled(s_pSpriteBottom[i],1);
 
-        // //add to scoreboard
+        //add to scoreboard
         g_scored = true;
       }
 
@@ -248,15 +256,13 @@ void gameGsLoop(void) {
         s_pSpriteBottom[i]->wX -= 1;
       }
       //if the player touches a pipe
-      // if(Collision(&player, *s_pSpriteTop[i],true) || Collision(&player, *s_pSpriteBottom[i],false)){ //true set for toppie to sub 32 for the starting y value.
-      //  // logWrite("Contact, player.x = %d, player.y = %d", player.x,player.y);
-      //  // logWrite("Contact, Toppipe.x = %d, toppipe.y = %d, toppipe height = %d",s_pSprite0->wX,s_pSprite0->wY,s_pSprite0->uwHeight);
-      //   stateChange(g_pStateManager, g_pMenuState); //switch to the menu state to ask to replay
-      //   //need to destroy the sprites and data
-      //   highScoreCheck(); //check the HS and write if required
-      //   pipesdisplay = 1; //reset the pipedisplay to 1 so on reply not all pipes are spawned
-      //   return;
-      // }
+      if(Collision(&player, *s_pSpriteTop[i],true) || Collision(&player, *s_pSpriteBottom[i],false)){ //true set for toppie to sub 32 for the starting y value.
+        stateChange(g_pStateManager, g_pMenuState); //switch to the menu state to ask to replay
+        //need to destroy the sprites and data
+        highScoreCheck(); //check the HS and write if required
+        pipesdisplay = 1; //reset the pipedisplay to 1 so on reply not all pipes are spawned
+        return;
+      }
   }
 
   //controls
@@ -265,18 +271,10 @@ void gameGsLoop(void) {
     birdplay++; //run the animation
   }
   else{
-    //player.y = MIN(player.y + player.yvel , 210);
+    player.y = MIN(player.y + player.yvel , 210);
     birdplay = 4; //set the bird to wings down for falling
   }
-     if (keyCheck(KEY_D)){ // move player right
-      player.x = MIN(player.x + PADDLE_SPEED, 275);
-    }
-    if (keyCheck(KEY_A)){ // move player left
-      player.x = MAX(player.x - PADDLE_SPEED, 0);
-    }
-    if(keyCheck(KEY_S)){
-      player.y = MAX(player.y + PADDLE_SPEED, 0);
-    }
+ 
   //this is done here, since the player has been undrawn, so we want to swap the player frame while it's undrawn
   if(birdplay == MAXBIRDS) birdplay = 0; //reset animation loop back to 0
   
@@ -324,6 +322,7 @@ void gameGsDestroy(void) {
     spriteRemove(s_pSpriteTop[j]);
     spriteRemove(s_pSpriteBottom[j]);
   }
+  bitmapDestroy(pBmBackground);
   systemSetDmaBit(DMAB_SPRITE, 0);
   spriteManagerDestroy();
   // This will also destroy all associated viewports and viewport managers

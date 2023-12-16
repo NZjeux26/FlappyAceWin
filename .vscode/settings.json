@@ -73,7 +73,8 @@
 		"xstring": "c",
 		"xtr1common": "c",
 		"xtree": "c",
-		"xutility": "c"
+		"xutility": "c",
+		"state.h": "c"
 	},
 	"cmake.configureOnOpen": false,
 	"C_Cpp.default.compilerPath": "C:\\msys64\\mingw64\\bin\\gcc.exe",
