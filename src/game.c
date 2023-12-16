@@ -96,13 +96,15 @@ void gameGsCreate(void) {
 
   paletteLoad("data/flappypal6.plt", s_pVpScore->pPalette, 32); //replaces palette
   makebirds();//make the bitmaps for the frames
-  // pBmBackground = bitmapCreateFromFile("data/background.bm",0);//load the background
-  // for(short x = 0; x < s_pMainBuffer->uBfrBounds.uwX; x+=16){
-  //   for(short y = 0; y < s_pMainBuffer->uBfrBounds.uwY; y+=16){
-  //     blitCopyAligned(pBmBackground,0,0,s_pMainBuffer->pBack,x,y,16,16);
-  //   }
-  // }
-  // bitmapDestroy(pBmBackground);
+  pBmBackground = bitmapCreateFromFile("data/background.bm",0);//load the background
+  
+  for(UWORD x = 0; x < s_pMainBuffer->uBfrBounds.uwX; x+=16){
+    for(UWORD y = 0; y < s_pMainBuffer->uBfrBounds.uwY; y+=16){
+      blitCopyAligned(pBmBackground,x,y,s_pMainBuffer->pBack,x,y,16,16);
+      blitCopyAligned(pBmBackground,x,y,s_pMainBuffer->pFront,x,y,16,16);
+    }
+  }
+  //bitmapDestroy(pBmBackground);
   spriteManagerCreate(s_pView, 0);
   systemSetDmaBit(DMAB_SPRITE, 1);
  
