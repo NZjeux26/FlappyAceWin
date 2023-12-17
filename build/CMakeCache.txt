@@ -37,6 +37,9 @@ ACE_LIBRARY_KIND:STRING=OBJECT
 //Value Computed by CMake
 ACE_SOURCE_DIR:STATIC=F:/FlappyAceWin/deps/ace
 
+//Enable ECS feature sets.
+ACE_USE_ECS_FEATURES:BOOL=OFF
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=C:/Users/NZJeu/.vscode/extensions/bartmanabyss.amiga-debug-1.7.5/bin/win32/opt/bin/m68k-amiga-elf-addr2line.exe
 

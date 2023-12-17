@@ -23,6 +23,7 @@
 #define PADDLE_SPEED 2
 #define MAXPIPES 4
 #define MAXBIRDS 5
+#define BIRD_BG_BUFFER_WIDTH CEIL_TO_FACTOR(16,16)
 //-------------------------------------------------------------- NEW STUFF START
 //AMiga Pal 320x256
 #define PLAYFIELD_HEIGHT (256-32) //32 for the top viewport height
@@ -41,6 +42,9 @@ static tBitMap *s_pSpriteTopData[MAXPIPES];
 static tBitMap *s_pSpriteBottomData[MAXPIPES];
 static tBitMap *s_pSpriteSrc;
 static tBitMap *pBmBackground;
+static tBitMap *s_pBmBirdMaskImage;
+
+static UBYTE s_hasBGToRestore;
 
 static tSprite *s_pSpriteTop[MAXPIPES];
 static tSprite *s_pSpriteBottom[MAXPIPES];
@@ -49,13 +53,13 @@ g_obj player; //player object declaration
 tFont *fallfontsmall; //global for font
 tTextBitMap *scoretextbitmap;//global for score text
 
+//game vars
 char scorebuffer[20];
 int gSCORE = 0;
 int g_highScore = 0; //needs to be assigned prior to initialization
 short pipesdisplay = 1;
 short birdplay = 0;
 short pipestart = 304; //set to 304 as the width of the pipes are 16 which is 320 the total width of the screen.
-short topPipeOffset = 0;
 
 ULONG startTime;
 UBYTE g_scored = false;
@@ -96,14 +100,14 @@ void gameGsCreate(void) {
 
   paletteLoad("data/flappypal6.plt", s_pVpScore->pPalette, 32); //replaces palette
   makebirds();//make the bitmaps for the frames
-  pBmBackground = bitmapCreateFromFile("data/background.bm",0);//load the background
+  // pBmBackground = bitmapCreateFromFile("data/background.bm",0);//load the background
   
-  for(UWORD x = 0; x < s_pMainBuffer->uBfrBounds.uwX; x+=16){
-    for(UWORD y = 0; y < s_pMainBuffer->uBfrBounds.uwY; y+=16){
-      blitCopyAligned(pBmBackground,x,y,s_pMainBuffer->pBack,x,y,16,16);
-      blitCopyAligned(pBmBackground,x,y,s_pMainBuffer->pFront,x,y,16,16);
-    }
-  }
+  // for(UWORD x = 0; x < s_pMainBuffer->uBfrBounds.uwX; x+=16){
+  //   for(UWORD y = 0; y < s_pMainBuffer->uBfrBounds.uwY; y+=16){
+  //     blitCopyAligned(pBmBackground,x,y,s_pMainBuffer->pBack,x,y,16,16);
+  //     blitCopyAligned(pBmBackground,x,y,s_pMainBuffer->pFront,x,y,16,16);
+  //   }
+  // }
   //bitmapDestroy(pBmBackground);
   spriteManagerCreate(s_pView, 0);
   systemSetDmaBit(DMAB_SPRITE, 1);
@@ -145,6 +149,8 @@ void gameGsCreate(void) {
   player.h = 12;
   player.yvel = 2;
 
+  s_pBmBirdMaskImage = bitmapCreate(BIRD_BG_BUFFER_WIDTH, player.h,4,0);
+  s_hasBGToRestore = 0;
   //create first batch of pipes to fill the array
   makePipes();
   for (short i = 0; i < MAXPIPES; i++) {
@@ -215,6 +221,11 @@ void gameGsLoop(void) {
     spriteProcessChannel(j * 2 + 1);
   }
 
+  // if(s_hasBGToRestore){
+  //   blitCopy(s_pBmBirdMaskImage,0,0,
+  //   s_pMainBuffer->pBack,player.x,player.y,
+  //   player.w,player.h, MINTERM_COOKIE);
+  // }
   //undraw player
 
   blitCopy(s_pBmBirds[birdplay],0,0,
@@ -258,13 +269,13 @@ void gameGsLoop(void) {
         s_pSpriteBottom[i]->wX -= 1;
       }
       //if the player touches a pipe
-      if(Collision(&player, *s_pSpriteTop[i],true) || Collision(&player, *s_pSpriteBottom[i],false)){ //true set for toppie to sub 32 for the starting y value.
-        stateChange(g_pStateManager, g_pMenuState); //switch to the menu state to ask to replay
-        //need to destroy the sprites and data
-        highScoreCheck(); //check the HS and write if required
-        pipesdisplay = 1; //reset the pipedisplay to 1 so on reply not all pipes are spawned
-        return;
-      }
+      // if(Collision(&player, *s_pSpriteBottom[i],false) || Collision(&player, *s_pSpriteTop[i],true)){ //true set for toppie to sub 32 for the starting y value.
+      //   stateChange(g_pStateManager, g_pMenuState); //switch to the menu state to ask to replay
+      //   //need to destroy the sprites and data
+      //   highScoreCheck(); //check the HS and write if required
+      //   pipesdisplay = 1; //reset the pipedisplay to 1 so on reply not all pipes are spawned
+      //   return;
+      // }
   }
 
   //controls
@@ -281,7 +292,11 @@ void gameGsLoop(void) {
   if(birdplay == MAXBIRDS) birdplay = 0; //reset animation loop back to 0
   
    //**Draw things**
-
+  //save BG under bird
+  // blitCopy(s_pMainBuffer->pBack,player.x,player.y,
+  // s_pBmBirdMaskImage,0,0,
+  // player.w,player.h, MINTERM_COOKIE);
+  // s_hasBGToRestore = 1;
   //update the previous position array
   s_pPlayerPrevPos[s_ubBufferIndex].uwX = player.x;
   s_pPlayerPrevPos[s_ubBufferIndex].uwY = player.y;
@@ -324,6 +339,7 @@ void gameGsDestroy(void) {
     spriteRemove(s_pSpriteTop[j]);
     spriteRemove(s_pSpriteBottom[j]);
   }
+  bitmapDestroy(s_pBmBirdMaskImage);
   bitmapDestroy(pBmBackground);
   systemSetDmaBit(DMAB_SPRITE, 0);
   spriteManagerDestroy();
