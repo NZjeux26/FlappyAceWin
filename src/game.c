@@ -99,16 +99,16 @@ void gameGsCreate(void) {
     TAG_END);
 
   paletteLoad("data/flappypal6.plt", s_pVpScore->pPalette, 32); //replaces palette
-  makebirds();//make the bitmaps for the frames
-  // pBmBackground = bitmapCreateFromFile("data/background.bm",0);//load the background
   
-  // for(UWORD x = 0; x < s_pMainBuffer->uBfrBounds.uwX; x+=16){
-  //   for(UWORD y = 0; y < s_pMainBuffer->uBfrBounds.uwY; y+=16){
-  //     blitCopyAligned(pBmBackground,x,y,s_pMainBuffer->pBack,x,y,16,16);
-  //     blitCopyAligned(pBmBackground,x,y,s_pMainBuffer->pFront,x,y,16,16);
-  //   }
-  // }
-  //bitmapDestroy(pBmBackground);
+  pBmBackground = bitmapCreateFromFile("data/background.bm",0);//load the background
+  
+  for(UWORD x = 0; x < s_pMainBuffer->uBfrBounds.uwX; x+=16){
+    for(UWORD y = 0; y < s_pMainBuffer->uBfrBounds.uwY; y+=16){
+      blitCopyAligned(pBmBackground,x,y,s_pMainBuffer->pBack,x,y,16,16);
+      blitCopyAligned(pBmBackground,x,y,s_pMainBuffer->pFront,x,y,16,16);
+    }
+  }
+  bitmapDestroy(pBmBackground);
   spriteManagerCreate(s_pView, 0);
   systemSetDmaBit(DMAB_SPRITE, 1);
  
@@ -152,6 +152,7 @@ void gameGsCreate(void) {
   s_pBmBirdMaskImage = bitmapCreate(BIRD_BG_BUFFER_WIDTH, player.h,4,0);
   s_hasBGToRestore = 0;
   //create first batch of pipes to fill the array
+  makebirds();//make the bitmaps for the frames
   makePipes();
   for (short i = 0; i < MAXPIPES; i++) {
     short pos = randUwMinMax(s_pRandManager, 62, 150); //recalculate position and the gap between pipes(range)
@@ -221,16 +222,16 @@ void gameGsLoop(void) {
     spriteProcessChannel(j * 2 + 1);
   }
 
-  // if(s_hasBGToRestore){
-  //   blitCopy(s_pBmBirdMaskImage,0,0,
-  //   s_pMainBuffer->pBack,player.x,player.y,
-  //   player.w,player.h, MINTERM_COOKIE);
-  // }
+  if(s_hasBGToRestore){
+    blitCopy(s_pBmBirdMaskImage,0,0,
+    s_pMainBuffer->pBack,s_pPlayerPrevPos[s_ubBufferIndex].uwX,s_pPlayerPrevPos[s_ubBufferIndex].uwY,
+    player.w,player.h, MINTERM_COOKIE);
+  }
   //undraw player
 
   blitCopy(s_pBmBirds[birdplay],0,0,
   s_pMainBuffer->pBack, s_pPlayerPrevPos[s_ubBufferIndex].uwX,s_pPlayerPrevPos[s_ubBufferIndex].uwY,
-  player.w,player.h,0);//16w,12h, 0 colour from the palette
+  player.w,player.h,MINTERM_COOKIE);//16w,12h, 0 colour from the palette
  
   //**Move things accross**
 
@@ -284,7 +285,7 @@ void gameGsLoop(void) {
     birdplay++; //run the animation
   }
   else{
-    player.y = MIN(player.y + player.yvel , 210);
+    //player.y = MIN(player.y + player.yvel , 210);
     birdplay = 4; //set the bird to wings down for falling
   }
  
@@ -293,10 +294,10 @@ void gameGsLoop(void) {
   
    //**Draw things**
   //save BG under bird
-  // blitCopy(s_pMainBuffer->pBack,player.x,player.y,
-  // s_pBmBirdMaskImage,0,0,
-  // player.w,player.h, MINTERM_COOKIE);
-  // s_hasBGToRestore = 1;
+  blitCopy(s_pMainBuffer->pBack,player.x,player.y,
+  s_pBmBirdMaskImage,0,0,
+  player.w,player.h, MINTERM_COOKIE);
+  s_hasBGToRestore = 1;
   //update the previous position array
   s_pPlayerPrevPos[s_ubBufferIndex].uwX = player.x;
   s_pPlayerPrevPos[s_ubBufferIndex].uwY = player.y;
