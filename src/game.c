@@ -221,17 +221,16 @@ void gameGsLoop(void) {
     spriteProcessChannel(j * 2);
     spriteProcessChannel(j * 2 + 1);
   }
-
+  //undraw player
   if(s_hasBGToRestore){
     blitCopy(s_pBmBirdMaskImage,0,0,
     s_pMainBuffer->pBack,s_pPlayerPrevPos[s_ubBufferIndex].uwX,s_pPlayerPrevPos[s_ubBufferIndex].uwY,
     player.w,player.h, MINTERM_COOKIE);
   }
-  //undraw player
 
-  blitCopy(s_pBmBirds[birdplay],0,0,
-  s_pMainBuffer->pBack, s_pPlayerPrevPos[s_ubBufferIndex].uwX,s_pPlayerPrevPos[s_ubBufferIndex].uwY,
-  player.w,player.h,MINTERM_COOKIE);//16w,12h, 0 colour from the palette
+  // blitCopy(s_pBmBirds[birdplay],0,0,
+  // s_pMainBuffer->pBack, s_pPlayerPrevPos[s_ubBufferIndex].uwX,s_pPlayerPrevPos[s_ubBufferIndex].uwY,
+  // player.w,player.h,MINTERM_COOKIE);//16w,12h, 0 colour from the palette(since BG was black used black to restore.)
  
   //**Move things accross**
 
@@ -275,6 +274,7 @@ void gameGsLoop(void) {
       //   //need to destroy the sprites and data
       //   highScoreCheck(); //check the HS and write if required
       //   pipesdisplay = 1; //reset the pipedisplay to 1 so on reply not all pipes are spawned
+      //   //trashGFX();
       //   return;
       // }
   }
@@ -292,22 +292,23 @@ void gameGsLoop(void) {
   //this is done here, since the player has been undrawn, so we want to swap the player frame while it's undrawn
   if(birdplay == MAXBIRDS) birdplay = 0; //reset animation loop back to 0
   
-   //**Draw things**
-  //save BG under bird
+      //save BG under bird
   blitCopy(s_pMainBuffer->pBack,player.x,player.y,
   s_pBmBirdMaskImage,0,0,
   player.w,player.h, MINTERM_COOKIE);
   s_hasBGToRestore = 1;
+
+   //**Draw things**
   //update the previous position array
   s_pPlayerPrevPos[s_ubBufferIndex].uwX = player.x;
   s_pPlayerPrevPos[s_ubBufferIndex].uwY = player.y;
 
   // Redraw the player at new position
   blitCopyMask(
-  s_pBmBirds[birdplay],0,0,
+  s_pBmBirds[birdplay],0,0,//copy the mask from the birdmask pos 0,0 to the main buffer at player.x/y
   s_pMainBuffer->pBack,player.x,player.y, 
   player.w, player.h,s_pBmBirdMask[birdplay]->Planes[0]);
-  
+
   //timer handling the pipes being spawned, reset to 1 at game reset
   ULONG currentTime = timerGet();
   if (currentTime - startTime > randUwMinMax(s_pRandManager, 50, 222) && pipesdisplay < MAXPIPES) {//timer is frames since starttime which is 1/50 of a second.
@@ -355,6 +356,26 @@ void updateScore(void) {  //bug seems to appear where text for 10000 + seems to 
     blitRect(s_pScoreBuffer->pBack, 40, 20, scoretextbitmap->uwActualWidth, scoretextbitmap->uwActualHeight, 0); //erase scorebuffer
     fontFillTextBitMap(fallfontsmall, scoretextbitmap, scorebuffer);//refill
     fontDrawTextBitMap(s_pScoreBuffer->pBack, scoretextbitmap, 40,20, 6, FONT_COOKIE);  //draw
+}
+void trashGFX(){//trashes all the bitmaps and sprites after a game is fin ** not qwuite working the way i thought
+  systemUse();
+  for(short int i = 0; i < MAXBIRDS; i++){
+    bitmapDestroy(s_pBmBirdMask[i]);
+    bitmapDestroy(s_pBmBirds[i]);
+  }
+  for(short j = 0; j < MAXPIPES; j++){
+    spriteRemove(s_pSpriteTop[j]);
+    spriteRemove(s_pSpriteBottom[j]);
+  }
+  bitmapDestroy(s_pBmBirdMaskImage);
+  bitmapDestroy(pBmBackground);
+  systemSetDmaBit(DMAB_SPRITE, 0);
+  spriteManagerDestroy();
+  systemUnuse();
+}
+
+void lightHighScoreCheck(void) {//session based HS keeping until file system stuff cna be sorted.
+  if(g_highScore < gSCORE) g_highScore = gSCORE;
 }
 
 void highScoreCheck(void) {

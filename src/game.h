@@ -8,9 +8,11 @@ void gameGsLoop(void);
 void gameGsDestroy(void);
 void updateScore(void);
 void highScoreCheck(void);
+void lightHighScoreCheck(void);
 short getHighScore(void);
 void makebirds(void);
 void makePipes(void);
+void trashGFX();
 
 typedef struct g_obj {//struct for player parameters
     short x;        //position X
