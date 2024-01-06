@@ -46,7 +46,7 @@ static tBitMap *s_pBmBirdMaskImage[2];
 
 static UBYTE s_hasBGToRestore[2];
 
-static tSprite *s_pSpriteTop[MAXPIPES];
+static tSprite *s_pSpriteTop[MAXPIPES];//sprites for the top and bottom, one of each for each upto maxpipes
 static tSprite *s_pSpriteBottom[MAXPIPES];
 g_obj player; //player object declaration
 
@@ -102,7 +102,7 @@ void gameGsCreate(void) {
   
   pBmBackground = bitmapCreateFromFile("data/background.bm",0);//load the background
   
-  for(UWORD x = 0; x < s_pMainBuffer->uBfrBounds.uwX; x+=16){
+  for(UWORD x = 0; x < s_pMainBuffer->uBfrBounds.uwX; x+=16){//fills out the background
     for(UWORD y = 0; y < s_pMainBuffer->uBfrBounds.uwY; y+=16){
       blitCopyAligned(pBmBackground,x,y,s_pMainBuffer->pBack,x,y,16,16);
       blitCopyAligned(pBmBackground,x,y,s_pMainBuffer->pFront,x,y,16,16);
@@ -162,7 +162,7 @@ void gameGsCreate(void) {
   
     //top pipes intionlistion
     s_pSpriteTop[i]->wY = 32;
-    UWORD uwHeight = (s_pSpriteTop[i]->wY + pos - (range / 2)) -32;//maybe sub 32?
+    UWORD uwHeight = (s_pSpriteTop[i]->wY + pos - (range / 2)) - s_pSpriteTop[i]->wY;
   
     blitCopy(
     s_pSpriteSrc,0,s_pSpriteSrc->Rows - uwHeight,
@@ -174,7 +174,7 @@ void gameGsCreate(void) {
     //bottompipe
     s_pSpriteBottom[i]->wX = pipestart;
     s_pSpriteBottom[i]->wY = pos + (range / 2);
-    s_pSpriteBottom[i]->uwHeight = 256 - s_pSpriteBottom[i]->wY;
+    s_pSpriteBottom[i]->uwHeight = (256 - s_pSpriteBottom[i]->wY);
 
     spriteSetEnabled(s_pSpriteTop[i],0); //disable the sprite so it doesn't show.
     spriteSetEnabled(s_pSpriteBottom[i],0);
@@ -192,18 +192,17 @@ The third condition checks if the y-coordinate of the first block is less than t
 The fourth condition checks if the y-coordinate of the first block plus the height of the first block is greater than the y-coordinate of the second block. This ensures that the first block is not below the second block.
 If all of these conditions are met, then the two blocks collide.*/
 //collision detection function takes a player object and a sprite object and return if there is a collision. 14 is the 'width' of the sprite
-UBYTE Collision(g_obj *a, tSprite b, UBYTE top)
-{
-  if(top){
+UBYTE CollisionTop(g_obj *a, tSprite b){
     return (a->x < b.wX + 14 && 
           a->x + a->w > b.wX && 
           a->y < b.wY + (b.uwHeight - 32) && //32 is subtracted since the sprites(for toppipe) start from Y = 0 not The viewport height which is 32.
           a->y + a->h > b.wY);
-  }
-  return (a->x < b.wX + 14 && 
+}
+UBYTE CollisionBottom(g_obj *a, tSprite b){
+    return (a->x < b.wX + 14 && 
           a->x + a->w > b.wX && 
           a->y < b.wY + b.uwHeight && 
-          a->y + a->h > b.wY);
+          a->y + a->h > (b.wY - 32)); //something about 32 on the low pipe Y was causing issues with the collision detection
 }
 
 void gameGsLoop(void) {
@@ -224,15 +223,11 @@ void gameGsLoop(void) {
     spriteProcessChannel(j * 2 + 1);
   }
   //undraw player
-  if(s_hasBGToRestore[s_ubBufferIndex]){
+  if(s_hasBGToRestore[s_ubBufferIndex]){//this saves the background under the player syncing up with the double buffer system
     blitCopy(s_pBmBirdMaskImage[s_ubBufferIndex],0,0,
     s_pMainBuffer->pBack,s_pPlayerPrevPos[s_ubBufferIndex].uwX,s_pPlayerPrevPos[s_ubBufferIndex].uwY,
     player.w,player.h, MINTERM_COOKIE);
   }
-
-  // blitCopy(s_pBmBirds[birdplay],0,0,
-  // s_pMainBuffer->pBack, s_pPlayerPrevPos[s_ubBufferIndex].uwX,s_pPlayerPrevPos[s_ubBufferIndex].uwY,
-  // player.w,player.h,MINTERM_COOKIE);//16w,12h, 0 colour from the palette(since BG was black used black to restore.)
  
   //**Move things accross**
 
@@ -245,7 +240,7 @@ void gameGsLoop(void) {
         spriteSetEnabled(s_pSpriteBottom[i],0);
        
         s_pSpriteTop[i]->wY = 32;
-        UWORD uwHeight = (s_pSpriteTop[i]->wY + pos - (range / 2)) - 32;
+        UWORD uwHeight = (s_pSpriteTop[i]->wY + pos - (range / 2)) - s_pSpriteTop[i]->wY;
         blitCopy(
         s_pSpriteSrc,0,s_pSpriteSrc->Rows - uwHeight,
         s_pSpriteTopData[i],0,0,
@@ -257,7 +252,7 @@ void gameGsLoop(void) {
         //bottompipe
         s_pSpriteBottom[i]->wX = pipestart;
         s_pSpriteBottom[i]->wY = pos + (range / 2);
-        s_pSpriteBottom[i]->uwHeight = 256 - s_pSpriteBottom[i]->wY;
+        s_pSpriteBottom[i]->uwHeight = (256 - s_pSpriteBottom[i]->wY);
 
         spriteSetEnabled(s_pSpriteTop[i],1);
         spriteSetEnabled(s_pSpriteBottom[i],1);
@@ -271,10 +266,10 @@ void gameGsLoop(void) {
         s_pSpriteBottom[i]->wX -= 1;
       }
       //if the player touches a pipe
-      if(Collision(&player, *s_pSpriteBottom[i],false) || Collision(&player, *s_pSpriteTop[i],true)){ //true set for toppie to sub 32 for the starting y value.
+      if(CollisionTop(&player, *s_pSpriteTop[i]) || CollisionBottom(&player, *s_pSpriteBottom[i])){ //true set for toppie to sub 32 for the starting y value.
         stateChange(g_pStateManager, g_pMenuState); //switch to the menu state to ask to replay
         //need to destroy the sprites and data
-        highScoreCheck(); //check the HS and write if required
+        lightHighScoreCheck(); //check the HS and write if required
         pipesdisplay = 1; //reset the pipedisplay to 1 so on reply not all pipes are spawned
         //trashGFX();
         return;
