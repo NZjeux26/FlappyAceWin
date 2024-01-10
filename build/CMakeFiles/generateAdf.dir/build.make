@@ -70,6 +70,7 @@ CMakeFiles/generateAdf:
 	F:\cmake-3.28.0-rc3-windows-x86_64\bin\cmake.exe -E make_directory F:/FlappyAceWin/build/adf/s
 	F:\cmake-3.28.0-rc3-windows-x86_64\bin\cmake.exe -E copy F:/FlappyAceWin/build/FlappyAceWin.exe F:/FlappyAceWin/build/adf
 	F:\cmake-3.28.0-rc3-windows-x86_64\bin\cmake.exe -E copy F:/FlappyAceWin/build/myacefont.fnt F:/FlappyAceWin/build/adf
+	F:\cmake-3.28.0-rc3-windows-x86_64\bin\cmake.exe -E copy_directory F:/FlappyAceWin/build/data F:/FlappyAceWin/build/adf/data
 	F:\cmake-3.28.0-rc3-windows-x86_64\bin\cmake.exe -E echo FlappyAceWin.exe > F:/FlappyAceWin/build/adf/s/startup-sequence
 	exe2adf -l FlappyAceWin -a FlappyAceWin.adf -d F:/FlappyAceWin/build/adf
 	F:\cmake-3.28.0-rc3-windows-x86_64\bin\cmake.exe -E rm -rf F:/FlappyAceWin/build/adf

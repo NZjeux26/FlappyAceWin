@@ -267,6 +267,7 @@ void gameGsLoop(void) {
       }
       //if the player touches a pipe
       if(CollisionTop(&player, *s_pSpriteTop[i]) || CollisionBottom(&player, *s_pSpriteBottom[i])){ //true set for toppie to sub 32 for the starting y value.
+        
         stateChange(g_pStateManager, g_pMenuState); //switch to the menu state to ask to replay
         //need to destroy the sprites and data
         lightHighScoreCheck(); //check the HS and write if required

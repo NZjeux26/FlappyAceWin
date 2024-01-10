@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14.0)
 project(FlappyAceWin LANGUAGES ASM C)
- #set(ACE_DEBUG ON)
- #set(ACE_DEBUG_UAE ON)
+#set(ACE_DEBUG ON)
+#set(ACE_DEBUG_UAE ON)
 #set(CMAKE_C_STANDARD 17)
 file(GLOB_RECURSE SOURCES src/*.c main.c my_strtol.c)
 
@@ -68,31 +68,9 @@ add_custom_target(generateAdf
 	COMMAND ${CMAKE_COMMAND} -E make_directory "${ADF_DIR}/s"
 	COMMAND ${CMAKE_COMMAND} -E copy "${CMAKE_CURRENT_BINARY_DIR}/${FlappyAceWin_OUTPUT_EXECUTABLE}" "${ADF_DIR}"
 	COMMAND ${CMAKE_COMMAND} -E copy "${CMAKE_CURRENT_BINARY_DIR}/myacefont.fnt" "${ADF_DIR}"
-	
+	COMMAND ${CMAKE_COMMAND} -E copy_directory "${DATA_DIR}" "${ADF_DIR}/data"
 	COMMAND ${CMAKE_COMMAND} -E echo "${FlappyAceWin_OUTPUT_EXECUTABLE}" > "${ADF_DIR}/s/startup-sequence"
 	COMMAND exe2adf -l ${CMAKE_PROJECT_NAME} -a "${CMAKE_PROJECT_NAME}.adf" -d ${ADF_DIR}
 	COMMAND ${CMAKE_COMMAND} -E rm -rf "${ADF_DIR}"
 	COMMENT "Generating ADF file"
 )
-
-# #Convert bitmaps
-# Convenience variables for source/destination paths
-#set(RES_DIR ${CMAKE_CURRENT_LIST_DIR}/res)
-#et(DATA_DIR ${CMAKE_CURRENT_BINARY_DIR}/data)
-
-# Create directory for converted files next to built executable
-#file(MAKE_DIRECTORY ${DATA_DIR})
-
-# # Convert palette and background image
-# convertPalette(${GAME_LINKED} ${RES_DIR}/flappypal.gpl ${DATA_DIR}/flappypal.plt)
-
-# convertBitmaps(
-#   TARGET ${GAME_LINKED} PALETTE ${RES_DIR}/flappypal.gpl
-#   MASK_COLOR "#FF00FF"
-#   SOURCES
-#     ${RES_DIR}/pipemiddle.png
-#   DESTINATIONS
-#     ${DATA_DIR}/pipe_middle.bm
-#   MASKS
-#     ${DATA_DIR}/pipe_mask.bm
-# )
