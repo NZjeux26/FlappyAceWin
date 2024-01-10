@@ -229,7 +229,7 @@ void gameGsLoop(void) {
     player.w,player.h, MINTERM_COOKIE);
   }
  
-  //**Move things accross**
+  //**Move things accross*8
 
   for (short i = 0; i < pipesdisplay; i++) {
       if(s_pSpriteTop[i]->wX <=0 || s_pSpriteBottom[i]->wX <=0){//probably only need one pipe side but jsut in case something weird happens
