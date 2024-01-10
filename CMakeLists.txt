@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14.0)
 project(FlappyAceWin LANGUAGES ASM C)
- set(ACE_DEBUG ON)
- set(ACE_DEBUG_UAE ON)
+ #set(ACE_DEBUG ON)
+ #set(ACE_DEBUG_UAE ON)
 #set(CMAKE_C_STANDARD 17)
 file(GLOB_RECURSE SOURCES src/*.c main.c my_strtol.c)
 

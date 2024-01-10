@@ -121,7 +121,7 @@ void gameGsCreate(void) {
   );
 
   gSCORE = 99999999;  //set to 99999999 so the bitmap is big enough to handle larger numbers
-  g_highScore = getHighScore();  //get the highscore from the file, returning zero if no file
+  g_highScore = 0; //getHighScore();  //get the highscore from the file, returning zero if no file
   char i_highScore[20]; //buffer string to hold the highscore
   stringDecimalFromULong(g_highScore, i_highScore); //convert to short
 
@@ -378,67 +378,67 @@ void lightHighScoreCheck(void) {//session based HS keeping until file system stu
   if(g_highScore < gSCORE) g_highScore = gSCORE;
 }
 
-void highScoreCheck(void) {
-  int score = gSCORE;
-  char charScore[30];
-  char filename[20] = "scoresheet.txt";
-  systemUse();
+// void highScoreCheck(void) {
+//   int score = gSCORE;
+//   char charScore[30];
+//   char filename[20] = "scoresheet.txt";
+//   systemUse();
 
-  if(!fileExists(filename)){  //check if the file exists, if not create and add the score
-      tFile *file = fileOpen(filename, "w");
-      stringDecimalFromULong(score,charScore);
-      fileWriteStr(file, charScore);//add the score to the file 
-      fileClose(file); 
-  }
-  else{//if file exsits, read the score chec against the player score, if greater write to file else do nothing
-    short tScore = g_highScore; //since the highscore should be pulled in at the start, no need to call it again
-    //function to return highest score in the file.
-   // logWrite("TScore Is: %d\n", tScore);
+//   if(!fileExists(filename)){  //check if the file exists, if not create and add the score
+//       tFile *file = fileOpen(filename, "w");
+//       stringDecimalFromULong(score,charScore);
+//       fileWriteStr(file, charScore);//add the score to the file 
+//       fileClose(file); 
+//   }
+//   else{//if file exsits, read the score chec against the player score, if greater write to file else do nothing
+//     short tScore = g_highScore; //since the highscore should be pulled in at the start, no need to call it again
+//     //function to return highest score in the file.
+//    // logWrite("TScore Is: %d\n", tScore);
 
-    if(score > tScore){//if score is greater than the current HS then add it to the end.
-      tFile *file = fileOpen(filename, "wb");
-      stringDecimalFromULong(score,charScore);
-      fileWriteStr(file,charScore);
-      fileWriteStr(file, ","); //using comma to seperate the scores
-      fileClose(file);
-    }
-  }
-  systemUnuse();
-}
+//     if(score > tScore){//if score is greater than the current HS then add it to the end.
+//       tFile *file = fileOpen(filename, "wb");
+//       stringDecimalFromULong(score,charScore);
+//       fileWriteStr(file,charScore);
+//       fileWriteStr(file, ","); //using comma to seperate the scores
+//       fileClose(file);
+//     }
+//   }
+//   systemUnuse();
+// }
 // //reads through the scoresheet to find the highest score and returns that to compare it with the current score by the player
-short getHighScore(void){
-  int highScore = 0;
-  char filename[20] = "scoresheet.txt";
-  systemUse();
+// short getHighScore(void){
+//   int highScore = 0;
+//   char filename[20] = "scoresheet.txt";
+//   systemUse();
   
-  if((!fileExists(filename))){
-    systemUnuse();
-    return 0; //return 0 if the file does not exist
-  } 
+//   if((!fileExists(filename))){
+//     systemUnuse();
+//     return 0; //return 0 if the file does not exist
+//   } 
 
-  tFile *file = fileOpen(filename, "r");
-  if(!file) {
-    systemUnuse();
-    return 102; //set to 2 so i know it was a cope out
-  }
+//   tFile *file = fileOpen(filename, "r");
+//   if(!file) {
+//     systemUnuse();
+//     return 102; //set to 2 so i know it was a cope out
+//   }
 
-  char tline[512];
-  while(fgets(tline, 512, file)){//issues getting the tokens into the array of lines
-    char *token = strtok(tline, ",");
-    while(token){
-      //logWrite("File Reading: %s\n", token); 
-      int tScore = strtol(token, &token, 10);  //convert to short //why is this returning zero?
-      if(tScore > highScore) highScore = tScore;  //if the read score is > than the HS then overwirte it.
-      token = strtok(NULL, "\n");
-      if(token == NULL) break;
-    }
-  }
+//   char tline[512];
+//   while(fgets(tline, 512, file)){//issues getting the tokens into the array of lines
+//     char *token = strtok(tline, ",");
+//     while(token){
+//       //logWrite("File Reading: %s\n", token); 
+//       int tScore = strtol(token, &token, 10);  //convert to short //why is this returning zero?
+//       if(tScore > highScore) highScore = tScore;  //if the read score is > than the HS then overwirte it.
+//       token = strtok(NULL, "\n");
+//       if(token == NULL) break;
+//     }
+//   }
   
-  fileClose(file);
-  systemUnuse();
-  return highScore; //return the Highest found score.
-  /*In Theory the last int he file should be the highest if this works correctly. This could get resource intensive if a person has hundreds of High scores*/
-}
+//   fileClose(file);
+//   systemUnuse();
+//   return highScore; //return the Highest found score.
+//   /*In Theory the last int he file should be the highest if this works correctly. This could get resource intensive if a person has hundreds of High scores*/
+// }
 
 void makebirds(void){
   //s_pBmBird = bitmapCreate(16,12,4,0); //16px wide, 12 high
