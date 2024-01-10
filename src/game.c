@@ -121,7 +121,7 @@ void gameGsCreate(void) {
   );
 
   gSCORE = 99999999;  //set to 99999999 so the bitmap is big enough to handle larger numbers
-  g_highScore = 0; //getHighScore();  //get the highscore from the file, returning zero if no file
+  //g_highScore = 0; //getHighScore();  //get the highscore from the file, returning zero if no file
   char i_highScore[20]; //buffer string to hold the highscore
   stringDecimalFromULong(g_highScore, i_highScore); //convert to short
 
@@ -158,7 +158,7 @@ void gameGsCreate(void) {
   makePipes();
   for (short i = 0; i < MAXPIPES; i++) {
     short pos = randUwMinMax(s_pRandManager, 62, 150); //recalculate position and the gap between pipes(range)
-    short range = randUwMinMax(s_pRandManager, 56, 86);
+    short range = randUwMinMax(s_pRandManager, 66, 96);
   
     //top pipes intionlistion
     s_pSpriteTop[i]->wY = 32;
@@ -234,7 +234,7 @@ void gameGsLoop(void) {
   for (short i = 0; i < pipesdisplay; i++) {
       if(s_pSpriteTop[i]->wX <=0 || s_pSpriteBottom[i]->wX <=0){//probably only need one pipe side but jsut in case something weird happens
         short pos = randUwMinMax(s_pRandManager, 62, 150); //recalculate position and the gap between pipes(range)
-        short range = randUwMinMax(s_pRandManager, 56, 86);
+        short range = randUwMinMax(s_pRandManager, 66, 96);
        
         spriteSetEnabled(s_pSpriteTop[i],0);//unenable the sprite
         spriteSetEnabled(s_pSpriteBottom[i],0);
@@ -267,7 +267,7 @@ void gameGsLoop(void) {
       }
       //if the player touches a pipe
       if(CollisionTop(&player, *s_pSpriteTop[i]) || CollisionBottom(&player, *s_pSpriteBottom[i])){ //true set for toppie to sub 32 for the starting y value.
-        
+
         stateChange(g_pStateManager, g_pMenuState); //switch to the menu state to ask to replay
         //need to destroy the sprites and data
         lightHighScoreCheck(); //check the HS and write if required
