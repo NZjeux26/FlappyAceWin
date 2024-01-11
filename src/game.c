@@ -59,7 +59,7 @@ int gSCORE = 0;
 int g_highScore = 0; //needs to be assigned prior to initialization
 short pipesdisplay = 1;
 short birdplay = 0;
-short pipestart = 304; //set to 304 as the width of the pipes are 16 which is 320 the total width of the screen.
+short pipestart = 320; //set to 320 so the pipes start off field.
 
 ULONG startTime;
 UBYTE g_scored = false;
@@ -232,7 +232,7 @@ void gameGsLoop(void) {
   //**Move things accross*8
 
   for (short i = 0; i < pipesdisplay; i++) {
-      if(s_pSpriteTop[i]->wX <=0 || s_pSpriteBottom[i]->wX <=0){//probably only need one pipe side but jsut in case something weird happens
+      if(s_pSpriteTop[i]->wX <=-16 || s_pSpriteBottom[i]->wX <=-16){//neg 16 so it's off screen. Since they are sprites it can be drawn 'off screen'
         short pos = randUwMinMax(s_pRandManager, 62, 150); //recalculate position and the gap between pipes(range)
         short range = randUwMinMax(s_pRandManager, 66, 96);
        
@@ -267,7 +267,6 @@ void gameGsLoop(void) {
       }
       //if the player touches a pipe
       if(CollisionTop(&player, *s_pSpriteTop[i]) || CollisionBottom(&player, *s_pSpriteBottom[i])){ //true set for toppie to sub 32 for the starting y value.
-
         stateChange(g_pStateManager, g_pMenuState); //switch to the menu state to ask to replay
         //need to destroy the sprites and data
         lightHighScoreCheck(); //check the HS and write if required
@@ -309,7 +308,7 @@ void gameGsLoop(void) {
 
   //timer handling the pipes being spawned, reset to 1 at game reset
   ULONG currentTime = timerGet();
-  if (currentTime - startTime > randUwMinMax(s_pRandManager, 50, 222) && pipesdisplay < MAXPIPES) {//timer is frames since starttime which is 1/50 of a second.
+  if (currentTime - startTime > randUwMinMax(s_pRandManager, 60, 222) && pipesdisplay < MAXPIPES) {//timer is frames since starttime which is 1/50 of a second.
       pipesdisplay++;
       startTime = currentTime;
   }
@@ -334,10 +333,6 @@ void gameGsDestroy(void) {
   for(short int i = 0; i < MAXBIRDS; i++){
     bitmapDestroy(s_pBmBirdMask[i]);
     bitmapDestroy(s_pBmBirds[i]);
-  }
-  for(short j = 0; j < MAXPIPES; j++){
-    spriteRemove(s_pSpriteTop[j]);
-    spriteRemove(s_pSpriteBottom[j]);
   }
   for (short k = 0; k < 2; k++){
     bitmapDestroy(s_pBmBirdMaskImage[k]);

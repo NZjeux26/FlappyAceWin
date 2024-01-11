@@ -29,7 +29,7 @@ void menuGsCreate(void){
 
     s_pVpMain = vPortCreate(0, TAG_VPORT_VIEW, s_pMenuView, TAG_VPORT_BPP, 4, TAG_END);
     s_pMainBuffer = simpleBufferCreate(0,TAG_SIMPLEBUFFER_VPORT, s_pVpMain, TAG_SIMPLEBUFFER_BITMAP_FLAGS, BMF_CLEAR, TAG_END);
-
+    
     //colour palette for the menu
     s_pVpMain->pPalette[0] = 0x0000; //black
     s_pVpMain->pPalette[1] = 0xFFFF; //White
@@ -37,9 +37,11 @@ void menuGsCreate(void){
     menufont = fontCreate("myacefont.fnt");
     menutextbitmap = fontCreateTextBitMapFromStr(menufont, "GAME OVER");
     fontDrawTextBitMap(s_pMainBuffer->pBack, menutextbitmap, MENU_WIDTH / 2 - 36, MENU_HEIGHT / 2 - 16, 1, FONT_COOKIE);
+    fontDestroyTextBitMap(menutextbitmap);
 
     menutextbitmap = fontCreateTextBitMapFromStr(menufont, "Play Again Y N");
     fontDrawTextBitMap(s_pMainBuffer->pBack, menutextbitmap, MENU_WIDTH / 2 - 56, MENU_HEIGHT / 2 - 5, 1, FONT_COOKIE);
+    fontDestroyTextBitMap(menutextbitmap);
 
     systemUnuse();
     viewLoad(s_pMenuView);
@@ -58,7 +60,9 @@ void menuGsLoop(void){
         logWrite("Switching!\n");
         return;
         }
-        vPortWaitForEnd(s_pVpMain);
+        copProcessBlocks();
+        systemIdleBegin();
+        vPortWaitUntilEnd(s_pVpMain);
     }
 }
 
