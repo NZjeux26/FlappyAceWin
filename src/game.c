@@ -267,6 +267,11 @@ void gameGsLoop(void) {
       }
       //if the player touches a pipe
       if(CollisionTop(&player, *s_pSpriteTop[i]) || CollisionBottom(&player, *s_pSpriteBottom[i])){ //true set for toppie to sub 32 for the starting y value.
+        systemSetDmaBit(DMAB_SPRITE, 0);//disable srpties
+        for (short i=0; i < MAXPIPES; i++) {//move them offscreen *This is done so junk data doesn't affect the menu screen
+          s_pSpriteTop[i]->wX = -16;
+          s_pSpriteBottom[i]->wX = -16;
+        }
         stateChange(g_pStateManager, g_pMenuState); //switch to the menu state to ask to replay
         //need to destroy the sprites and data
         lightHighScoreCheck(); //check the HS and write if required

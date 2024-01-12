@@ -32,7 +32,7 @@
 *.out
 *.app
 
-build/*
+build/
 !build/data
 dist/
 res/
